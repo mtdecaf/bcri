@@ -1,0 +1,19 @@
+.page-nav {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    &--small {
+        justify-content: end;
+        height: 2.5rem;
+    }
+    &--large {
+        justify-content: center;
+        height: 3rem;
+    }
+    &__list {
+        width: 80%;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+}
