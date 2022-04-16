@@ -1,3 +1,24 @@
-// media query breakpoint mixins
+@use "variables" as *;
+@use "colors" as *;
 
-// $mobile: (min-width: $mobile);
+// media breakpoints
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+// side paddings
+@mixin side-padding-mobile {
+    padding: 0 1rem;
+}
+
+@mixin side-padding-tablet {
+    padding: 0 2rem;
+}

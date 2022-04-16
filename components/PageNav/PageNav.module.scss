@@ -1,19 +1,43 @@
+@use "../../styles/global/colors.scss" as *;
+@use "../../styles/global/mixins.scss" as *;
+
 .page-nav {
     width: 100vw;
     display: flex;
     align-items: center;
+    @include side-padding-mobile;
+    @include tablet {
+      @include side-padding-tablet;
+    }
     &--small {
         justify-content: end;
-        height: 2.5rem;
+        height: 3rem;
+    }
+    &__contact-bar {
+        height: 2rem;
+        display: flex;
+        justify-content: end;
+        background-color: $dark-blue;
+        @include side-padding-mobile;
+        @include tablet {
+          @include side-padding-tablet;
+        }
+        &__info-wrap{
+            display: flex;
+            align-items: center;
+        }
     }
     &--large {
         justify-content: center;
-        height: 3rem;
+        height: 3.5rem;
     }
     &__list {
         width: 80%;
         list-style: none;
         display: flex;
         justify-content: space-between;
+    }
+    &__burger {
+        color: $dark-blue;
     }
 }

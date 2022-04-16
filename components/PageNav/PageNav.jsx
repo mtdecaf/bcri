@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import styles from "./PageNav.module.scss";
+import Image from 'next/image';
+import bcriLogo from '../../public/bcri-logo.png';
+import { FiPhone } from "react-icons/fi";
 
 const PageNav = () => {
   const hasWindow = typeof window !== "undefined";
@@ -36,9 +39,18 @@ const PageNav = () => {
       </ul>
     </div>
   ) : mounted ? (
+    <>
+    <div className={styles["page-nav__contact-bar"]}>
+      <div className={styles["page-nav__contact-bar__info-wrap"]}>
+        <FiPhone className={styles["page-nav__contact-bar__phone-icon"]} />
+        <p className={styles["page-nav__contact-bar__info"]}><a href="tel:+16045392510">(604)-539-2510</a></p>
+      </div>
+    </div>
     <div className={[styles["page-nav"], styles["page-nav--small"]].join(" ")}>
+      <Image src={bcriLogo} />
       <MenuRoundedIcon fontSize="large" className={styles["page-nav__burger"]} />
     </div>
+    </>
   ) : null;
 };
 
