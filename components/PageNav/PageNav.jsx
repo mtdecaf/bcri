@@ -46,6 +46,7 @@ const PageNav = () => {
     </div>
   ) : mounted ? (
     <>
+    <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
     <div className={styles["page-nav__contact-bar"]}>
       <div className={styles["page-nav__contact-bar__info-wrap"]}>
         <FiPhone className={styles["page-nav__contact-bar__phone-icon"]} />
@@ -53,10 +54,11 @@ const PageNav = () => {
       </div>
     </div>
     <div className={[styles["page-nav"], styles["page-nav--small"]].join(" ")}>
-      <Image className={styles["page-nav__logo"]} src={bcriLogo} alt="" />
-      <MenuRoundedIcon fontSize="large" onClick={() => handleClick()} className={styles["page-nav__burger"]} />
+      <div className={styles["page-nav__logo-wrap"]}>
+        <Image className={styles["page-nav__logo"]} width="100%" height="40%" objectFit="contain" src={bcriLogo} alt="BCRI logo" />
+      </div>
+      <MenuRoundedIcon className={styles["page-nav__burger"]} fontSize="large" onClick={() => handleClick()} />
     </div>
-    <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   ) : null;
 };

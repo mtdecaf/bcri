@@ -1,5 +1,5 @@
 import { Slide } from "@mui/material";
-import styles from "./PageNav.module.scss";
+import styles from "./BurgerMenu.module.scss";
 
 const BurgerMenu = ({ isOpen, setIsOpen }) => {
   return (
