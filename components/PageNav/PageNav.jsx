@@ -4,12 +4,14 @@ import styles from "./PageNav.module.scss";
 import Image from 'next/image';
 import bcriLogo from '../../public/bcri-logo.png';
 import { FiPhone } from "react-icons/fi";
+import BurgerMenu from "./BurgerMenu";
 
 const PageNav = () => {
   const hasWindow = typeof window !== "undefined";
 
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
   const [mounted, setMounted] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -28,6 +30,10 @@ const PageNav = () => {
       return () => window.removeEventListener("resize", handleResize);
     }
   }, [hasWindow]);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
   console.log(windowWidth);
   return mounted && windowWidth >= 768 ? (
     <div className={[styles["page-nav"], styles["page-nav--large"]].join(" ")}>
@@ -47,9 +53,10 @@ const PageNav = () => {
       </div>
     </div>
     <div className={[styles["page-nav"], styles["page-nav--small"]].join(" ")}>
-      <Image src={bcriLogo} />
-      <MenuRoundedIcon fontSize="large" className={styles["page-nav__burger"]} />
+      <Image className={styles["page-nav__logo"]} src={bcriLogo} alt="" />
+      <MenuRoundedIcon fontSize="large" onClick={() => handleClick()} className={styles["page-nav__burger"]} />
     </div>
+    <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   ) : null;
 };
