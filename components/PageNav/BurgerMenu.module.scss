@@ -1,7 +1,28 @@
+@use "../../styles/global/colors.scss" as *;
+
 .burger-menu {
     background-color: white;
     display: flex;
     height: 100vh;
     position: absolute;
     right: 0;
+    z-index: 100;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 100vw;
+    &__close {
+        color: $dark-blue;
+        position: relative;
+        right: 1rem;
+        top: 2rem;
+    }
+    &__list {
+        width: 100%;
+        height: 60%;
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
 }

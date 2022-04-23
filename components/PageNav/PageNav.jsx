@@ -34,7 +34,6 @@ const PageNav = () => {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-  console.log(windowWidth);
   return mounted && windowWidth >= 768 ? (
     <div className={[styles["page-nav"], styles["page-nav--large"]].join(" ")}>
       <ul className={styles["page-nav__list"]}>

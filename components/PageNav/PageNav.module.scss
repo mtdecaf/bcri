@@ -17,7 +17,7 @@
   &__contact-bar {
     height: 2rem;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     background-color: $dark-blue;
     @include side-padding-mobile;
     @include tablet {
