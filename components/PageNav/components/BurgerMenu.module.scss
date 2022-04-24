@@ -1,15 +1,16 @@
-@use "../../styles/global/colors.scss" as *;
+@use "../../../styles/global/colors.scss" as *;
 
 .burger-menu {
     background-color: white;
     display: flex;
+    width: 100%;
+    max-width: 425px;
     height: 100vh;
     position: absolute;
     right: 0;
     z-index: 100;
     flex-direction: column;
     align-items: flex-end;
-    min-width: 100vw;
     &__close {
         color: $dark-blue;
         position: relative;

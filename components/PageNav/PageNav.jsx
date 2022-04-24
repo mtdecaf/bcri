@@ -5,7 +5,7 @@ import styles from "./PageNav.module.scss";
 import Image from 'next/image';
 import bcriLogo from '../../public/bcri-logo.png';
 import { FiPhone } from "react-icons/fi";
-import BurgerMenu from "./BurgerMenu";
+import BurgerMenu from "./components/BurgerMenu";
 
 const PageNav = () => {
   const hasWindow = typeof window !== "undefined";
