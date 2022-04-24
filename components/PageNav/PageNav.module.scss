@@ -5,15 +5,22 @@
   width: 100vw;
   display: flex;
   align-items: center;
-  @include side-padding-mobile;
-  @include tablet {
-    @include side-padding-tablet;
-  }
+  
   &--small {
     justify-content: space-between;
     align-items: center;
     height: 3rem;
+    @include side-padding-mobile;
+    @include tablet {
+      @include side-padding-tablet;
+    }
   }
+
+  &--large {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   &__contact-bar {
     height: 2rem;
     display: flex;
@@ -23,47 +30,90 @@
     @include tablet {
       @include side-padding-tablet;
     }
-    &__info{
-      font-weight: 600;
-      &-wrap {
-        display: flex;
-        align-items: center;
-        color: white;
-        gap: 0.5rem;
+    &--large {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      @include side-padding-mobile;
+      @include tablet {
+        @include side-padding-tablet;
       }
+    }
+    &__wrap {
+      width: 80%;
+      height: 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-info{
+      display: flex;
     }
   }
   &__right-wrap{
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
   }
-  &__contact-button {
+  &__contact-phone {
     &__wrap {
       background-color: $light-blue;
-    display: flex;
-    align-items: center;
-    padding: 0.3rem 0.75rem;
-    border-radius: 5px;
-    justify-self: flex-end;
-    color: white;
-    gap: 0.5rem;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: 5px;
+      color: white;
+      gap: 0.5rem;
+      &--small {
+        color: white;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        gap: 0.5rem;
+      }
     }
   }
-  &--large {
-    justify-content: center;
-    height: 3.5rem;
+
+  &__contact-email {
+    &__wrap {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: 5px;
+      justify-self: flex-end;
+      color: $dark-blue;
+      gap: 0.5rem;
+      position: relative;
+      right: -0.75rem;
+    }
   }
+
   &__list {
     display: flex;
-    width: 80%;
-    list-style: none;
     justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 2.5rem;
+    list-style: none;
+    &-wrap {
+      background-color: $light-grey;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      @include side-padding-mobile;
+      @include tablet {
+        @include side-padding-tablet;
+      }
+    }
   }
+
   &__button {
     color: $dark-blue;
     font-size: 1.5rem;
     font-weight: 600;
   }
+  
   &__burger {
     color: $dark-blue;
     cursor: pointer;
