@@ -23,9 +23,30 @@
     @include tablet {
       @include side-padding-tablet;
     }
-    &__info-wrap {
-      display: flex;
-      align-items: center;
+    &__info{
+      font-weight: 600;
+      &-wrap {
+        display: flex;
+        align-items: center;
+        color: white;
+        gap: 0.5rem;
+      }
+    }
+  }
+  &__right-wrap{
+    display: flex;
+    gap: 4rem;
+  }
+  &__contact-button {
+    &__wrap {
+      background-color: $light-blue;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0.75rem;
+    border-radius: 5px;
+    justify-self: flex-end;
+    color: white;
+    gap: 0.5rem;
     }
   }
   &--large {
@@ -33,12 +54,16 @@
     height: 3.5rem;
   }
   &__list {
+    display: flex;
     width: 80%;
     list-style: none;
-    display: flex;
     justify-content: space-between;
   }
-
+  &__button {
+    color: $dark-blue;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
   &__burger {
     color: $dark-blue;
     cursor: pointer;

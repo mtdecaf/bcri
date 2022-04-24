@@ -25,4 +25,14 @@
         align-items: center;
         justify-content: space-around;
     }
+    &__button {
+        color: $dark-blue;
+        font-size: 1.75rem;
+        font-weight: bold;
+    }
+    &__divider {
+        width: 70%;
+        height: 2px;
+        background-color: $dark-blue;
+    }
 }
