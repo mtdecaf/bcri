@@ -1,5 +1,6 @@
 @use "../../styles/global/colors.scss" as *;
 @use "../../styles/global/mixins.scss" as *;
+@use "../../styles/global/variables.scss" as *;
 
 .page-nav {
   width: 100vw;
@@ -15,7 +16,7 @@
       @include side-padding-tablet;
     }
   }
-
+  
   &--large {
     flex-direction: column;
     justify-content: space-between;
@@ -38,6 +39,9 @@
       @include tablet {
         @include side-padding-tablet;
       }
+      @include desktop {
+        padding: 0;
+      }
     }
     &__wrap {
       width: 80%;
@@ -45,6 +49,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include desktop {
+        max-width: $desktop;
+        padding: 0;
+      }
     }
     &-info{
       display: flex;
@@ -96,6 +104,9 @@
     width: 80%;
     height: 2.5rem;
     list-style: none;
+    @include desktop {
+      max-width: $desktop;
+    }
     &-wrap {
       background-color: $light-grey;
       display: flex;
@@ -104,6 +115,9 @@
       @include side-padding-mobile;
       @include tablet {
         @include side-padding-tablet;
+      }
+      @include desktop {
+        padding: 0;
       }
     }
   }
