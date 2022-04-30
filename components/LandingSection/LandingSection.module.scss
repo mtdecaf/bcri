@@ -1,1 +1,40 @@
 @use "styles/global/colors.scss" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.landing-section {
+    background-color: rgba(4, 52, 84, 0.4);
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include side-padding-mobile;
+    @include tablet {
+      @include side-padding-tablet;
+    }
+
+    &__title {
+        font-size: 2rem;
+        color: white;
+    }
+    
+    &__button {
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        color: white;
+        width: 8.5rem;
+        white-space: nowrap;
+        &-wrap {
+            display: flex;
+            gap: 1rem;
+        }
+        &--primary {
+            background-color: $dark-blue;
+        }
+        &--sub {
+            background-color: transparent;
+            border: 3px solid white;
+        }
+    }
+}
