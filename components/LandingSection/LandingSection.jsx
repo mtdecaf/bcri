@@ -3,7 +3,7 @@ import styles from "./LandingSection.module.scss";
 const LandingSection = () => {
     return (
         <div className="landing-section">
-            home
+            <h1></h1>
         </div>
     )
 }
