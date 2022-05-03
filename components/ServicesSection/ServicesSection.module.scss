@@ -7,6 +7,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include tablet {
+        @include side-padding-tablet;
+    }
     &__title {
         &-wrap {
             height: 3rem;
@@ -20,15 +23,15 @@
         flex-direction: column;
         align-items: center;
         gap: 1.25rem;
+        margin: 1rem 0;
+        width: 100%;
         @include tablet {
-            @include side-padding-tablet;
-            flex-direction: row;
-            justify-content: space-between;
-            gap: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+            grid-gap: 1.25rem;
             flex-wrap: wrap;
         }
         @include desktop {
-            width: 100%;
             max-width: $desktop;
             padding: 0;
         }
