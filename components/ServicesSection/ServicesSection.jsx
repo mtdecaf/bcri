@@ -21,7 +21,7 @@ const servicesData = [
 
 const ServicesSection = () => {
     return (
-        <section className={cx("service-section")}>
+        <section className={cx("service-section")} id="services-section">
             <div className={cx("service-section__title-wrap")}>
                 <h1 className={cx("service-section__title")}>Our Services</h1>
             </div>

@@ -3,9 +3,17 @@ import LandingSection from "../components/LandingSection/LandingSection";
 import ServicesSection from "../components/ServicesSection/ServicesSection";
 
 export default function Home() {
+  const scrollTo = (e, section) => {
+    e.preventDefault();
+    const element = document.getElementById(section);
+    element.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth'
+    })
+  };
   return (
     <div className={styles.container}>
-      <LandingSection />
+      <LandingSection scrollTo={scrollTo} />
       <ServicesSection />
     </div>
   );

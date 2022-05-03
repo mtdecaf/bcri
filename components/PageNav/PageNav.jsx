@@ -38,6 +38,16 @@ const PageNav = () => {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+
+  const scrollTo = (e, section) => {
+    e.preventDefault();
+    const element = document.getElementById(section);
+    element.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth'
+    })
+  };
+
   return mounted && windowWidth >= 768 ? (
     <div className = {cx("page-nav", "page-nav--large")}>
       <div className={cx("page-nav__contact-bar--large")}>
@@ -59,7 +69,7 @@ const PageNav = () => {
       </div>
       <div className={cx("page-nav__list-wrap")}>
         <div className={cx("page-nav__list")}>
-          <a className={cx("page-nav__button", "page-nav__service")} href="">SERVICE</a>
+          <a className={cx("page-nav__button", "page-nav__service")} href="" onClick={(e) => scrollTo(e, "services-section")}>SERVICE</a>
           <a className={cx("page-nav__button", "page-nav__testimonial")} href="">TESTIMONIALS</a>
           <a className={cx("page-nav__button", "page-nav__company")} href="">COMPANY</a>
           <a className={cx("page-nav__button", "page-nav__contact")} href="">CONTACT US</a>
