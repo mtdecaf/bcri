@@ -13,6 +13,10 @@ const servicesData = [
         title: "Roof Inspections",
         description: "We inspect all types of roofs, including metal, wood, and concrete. We also inspect all types of roofs, including metal, wood, and concrete.",
     },
+    {
+        title: "Roof Inspections",
+        description: "We inspect all types of roofs, including metal, wood, and concrete. We also inspect all types of roofs, including metal, wood, and concrete.",
+    },
 ];
 
 const ServicesSection = () => {
@@ -21,7 +25,17 @@ const ServicesSection = () => {
             <div className={cx("service-section__title-wrap")}>
                 <h1 className={cx("service-section__title")}>Our Services</h1>
             </div>
-            <ServicesCard />
+            <div className={cx("service-section__cards-wrap")}>
+                {servicesData.map((service, index) => {
+                    return (
+                        <ServicesCard
+                            key={index}
+                            title={service.title}
+                            description={service.description}
+                        />
+                    );
+                })}
+            </div>
         </section>
     )
 }

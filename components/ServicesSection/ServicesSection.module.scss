@@ -4,12 +4,33 @@
 
 .service-section {
     @include side-padding-mobile;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__title {
         &-wrap {
             height: 3rem;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+    }
+    &__cards-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        @include tablet {
+            @include side-padding-tablet;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        @include desktop {
+            width: 100%;
+            max-width: $desktop;
+            padding: 0;
         }
     }
 }
