@@ -14,11 +14,11 @@ const ServicesCard = (props) => {
     return (
         <div className={cx("services-card__outter-wrap")}>
             <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-                <div className={cx("services-card__front-wrap", "services-card")} onClick={handleClick}>
+                <div className={cx("services-card__front-wrap", "services-card")} onClick={handleClick} style={{ borderRadius: isFlipped ? "0 25px" : "25px 0" }}>
                     <img className={cx("services-card__icon")} src="https://via.placeholder.com/150" alt=""/>
                     <h3 className={cx("services-card__title")}>{props.title}</h3>
                 </div>
-                <div className={cx("services-card__back-wrap", "services-card")} onClick={handleClick}>
+                <div className={cx("services-card__back-wrap", "services-card")} onClick={handleClick} style={{ borderRadius: isFlipped ? "0 25px" : "25px 0" }}>
                     <p className={cx("services-card__description")}>{props.description}</p>
                 </div>
             </ReactCardFlip>
