@@ -1,0 +1,13 @@
+@use "styles/global/colors" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.services-card {
+    border: 5px solid rgba(4, 52, 84, 0.4);
+    border-radius: 20px 0;
+    aspect-ratio: 1;
+    &__outter-wrap {
+        width: 100%;
+        max-width: 320px;
+    }
+}

@@ -30,7 +30,7 @@ const LandingSection = () => {
     }, [hasWindow]);
 
     return mounted && (
-        <div className={cx("landing-section")} id="landing-section">
+        <section className={cx("landing-section")} id="landing-section">
             <div className={cx("landing-section__inner-wrap")}>
                 {windowWidth >= 768 ?
                     <h1 className={cx("landing-section__title")}>The Roof Inspections <br></br> You Can Count On</h1>
@@ -41,7 +41,7 @@ const LandingSection = () => {
                     <button className={cx("landing-section__button", "landing-section__button--sub", "landing-section__button-service")} href="">OUR SERVICES</button>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

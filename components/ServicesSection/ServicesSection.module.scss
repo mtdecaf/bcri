@@ -1,0 +1,15 @@
+@use "styles/global/colors" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.service-section {
+    @include side-padding-mobile;
+    &__title {
+        &-wrap {
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
