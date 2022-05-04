@@ -3,10 +3,12 @@
 @use "styles/global/variables.scss" as *;
 
 .page-nav {
+  background-color: white;
   width: 100vw;
   display: flex;
   align-items: center;
   position: sticky;
+  top: 0;
 
   &--small {
     justify-content: space-between;

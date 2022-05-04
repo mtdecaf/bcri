@@ -10,7 +10,6 @@
     justify-content: center;
     @include side-padding-mobile;
     @include tablet {
-        // gap: 3rem;
         height: calc(100vh - 6.5rem);
         align-items: center;
         @include side-padding-tablet;
