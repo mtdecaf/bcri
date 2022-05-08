@@ -1,0 +1,25 @@
+.testimonial-card {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 2rem 1.25rem;
+    &__rating {
+        margin-bottom: 1rem;
+    }
+    &__content {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        &-wrap {
+        }
+    }
+    &__name {
+        font-size: 1.25rem;
+        letter-spacing: 0.2rem;
+        &-wrap {
+            margin: 1.4rem 0 1rem;
+        }
+    }
+    &__company {
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+    }
+}
