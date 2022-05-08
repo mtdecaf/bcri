@@ -16,8 +16,8 @@ const TestimonialCard = (props) => {
             <div className={cx("testimonial-card__name-wrap")}>
                 <p className={cx("testimonial-card__name")}>{testimonialData.name.toUpperCase()}</p>
             </div>
-            <div className={cx("testimonial-card__company")}>
-                {testimonialData.company}
+            <div className={cx("testimonial-card__company-wrap")}>
+                <p className={cx("testimonial-card__company")}>{testimonialData.company}</p>
             </div>
         </div>
     );
