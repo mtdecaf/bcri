@@ -30,6 +30,7 @@
                 justify-content: flex-start;
             }
             @include desktop {
+                height: 4.5rem;
                 max-width: $desktop;
             }
         }

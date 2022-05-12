@@ -47,6 +47,9 @@ const PageNav = () => {
         block: 'start',
         behavior: 'smooth'
     })
+    if (isOpen) {
+      setIsOpen(false);
+    }
   };
 
   return mounted && windowWidth >= 768 ? (
@@ -71,7 +74,7 @@ const PageNav = () => {
       <div className={cx("page-nav__list-wrap")}>
         <div className={cx("page-nav__list")}>
           <a className={cx("page-nav__button", "page-nav__service")} href="" onClick={(e) => scrollTo(e, "services-section")}>SERVICE</a>
-          <a className={cx("page-nav__button", "page-nav__testimonial")} href="">TESTIMONIALS</a>
+          <a className={cx("page-nav__button", "page-nav__testimonial")} href="" onClick={(e) => scrollTo(e, "testimonial-section")}>TESTIMONIALS</a>
           <a className={cx("page-nav__button", "page-nav__company")} href="">COMPANY</a>
           <a className={cx("page-nav__button", "page-nav__contact")} href="">CONTACT US</a>
         </div>
@@ -79,7 +82,7 @@ const PageNav = () => {
     </div>
   ) : mounted ? (
     <>
-    <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+    <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} scrollTo={scrollTo} />
     {windowWidth <= 425 ? 
     <div className={cx("page-nav__contact-bar")}>
       <div className={cx("page-nav__contact-phone__wrap--small")}>
