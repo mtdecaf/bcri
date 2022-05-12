@@ -16,6 +16,7 @@ const PageNav = () => {
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  
   useEffect(() => {
     setMounted(true);
   }, []);

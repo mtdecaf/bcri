@@ -7,6 +7,9 @@
     border-radius: 5px;
     padding: 2rem 1.25rem;
     width: calc(100% - 2rem);
+    @include tablet {
+        width: 100%;
+    }
     &__rating {
         margin-bottom: 1rem;
     }
