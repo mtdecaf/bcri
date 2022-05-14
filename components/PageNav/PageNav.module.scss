@@ -14,7 +14,7 @@
   &--small {
     justify-content: space-between;
     align-items: center;
-    height: 3rem;
+    height: 3.5rem;
     @include side-padding-mobile;
     @include tablet {
       @include side-padding-tablet;
@@ -68,15 +68,19 @@
 
   &__right-wrap{
     display: flex;
-    gap: 2rem;
+    gap: 0.5rem;
   }
 
   &__contact-phone {
+    font-size: 0.85rem;
+    font-weight: 600;
+    @include tablet {
+      font-size: 1rem;
+    }
     &__wrap {
       background-color: $light-blue;
       display: flex;
       align-items: center;
-      font-weight: 600;
       padding: 0.3rem 0.75rem;
       border-radius: 5px;
       color: white;
@@ -112,7 +116,7 @@
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    height: 2.5rem;
+    padding: 10px 0;
     list-style: none;
     @include desktop {
       max-width: $desktop;
@@ -123,6 +127,7 @@
       display: flex;
       justify-content: center;
       width: 100%;
+      overflow: hidden;
       @include side-padding-mobile;
       @include tablet {
         @include side-padding-tablet;

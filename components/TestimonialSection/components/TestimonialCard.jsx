@@ -6,7 +6,6 @@ let cx = classNames.bind(styles);
 
 const TestimonialCard = (props) => {
     const { testimonialData } = props;
-    console.log(testimonialData);
     return (
         <div className={cx("testimonial-card")}>
             <Rating className={cx("testimonial-card__rating")} value={testimonialData.rating} precision={0.5} readOnly />
