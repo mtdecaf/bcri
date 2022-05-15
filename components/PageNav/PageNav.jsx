@@ -70,10 +70,26 @@ const PageNav = () => {
     }
   }, [hasWindow]);
 
+  // large nav transition styles
   const navBarStyle = {
-    padding: isScrolled && "1rem 0",
-    maxHeight: isScrolled ? "6rem" : "4rem",
+    padding: isScrolled && "1.5rem 0",
+    maxHeight: isScrolled ? "7rem" : "4rem",
     transition: "all 0.75s",
+  }
+
+  const navBarLogoStyle = {
+    maxWidth: isScrolled ? "7.5rem" : "7rem",
+    transition: "all 0.75s",
+  }
+
+  const navBarPhoneWrapStyle = {
+    padding: isScrolled ? "0.6rem 1rem" : "0.3rem 0.75rem",
+    transition: "padding 0.75s",
+  }
+
+  const navBarfontStyle = {
+    fontSize: isScrolled ? "1.2rem" : "1rem",
+    transition: "font-size 0.75s",
   }
 
   const navListStyle = {
@@ -85,17 +101,17 @@ const PageNav = () => {
     <div className = {cx("page-nav", "page-nav--large")}>
       <div className={cx("page-nav__contact-bar--large")} style={navBarStyle}>
         <div className={cx("page-nav__contact-bar__wrap")}>
-          <div className={cx("page-nav__logo-wrap")}>
-            <Image className={cx("page-nav__logo")} width="100%" height="40%" objectFit="contain" src={bcriLogo} alt="BCRI logo" />
+          <div className={cx("page-nav__logo-wrap")} style={navBarLogoStyle}>
+            <Image className={cx("page-nav__logo")} layout="responsive" src={bcriLogo} alt="BCRI logo" />
           </div>
           <div className={cx("page-nav__contact-bar-info")}>
-            <div className={cx("page-nav__contact-phone__wrap")}>
+            <div className={cx("page-nav__contact-phone__wrap")} style={navBarPhoneWrapStyle}>
               <FiPhone className={cx("page-nav__contact-phone-icon")} />
-              <p className={cx("page-nav__contact-phone")}><a href="tel:+16045392510">(604)-539-2510</a></p>
+              <a href="tel:+16045392510" className={cx("page-nav__contact-phone")} style={navBarfontStyle}>(604)-539-2510</a>
             </div>
             <div className={cx("page-nav__contact-email__wrap")}>
               <EmailOutlinedIcon className={cx("page-nav__contact-email-icon")} />
-              <p className={cx("page-nav__contact-email")}><a href="mailto:info@bcroofinspections.com">info@bcroofinspections.com</a></p>
+              <a href="mailto:info@bcroofinspections.com" className={cx("page-nav__contact-email")} style={navBarfontStyle}>info@bcroofinspections.com</a>
             </div>
           </div>
         </div>
@@ -113,8 +129,8 @@ const PageNav = () => {
     <>
     <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} scrollTo={scrollTo} />
     <div className={cx("page-nav", "page-nav--small")}>
-      <div className={cx("page-nav__logo-wrap")}>
-        <Image className={cx("page-nav__logo")} width="100%" height="40%" objectFit="contain" src={bcriLogo} alt="BCRI logo" />
+      <div className={cx("page-nav__logo-wrap")} style={{width:"6rem"}}>
+        <Image className={cx("page-nav__logo")} layout="responsive" src={bcriLogo} alt="BCRI logo" />
       </div>
       <div className={cx("page-nav__right-wrap")}>
         <div className={cx("page-nav__contact-phone__wrap")}>
