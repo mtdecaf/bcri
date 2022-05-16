@@ -23,18 +23,26 @@
         }
     }
     &__logos-wrap {
+        @include side-padding-mobile;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
         @include tablet {
+            @include side-padding-tablet;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-gap: 1rem;
+        }
+        @include desktop {
+            padding: 0;
+            max-width: $desktop;
+            grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+            grid-gap: 1.5rem;
         }
     }
     &__logo {
         &-container {
-            width: 150px;
-            @include tablet {
-                width: 180px;
-            }
+            min-width: 125px;
         }
     }
 }
