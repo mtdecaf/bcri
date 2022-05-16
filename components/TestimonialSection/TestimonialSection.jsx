@@ -28,7 +28,7 @@ const TestimonialSection = () => {
     return(
         <section className={cx("testimonial-section")} id="testimonial-section">
             <div className={cx("testimonial-section__title-wrap")}>
-                <h1 className={cx("testimonial-section__title")}>Why People Choose Us</h1>
+                <h2 className={cx("testimonial-section__title")}>Why People Choose Us</h2>
             </div>
             <div className={cx("testimonial-section__cards-wrap")}>
                 {testimonialData.map((data, key) => <TestimonialCard testimonialData={data} key={key} />)}

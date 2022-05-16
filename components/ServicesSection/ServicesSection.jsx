@@ -23,7 +23,7 @@ const ServicesSection = () => {
     return (
         <section className={cx("service-section")} id="services-section">
             <div className={cx("service-section__title-wrap")}>
-                <h1 className={cx("service-section__title")}>Our Services</h1>
+                <h2 className={cx("service-section__title")}>Our Services</h2>
             </div>
             <div className={cx("service-section__cards-wrap")}>
                 {servicesData.map((service, index) => {

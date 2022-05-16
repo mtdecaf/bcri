@@ -1,0 +1,40 @@
+@use "styles/global/colors.scss" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.customers-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+        &-wrap {
+            @include side-padding-mobile;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            @include tablet {
+                @include side-padding-tablet;
+                justify-content: flex-start;
+            }
+            @include desktop {
+                max-width: $desktop;
+                padding: 0;
+            }
+        }
+    }
+    &__logos-wrap {
+        @include tablet {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+    }
+    &__logo {
+        &-container {
+            width: 150px;
+            @include tablet {
+                width: 180px;
+            }
+        }
+    }
+}

@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "colors" as *;
+@use "mixins" as *;
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 a {
@@ -11,4 +14,11 @@ a {
   margin: 0;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth !important;
+}
+h2 {
+  color: $dark-blue;
+  font-size: 1.5rem;
+  @include desktop {
+    font-size: 2rem;
+  }
 }
