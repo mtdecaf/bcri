@@ -3,7 +3,7 @@
 @use "styles/global/variables.scss" as *;
 
 .testimonial-card {
-    background-color: #f8f8f8;
+    background-color: $off-white;
     border-radius: 5px;
     padding: 2rem 1.25rem;
     width: calc(100% - 2rem);

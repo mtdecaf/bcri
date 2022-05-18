@@ -3,29 +3,44 @@
 @use "styles/global/variables.scss" as *;
 
 .services-card {
-    border: 5px solid rgba(4, 52, 84, 0.4);
-    box-shadow: rgba(4, 52, 84, 0.2) -5px 5px, rgba(4, 52, 84, 0.1) -10px 10px;
+    border-radius: 5px;
+    width: calc(100% - 2rem);
     aspect-ratio: 1;
     padding: 1rem;
-    
-    &__outter-wrap {
-        width: 100%;
-        max-width: 325px;
-        margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    &__icon {
+        padding: 1.25rem;
+        &-wrap {
+            background-color: $off-white;
+            border-radius: 50px;
+            height: 6.5rem;
+            width: 6.5rem;
+            margin-bottom: 1rem;
+        }
     }
-
-    &__front-wrap {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1.25rem;
+    &__title {
+        color: $primary-blue;
+        font-size: 1.5rem;
+        letter-spacing: 0.15rem;
+        font-weight: 600;
+        &-wrap {
+            height: 2.5rem;
+        }
     }
-
     &__description {
         color: $primary-blue;
         font-size: 1.25rem;
-        line-height: 1.5rem;
+        line-height: 1.25rem;
+    }
+    &__button {
+        color: $primary-blue;
+        font-size: 1rem;
         font-weight: 600;
+        &-wrap {
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+        }
     }
 }

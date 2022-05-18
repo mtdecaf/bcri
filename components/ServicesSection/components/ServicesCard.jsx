@@ -1,27 +1,28 @@
-import { useState } from 'react';
-import ReactCardFlip from 'react-card-flip';
+import { IoHome, IoDocumentText } from "react-icons/io5";
+import { RiPencilRuler2Fill } from "react-icons/ri";
 
 import styles from "./ServicesCard.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const ServicesCard = (props) => {
-    const [isFlipped, setIsFlipped] = useState(false);
-    const handleClick = () => {
-        setIsFlipped(!isFlipped);
-    };
 
     return (
-        <div className={cx("services-card__outter-wrap")}>
-            <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-                <div className={cx("services-card__front-wrap", "services-card")} onClick={handleClick} style={{ borderRadius: isFlipped ? "0 25px" : "25px 0" }}>
-                    <img className={cx("services-card__icon")} src="https://via.placeholder.com/150" alt=""/>
-                    <h3 className={cx("services-card__title")}>{props.title}</h3>
-                </div>
-                <div className={cx("services-card__back-wrap", "services-card")} onClick={handleClick} style={{ borderRadius: isFlipped ? "0 25px" : "25px 0" }}>
-                    <p className={cx("services-card__description")}>{props.description}</p>
-                </div>
-            </ReactCardFlip>
+        <div className={cx("services-card")}>
+            <div className={cx("services-card__icon-wrap")}>
+                {props.icon === "IoHome" && <IoHome className={cx("services-card__icon")} size={104} color={"#043454"} />}
+                {props.icon === "IoDocumentText" && <IoDocumentText className={cx("services-card__icon")} size={104} color={"#043454"} />}
+                {props.icon === "RiPencilRuler2Fill" && <RiPencilRuler2Fill className={cx("services-card__icon")} size={104} color={"#043454"} />}
+            </div>
+            <div  className={cx("services-card__title-wrap")}>
+                <p className={cx("services-card__title")}>{props.title}</p>
+            </div>
+            <div className={cx("services-card__description-wrap")}>
+                <p className={cx("services-card__description")}>{props.description}</p>
+            </div>
+            <div className={cx("services-card__button-wrap")}>
+                <a href="" className={cx("services-card__button")}>Learn More &gt;</a>
+            </div>
         </div>
     )
 }
