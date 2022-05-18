@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: flex-end;
     &__close {
-        color: $dark-blue;
+        color: $primary-blue;
         position: relative;
         right: 1rem;
         top: 2rem;
@@ -27,7 +27,7 @@
         justify-content: space-around;
     }
     &__button {
-        color: $dark-blue;
+        color: $primary-blue;
         font-size: 1.75rem;
         font-weight: bold;
     }
@@ -35,6 +35,6 @@
         width: 70%;
         max-width: 17.5rem;
         height: 2px;
-        background-color: $dark-blue;
+        background-color: $primary-blue;
     }
 }

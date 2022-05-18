@@ -30,7 +30,7 @@
     height: 2rem;
     display: flex;
     justify-content: flex-end;
-    background-color: $dark-blue;
+    background-color: $primary-blue;
     @include side-padding-mobile;
     @include tablet {
       @include side-padding-tablet;
@@ -108,7 +108,7 @@
       padding: 0.3rem 0.75rem;
       border-radius: 5px;
       justify-self: flex-end;
-      color: $dark-blue;
+      color: $primary-blue;
       gap: 0.5rem;
       position: relative;
       right: -0.75rem;
@@ -143,7 +143,7 @@
   }
 
   &__button {
-    color: $dark-blue;
+    color: $primary-blue;
     font-size: 1.25rem;
     font-weight: 600;
     @include desktop {
@@ -152,7 +152,7 @@
   }
   
   &__burger {
-    color: $dark-blue;
+    color: $primary-blue;
     cursor: pointer;
     position: relative;
     right: -0.25rem;

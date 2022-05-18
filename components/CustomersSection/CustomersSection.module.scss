@@ -10,10 +10,13 @@
         &-wrap {
             @include side-padding-mobile;
             width: 100%;
+            height: 3rem;
             display: flex;
             justify-content: center;
+            align-items: center;
             @include tablet {
                 @include side-padding-tablet;
+                height: 3.5rem;
                 justify-content: flex-start;
             }
             @include desktop {
@@ -29,6 +32,7 @@
         gap: 0.5rem;
         @include tablet {
             @include side-padding-tablet;
+            width: 100%;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             grid-gap: 1rem;
@@ -43,6 +47,7 @@
     &__logo {
         &-container {
             min-width: 125px;
+            max-width: 175px;
         }
     }
 }
