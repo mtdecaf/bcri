@@ -21,13 +21,12 @@ const CustomersSection = () => {
       <div className={cx("customers-section__logos-wrap")}>
         {customers.map((customer, index) => {
           return (
-            <div className={cx("customers-section__logo-container")}>
+            <div className={cx("customers-section__logo-container")} key={index}>
               <Image
                 className={cx(
                   "customers-section__logo",
                   `customers-section__logo--${customer}`
                 )}
-                key={index}
                 src={`/customers-logo/${customer}.svg`}
                 alt={customer}
                 width={100}

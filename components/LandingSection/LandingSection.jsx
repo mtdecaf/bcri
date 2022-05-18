@@ -18,15 +18,15 @@ const LandingSection = (porps) => {
         const width = hasWindow ? window.innerWidth : null;
         return width;
       }
-      useEffect(() => {
-        if (hasWindow) {
-          function handleResize() {
-            setWindowWidth(getWindowWidth());
-          }
-    
-          window.addEventListener("resize", handleResize);
-          return () => window.removeEventListener("resize", handleResize);
+    useEffect(() => {
+      if (hasWindow) {
+        function handleResize() {
+          setWindowWidth(getWindowWidth());
         }
+    
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }
     }, [hasWindow]);
 
     return mounted && (
