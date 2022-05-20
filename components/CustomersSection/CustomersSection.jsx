@@ -5,13 +5,23 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const CustomersSection = () => {
-  const customers = [
-    "customer1",
-    "customer2",
-    "customer3",
-    "customer4",
-    "customer5",
-  ];
+  const customersNum = 29;
+  const customers = [];
+  for (let i = 1; i <= customersNum; i++) {
+    console.log("hi")
+    customers.push(
+      <div className={cx("customers-section__logo-container")} key={i}>
+        <Image 
+          className={cx("customers-section__logo")}
+          src={`/customers-logo/customer${i}.png`}
+          alt={`customer${i}`}
+          width="100%"
+          height="48px"
+        />
+      </div>
+    );
+  }
+
   return (
     <div className={cx("customers-section")}>
       <div className={cx("customers-section__title-wrap")}>
@@ -19,23 +29,7 @@ const CustomersSection = () => {
       </div>
       {/* create an image for every file in customers-logo folder */}
       <div className={cx("customers-section__logos-wrap")}>
-        {customers.map((customer, index) => {
-          return (
-            <div className={cx("customers-section__logo-container")} key={index}>
-              <Image
-                className={cx(
-                  "customers-section__logo",
-                  `customers-section__logo--${customer}`
-                )}
-                src={`/customers-logo/${customer}.svg`}
-                alt={customer}
-                width={100}
-                height={100}
-                layout="responsive"
-              />
-            </div>
-          );
-        })}
+        {customers}
       </div>
     </div>
   );

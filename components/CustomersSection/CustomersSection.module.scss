@@ -31,23 +31,22 @@
         flex-direction: column;
         gap: 0.5rem;
         @include tablet {
-            @include side-padding-tablet;
             width: 100%;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            grid-gap: 1rem;
+            @include side-padding-tablet;
+            height: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
         @include desktop {
             padding: 0;
             max-width: $desktop;
-            grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
-            grid-gap: 1.5rem;
         }
     }
     &__logo {
+        // width: 100%;
+        filter: grayscale(100%);
         &-container {
-            min-width: 125px;
-            max-width: 175px;
+            // height: 3rem;
         }
     }
 }
