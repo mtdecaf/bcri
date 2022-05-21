@@ -5,7 +5,7 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const CustomersSection = () => {
-  const customersNum = 29;
+  const customersNum = 41;
   const customers = [];
   const customersRef = useRef(null);
 
