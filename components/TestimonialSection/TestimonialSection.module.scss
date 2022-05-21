@@ -4,7 +4,8 @@
 
 .testimonial-section{
     @include side-padding-mobile;
-    background-color: $primary-blue;
+    background-image: url("/svg-assets/testimonials_background.svg");
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
