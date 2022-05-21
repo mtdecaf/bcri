@@ -31,7 +31,7 @@ const TestimonialSection = () => {
                 <h2 className={cx("testimonial-section__title")}>Why People Choose Us</h2>
             </div>
             <div className={cx("testimonial-section__cards-wrap")}>
-                {testimonialData.map((data, key) => <TestimonialCard testimonialData={data} key={key} />)}
+                {testimonialData.map((data, key) => <TestimonialCard testimonialData={data} key={key} index={key} />)}
             </div>
         </section>
     )

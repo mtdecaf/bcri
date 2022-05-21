@@ -8,7 +8,10 @@
     padding: 2rem 1.25rem;
     width: calc(100% - 2rem);
     @include tablet {
-        width: 100%;
+        width: 65%;
+    }
+    &-wrap {
+        display: flex;
     }
     &__rating {
         margin-bottom: 1rem;

@@ -39,9 +39,7 @@
         margin: 2.375rem 0 3rem 0;
         width: 100%;
         @include tablet {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            flex-wrap: wrap;
+            display: flex;
             @include side-padding-tablet;
         }
         @include desktop {
