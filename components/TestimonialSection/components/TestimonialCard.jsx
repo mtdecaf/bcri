@@ -5,7 +5,6 @@ import classNames from 'classnames/bind';
 let cx = classNames.bind(styles);
 
 const TestimonialCard = ({ testimonialData, index }) => {
-    console.log(index)
     return (
         <div className={cx("testimonial-card-wrap")} style={{ justifyContent: index === 0 || index % 2 ===0 ? "flex-start" : "flex-end" }}>
             <div className={cx("testimonial-card")}>

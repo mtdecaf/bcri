@@ -3,14 +3,14 @@
 @use "styles/global/variables.scss" as *;
 
 .landing-section {
-    background-color: rgba(4, 52, 84, 0.4);
+    // background-color: rgba(4, 52, 84, 0.4);
     height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     @include side-padding-mobile;
     @include tablet {
-        height: calc(100vh - 6.5rem);
+        height: calc(100vh - 7rem);
         align-items: center;
         @include side-padding-tablet;
     }
@@ -69,7 +69,22 @@
         }
         &--sub {
             background-color: transparent;
-            border: 3px solid white;
+            border: 3px solid $primary-blue;
         }
+    }
+    &__left-overlay, &__right-overlay {
+        background-color: rgba(4, 52, 84, 0.4);
+        position: absolute;
+        top: 7rem;
+        width: 50%;
+        height: calc(100% - 6rem);
+    }
+    &__left-overlay {
+        clip-path: polygon(0 0, 100% 0, 43% 100%, 0% 100%);
+            left: 0;
+    }
+    &__right-overlay {
+        clip-path: polygon(57% 0, 100% 0, 100% 100%, 0% 100%);
+            right: 0;
     }
 }
