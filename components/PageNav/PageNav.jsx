@@ -24,6 +24,7 @@ const PageNav = () => {
 
   function getWindowWidth() {
     const width = hasWindow ? window.innerWidth : null;
+    console.log(width);
     return width;
   }
 

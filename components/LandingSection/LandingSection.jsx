@@ -29,6 +29,16 @@ const LandingSection = (porps) => {
     }
   }, [hasWindow]);
 
+  const leftOverlayStyle = {
+    transform: mounted ? "translateX(-60%)" : "translateX(0)",
+    transition: "transform 0.5s",
+  };
+
+  const rightOverlayStyle = {
+    transform: mounted ? "translateX(60%)" : "translateX(0)",
+    transition: "transform 0.5s",
+  };
+
   return (
     mounted && (
       <section className={cx("landing-section")} id="landing-section">
@@ -65,10 +75,10 @@ const LandingSection = (porps) => {
             </button>
           </div>
         </div>
-        <div className={cx("landing-section__left-overlay-wrap")}>
-          <img className={cx("landing-section__left-overlay")} src="" alt="" />
+        <div className={cx("landing-section__left-overlay-wrap")} style={leftOverlayStyle}>
+          <img className={cx("landing-section__left-overlay")}  src="" alt="" />
         </div>
-        <div className={cx("landing-section__right-overlay-wrap")}>
+        <div className={cx("landing-section__right-overlay-wrap")} style={rightOverlayStyle}>
           <img className={cx("landing-section__right-overlay")} src="" alt="" />
         </div>
       </section>

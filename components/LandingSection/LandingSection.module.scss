@@ -73,18 +73,24 @@
         }
     }
     &__left-overlay, &__right-overlay {
-        background-color: rgba(4, 52, 84, 0.4);
-        position: absolute;
-        top: 7rem;
-        width: 50%;
-        height: calc(100% - 6rem);
+        &-wrap {            
+            background-color: rgba(4, 52, 84, 0.4);
+            position: absolute;
+            top: 7rem;
+            width: 65%;
+            height: calc(100% - 6rem);
+        }
     }
     &__left-overlay {
-        clip-path: polygon(0 0, 100% 0, 43% 100%, 0% 100%);
+        &-wrap {
+            clip-path: polygon(0 0, 100% 0, 43% 100%, 0% 100%);
             left: 0;
+        }
     }
     &__right-overlay {
-        clip-path: polygon(57% 0, 100% 0, 100% 100%, 0% 100%);
+        &-wrap {
+            clip-path: polygon(57% 0, 100% 0, 100% 100%, 0% 100%);
             right: 0;
+        }
     }
 }
