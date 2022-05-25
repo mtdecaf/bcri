@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 
 import styles from "./CustomersSection.module.scss";
 import classNames from "classnames/bind";

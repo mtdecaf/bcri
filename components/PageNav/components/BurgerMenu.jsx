@@ -11,7 +11,7 @@ const BurgerMenu = ({ isOpen, setIsOpen, scrollTo }) => {
       <div className={cx("burger-menu")}>
         <ClearRoundedIcon className={cx("burger-menu__close")} style={{ fontSize: 50 }} onClick={() => setIsOpen(false)} />
         <div className={cx("burger-menu__list")}>
-            <a className={cx("burger-menu__button")} href="" onClick={(e) => scrollTo(e, "services-section")}>SERVICE</a>
+            <a className={cx("burger-menu__button")} href="" onClick={(e) => scrollTo(e, "services-section")}>SERVICES</a>
             <hr className={cx("burger-menu__divider")}/>
             <a className={cx("burger-menu__button")} href="">TESTIMONIALS</a>
             <hr className={cx("burger-menu__divider")}/>

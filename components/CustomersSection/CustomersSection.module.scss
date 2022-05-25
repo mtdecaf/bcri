@@ -32,16 +32,16 @@
         flex-direction: column;
         gap: 0.5rem;
         @include tablet {
-            width: 100%;
             @include side-padding-tablet;
+            width: 100%;
             height: 100%;
+            padding: 1rem 0;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
             row-gap: 1rem;
         }
         @include desktop {
-            padding: 0;
             max-width: $desktop;
         }
     }

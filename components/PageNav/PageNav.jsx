@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import Image from 'next/image';
+import Link from 'next/link';
 import bcriLogo from '../../public/bcri-logo.png';
 import { FiPhone } from "react-icons/fi";
 import BurgerMenu from "./components/BurgerMenu";
@@ -102,7 +103,7 @@ const PageNav = () => {
       <div className={cx("page-nav__contact-bar--large")} style={navBarStyle}>
         <div className={cx("page-nav__contact-bar__wrap")}>
           <div className={cx("page-nav__logo-wrap")} style={navBarLogoStyle}>
-            <Image className={cx("page-nav__logo")} layout="responsive" src={bcriLogo} alt="BCRI logo" />
+            <Link href="/"><Image className={cx("page-nav__logo")} layout="responsive" src={bcriLogo} alt="BCRI logo" /></Link>
           </div>
           <div className={cx("page-nav__contact-bar-info")}>
             <div className={cx("page-nav__contact-phone__wrap")} style={navBarPhoneWrapStyle}>
@@ -118,7 +119,7 @@ const PageNav = () => {
       </div>
       <div className={cx("page-nav__list-wrap")} style={navListStyle}>
         <div className={cx("page-nav__list")}>
-          <a className={cx("page-nav__button", "page-nav__service")} href="" onClick={(e) => scrollTo(e, "services-section")}>SERVICE</a>
+          <a className={cx("page-nav__button", "page-nav__services")}><Link href="/services">SERVICES</Link></a>
           <a className={cx("page-nav__button", "page-nav__testimonial")} href="" onClick={(e) => scrollTo(e, "testimonial-section")}>TESTIMONIALS</a>
           <a className={cx("page-nav__button", "page-nav__company")} href="">COMPANY</a>
           <a className={cx("page-nav__button", "page-nav__contact")} href="">CONTACT US</a>
