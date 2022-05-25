@@ -4,9 +4,13 @@ import styles from "./TestimonialCard.module.scss";
 import classNames from 'classnames/bind';
 let cx = classNames.bind(styles);
 
-const TestimonialCard = ({ testimonialData, index }) => {
-    return (
-        <div className={cx("testimonial-card-wrap")} style={{ justifyContent: index === 0 || index % 2 ===0 ? "flex-start" : "flex-end" }}>
+const TestimonialCard = ({ testimonialData, index, mounted, windowWidth }) => {
+    const testimonialCardStyle ={
+        justifyContent: windowWidth < 768 ? "center" : index === 0 || index % 2 ===0 ? "flex-start" : "flex-end",
+    }
+    console.log(testimonialCardStyle)
+    return mounted && (
+        <div className={cx("testimonial-card-wrap")} style={testimonialCardStyle}>
             <div className={cx("testimonial-card")}>
                 <Rating className={cx("testimonial-card__rating")} value={testimonialData.rating} precision={0.5} readOnly />
                 <div  className={cx("testimonial-card__content-wrap")}>

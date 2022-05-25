@@ -54,13 +54,14 @@
         color: $primary-blue;
         border: 3px solid $primary-blue;
         border-radius: 5px;
-        cursor: pointer;
         padding: 0.5rem 0;
+        margin-bottom: 2rem;
         width: 11rem;
-        white-space: nowrap;
         font-size: 0.8rem;
+        font-weight: 600;
         display: flex;
         justify-content: center;
+        cursor: pointer;
         @include tablet {
             width: 15rem;
             padding: 0.75rem 0;

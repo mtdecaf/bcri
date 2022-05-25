@@ -25,14 +25,14 @@ const testimonialData = [
         testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget nisl id libero consectetur fermentum. Nulla euismod, urna eu tempor consectetur, nisi nisl aliquam nunc, euismod aliquam nisl nisi euismod.",
     }
 ]
-const TestimonialSection = () => {
+const TestimonialSection = ({mounted, windowWidth}) => {
     return(
         <section className={cx("testimonial-section")} id="testimonial-section">
             <div className={cx("testimonial-section__title-wrap")}>
                 <h2 className={cx("testimonial-section__title")}>Why People Choose Us</h2>
             </div>
             <div className={cx("testimonial-section__cards-wrap")}>
-                {testimonialData.map((data, key) => <TestimonialCard testimonialData={data} key={key} index={key} />)}
+                {testimonialData.map((data, key) => <TestimonialCard testimonialData={data} key={key} index={key} mounted={mounted} windowWidth={windowWidth} />)}
             </div>
             <div className={cx("testimonial-section__button-wrap")}>
                 <Link href="/"><a className={cx("testimonial-section__button")}>SEE MORE TESTIMONIALS</a></Link>
