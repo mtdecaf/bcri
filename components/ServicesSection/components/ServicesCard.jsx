@@ -22,7 +22,7 @@ const ServicesCard = (props) => {
                 <p className={cx("services-card__description")}>{props.description}</p>
             </div>
             <div className={cx("services-card__button-wrap")}>
-                <a className={cx("services-card__button")}><Link href="/services">Learn More &gt;</Link></a>
+                <Link href="/services"><a className={cx("services-card__button")}>Learn More &gt;</a></Link>
             </div>
         </div>
     )

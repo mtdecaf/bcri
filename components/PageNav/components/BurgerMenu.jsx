@@ -1,5 +1,6 @@
 import { Slide } from "@mui/material";
 import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
+import Link from "next/link";
 
 import styles from "./BurgerMenu.module.scss";
 import classNames from 'classnames/bind';
@@ -11,7 +12,7 @@ const BurgerMenu = ({ isOpen, setIsOpen, scrollTo }) => {
       <div className={cx("burger-menu")}>
         <ClearRoundedIcon className={cx("burger-menu__close")} style={{ fontSize: 50 }} onClick={() => setIsOpen(false)} />
         <div className={cx("burger-menu__list")}>
-            <a className={cx("burger-menu__button")} href="" onClick={(e) => scrollTo(e, "services-section")}>SERVICES</a>
+            <Link href="/services"><a className={cx("burger-menu__button")}>SERVICES</a></Link>
             <hr className={cx("burger-menu__divider")}/>
             <a className={cx("burger-menu__button")} href="">TESTIMONIALS</a>
             <hr className={cx("burger-menu__divider")}/>

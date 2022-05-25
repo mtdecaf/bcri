@@ -1,4 +1,5 @@
 import TestimonialCard from "./components/TestimonialCard";
+import Link from "next/link";
 
 import styles from "./TestimonialSection.module.scss";
 import classNames from 'classnames/bind';
@@ -32,6 +33,9 @@ const TestimonialSection = () => {
             </div>
             <div className={cx("testimonial-section__cards-wrap")}>
                 {testimonialData.map((data, key) => <TestimonialCard testimonialData={data} key={key} index={key} />)}
+            </div>
+            <div className={cx("testimonial-section__button-wrap")}>
+                <Link href="/"><a className={cx("testimonial-section__button")}>SEE MORE TESTIMONIALS</a></Link>
             </div>
         </section>
     )

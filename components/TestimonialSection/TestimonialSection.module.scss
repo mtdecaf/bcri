@@ -47,5 +47,36 @@
             max-width: $desktop;
             padding: 0;
         }
-    };
+    }
+
+    &__button {
+        background-color: white;
+        color: $primary-blue;
+        border: 3px solid $primary-blue;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 0.5rem 0;
+        width: 11rem;
+        white-space: nowrap;
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: center;
+        @include tablet {
+            width: 15rem;
+            padding: 0.75rem 0;
+            font-size: 1.1rem;
+        }
+        &-wrap {
+            width: 100%;
+            display: flex;
+            @include side-padding-mobile;
+            @include tablet {
+                @include side-padding-tablet;
+            }
+            @include desktop {
+                padding: 0;
+                max-width: $desktop;
+            }
+        }
+    }
 }

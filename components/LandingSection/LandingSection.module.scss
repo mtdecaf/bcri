@@ -39,9 +39,7 @@
     }
     
     &__button {
-        border: none;
         border-radius: 5px;
-        color: white;
         cursor: pointer;
         padding: 0.5rem 0;
         width: 9rem;
@@ -65,9 +63,10 @@
         }
         &--primary {
             background-color: $primary-blue;
+            color: white;
         }
         &--sub {
-            background-color: transparent;
+            background-color: white;
             color: $primary-blue;
             border: 3px solid $primary-blue;
         }

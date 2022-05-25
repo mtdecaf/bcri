@@ -103,7 +103,7 @@ const PageNav = () => {
       <div className={cx("page-nav__contact-bar--large")} style={navBarStyle}>
         <div className={cx("page-nav__contact-bar__wrap")}>
           <div className={cx("page-nav__logo-wrap")} style={navBarLogoStyle}>
-            <Link href="/"><Image className={cx("page-nav__logo")} layout="responsive" src={bcriLogo} alt="BCRI logo" /></Link>
+            <Link href="/"><a><Image className={cx("page-nav__logo")} layout="responsive" src={bcriLogo} alt="BCRI logo" /></a></Link>
           </div>
           <div className={cx("page-nav__contact-bar-info")}>
             <div className={cx("page-nav__contact-phone__wrap")} style={navBarPhoneWrapStyle}>
@@ -119,7 +119,7 @@ const PageNav = () => {
       </div>
       <div className={cx("page-nav__list-wrap")} style={navListStyle}>
         <div className={cx("page-nav__list")}>
-          <a className={cx("page-nav__button", "page-nav__services")}><Link href="/services">SERVICES</Link></a>
+          <Link href="/services"><a className={cx("page-nav__button", "page-nav__services")}>SERVICES</a></Link>
           <a className={cx("page-nav__button", "page-nav__testimonial")} href="" onClick={(e) => scrollTo(e, "testimonial-section")}>TESTIMONIALS</a>
           <a className={cx("page-nav__button", "page-nav__company")} href="">COMPANY</a>
           <a className={cx("page-nav__button", "page-nav__contact")} href="">CONTACT US</a>
