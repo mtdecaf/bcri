@@ -1,5 +1,6 @@
 import { IoHome, IoDocumentText } from "react-icons/io5";
 import { RiPencilRuler2Fill } from "react-icons/ri";
+import Link from "next/link";
 
 import styles from "./ServicesCard.module.scss";
 import classNames from "classnames/bind";
@@ -21,7 +22,7 @@ const ServicesCard = (props) => {
                 <p className={cx("services-card__description")}>{props.description}</p>
             </div>
             <div className={cx("services-card__button-wrap")}>
-                <a href="" className={cx("services-card__button")}>Learn More &gt;</a>
+                <a className={cx("services-card__button")}><Link href="/services">Learn More &gt;</Link></a>
             </div>
         </div>
     )
