@@ -3,7 +3,6 @@
 @use "styles/global/variables.scss" as *;
 
 .landing-section {
-    // background-color: rgba(4, 52, 84, 0.4);
     height: 20rem;
     display: flex;
     flex-direction: column;
@@ -32,7 +31,7 @@
 
     &__title {
         font-size: 2rem;
-        color: white;
+        color: $primary-blue;
         @include tablet {
             font-size: 2.5rem;
             text-align: center;
@@ -69,6 +68,7 @@
         }
         &--sub {
             background-color: transparent;
+            color: $primary-blue;
             border: 3px solid $primary-blue;
         }
     }
@@ -76,21 +76,42 @@
         &-wrap {            
             background-color: rgba(4, 52, 84, 0.4);
             position: absolute;
-            top: 7rem;
             width: 65%;
-            height: calc(100% - 6rem);
+            height: 20rem;
+            @include tablet {
+                height: calc(100vh - 7rem);
+            }
         }
     }
     &__left-overlay {
         &-wrap {
             clip-path: polygon(0 0, 100% 0, 43% 100%, 0% 100%);
-            left: 0;
+            left: -50%;
+            animation: slide-out-left 1s ease-in-out;
         }
     }
     &__right-overlay {
         &-wrap {
             clip-path: polygon(57% 0, 100% 0, 100% 100%, 0% 100%);
-            right: 0;
+            right: -50%;
+            animation: slide-out-right 1s ease-in-out;
         }
+    }
+}
+@keyframes slide-out-left {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -50%;
+    }
+}
+
+@keyframes slide-out-right {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -50%;
     }
 }
