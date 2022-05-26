@@ -1,28 +1,12 @@
 import ServicesCard from "./components/ServicesCard";
+import services from "../../data/servicesData.json";
 
 import styles from "./ServicesSection.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
-const servicesData = [
-    {
-        title: "Roof Inspections",
-        icon: "IoHome",
-        description: "We inspect all types of roofs, including metal, wood, and concrete. We also inspect all types of roofs, including metal, wood, and concrete.",
-    },
-    {
-        title: "Roof Inspections",
-        icon: "IoDocumentText",
-        description: "We inspect all types of roofs, including metal, wood, and concrete. We also inspect all types of roofs, including metal, wood, and concrete.",
-    },
-    {
-        title: "Roof Inspections",
-        icon: "RiPencilRuler2Fill",
-        description: "We inspect all types of roofs, including metal, wood, and concrete. We also inspect all types of roofs, including metal, wood, and concrete.",
-    },
-];
-
 const ServicesSection = () => {
+    const { servicesData } = services;
     return (
         <section className={cx("service-section")} id="services-section">
             <div className={cx("service-section__title-wrap")}>

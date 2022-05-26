@@ -1,0 +1,19 @@
+{
+    "servicesData": [
+        {
+            "title": "Roof Inspections",
+            "icon": "IoHome",
+            "description": "We inspect all types of roofs, including metal, wood, and concrete. We also inspect all types of roofs, including metal, wood, and concrete."
+        },
+        {
+            "title": "Roof Inspections",
+            "icon": "IoDocumentText",
+            "description": "We inspect all types of roofs, including metal, wood, and concrete. We also inspect all types of roofs, including metal, wood, and concrete."
+        },
+        {
+            "title": "Roof Inspections",
+            "icon": "RiPencilRuler2Fill",
+            "description": "We inspect all types of roofs, including metal, wood, and concrete. We also inspect all types of roofs, including metal, wood, and concrete."
+        }
+    ]
+}
