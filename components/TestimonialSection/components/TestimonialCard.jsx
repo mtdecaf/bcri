@@ -8,7 +8,7 @@ const TestimonialCard = ({ testimonialData, index, mounted, windowWidth }) => {
     const testimonialCardStyle ={
         justifyContent: windowWidth < 768 ? "center" : index === 0 || index % 2 ===0 ? "flex-start" : "flex-end",
     }
-    console.log(testimonialCardStyle)
+
     return mounted && (
         <div className={cx("testimonial-card-wrap")} style={testimonialCardStyle}>
             <div className={cx("testimonial-card")}>

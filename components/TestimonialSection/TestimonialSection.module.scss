@@ -50,7 +50,7 @@
     }
 
     &__button {
-        background-color: white;
+        background-color: $off-white;
         color: $primary-blue;
         border-radius: 5px;
         padding: 0.5rem 0;
@@ -69,9 +69,11 @@
         &-wrap {
             width: 100%;
             display: flex;
+            justify-content: center;
             @include side-padding-mobile;
             @include tablet {
                 @include side-padding-tablet;
+                justify-content: flex-end;
             }
             @include desktop {
                 padding: 0;
