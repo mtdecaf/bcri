@@ -9,6 +9,8 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    line-height: 1.5rem;
+    position: relative;
     @include tablet {
         height: 20rem;
     }
@@ -32,9 +34,41 @@
         }
     }
 
+    &__title {
+        line-height: 3rem;
+    }
+
+    &__about {
+        &-wrap {
+            @include tablet {
+                width: 40%;
+            }
+        }
+    }
+
     &__services {
         &-list-item {
             list-style: none;
+        }
+    }
+
+    &__overlay {
+        &-wrap {
+            background-image: url("/svg-assets/footer_overlay_background.svg");
+            background-size: cover;
+            border-radius: 1rem;
+            box-shadow: 0px 5px 15px 3px rgba(237, 237, 237, 0.25);
+            position: absolute;
+            height: 7rem;
+            width: calc(100vw - 2rem);
+            top: -3.5rem;
+            left: auto;
+            @include tablet {
+                width: calc(100vw - 4rem);
+            }
+            @include desktop {
+                max-width: calc($desktop - 2rem);
+            }
         }
     }
 }

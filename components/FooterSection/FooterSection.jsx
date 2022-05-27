@@ -11,7 +11,7 @@ const FooterSection = () => {
     <div className={cx("footer-section")}>
       <div className={cx("footer-section__inner-wrap")}>
         <div className={cx("footer-section__about-wrap")}>
-          <h3 className={cx("footer-section__about-title")}>About Us</h3>
+          <h3 className={cx("footer-section__about-title", "footer-section__title")}>About Us</h3>
           <div className={cx("footer-section__about-content-wrap")}>
             <p className={cx("footer-section__about-content")}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
@@ -22,8 +22,8 @@ const FooterSection = () => {
           </div>
         </div>
         <div className={cx("footer-section__services-wrap")}>
-          <h3 className={cx("footer-section__services-title")}>Services</h3>
-          <ul classNames={cx("footer-section__services-list")}>
+          <h3 className={cx("footer-section__services-title", "footer-section__title")}>Services</h3>
+          <ul className={cx("footer-section__services-list")}>
             {servicesData.map((data, key) => (
               <li
                 className={cx("footer-section__services-list-item")}
@@ -39,7 +39,7 @@ const FooterSection = () => {
           </ul>
         </div>
         <div className={cx("footer-section__contact-wrap")}>
-          <h3 className={cx("footer-section__contact-title")}>Contact Us</h3>
+          <h3 className={cx("footer-section__contact-title", "footer-section__title")}>Contact Us</h3>
           <div className={cx("footer-section__contact-phone-wrap")}>
             <a
               className={cx("footer-section__contact-phone-link")}
@@ -56,6 +56,9 @@ const FooterSection = () => {
               Email: info@bcroofinspections.com
             </a>
           </div>
+        </div>
+        <div className={cx("footer-section__overlay-wrap")}>
+
         </div>
       </div>
     </div>
