@@ -122,7 +122,7 @@ const PageNav = () => {
       <div className={cx("page-nav__list-wrap")} style={navListStyle}>
         <div className={cx("page-nav__list")}>
           <Link href="/services"><a className={cx("page-nav__button", "page-nav__services")}>SERVICES</a></Link>
-          <a className={cx("page-nav__button", "page-nav__testimonial")} onClick={(e) => scrollTo(e, "testimonial-section")}>TESTIMONIALS</a>
+          <Link href="/testimonies"><a className={cx("page-nav__button", "page-nav__testimonial")}>TESTIMONIALS</a></Link>
           <a className={cx("page-nav__button", "page-nav__company")}>COMPANY</a>
           <a className={cx("page-nav__button", "page-nav__contact")} onClick={(e) => scrollTo(e, "footer-section")}>CONTACT US</a>
         </div>
@@ -134,7 +134,7 @@ const PageNav = () => {
     <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} scrollTo={scrollTo} />
     <div className={cx("page-nav", "page-nav--small")}>
       <div className={cx("page-nav__logo-wrap")} style={{width:"6rem"}}>
-        <Image className={cx("page-nav__logo")} layout="responsive" src={bcriLogo} alt="BCRI logo" />
+        <Link href="/"><a><Image className={cx("page-nav__logo")} layout="responsive" src={bcriLogo} alt="BCRI logo" /></a></Link>
       </div>
       <div className={cx("page-nav__right-wrap")}>
         <div className={cx("page-nav__contact-phone__wrap")}>
@@ -143,7 +143,7 @@ const PageNav = () => {
         </div>
         <MenuRoundedIcon className={cx("page-nav__burger")} fontSize="large" onClick={() => handleClick()} />
       </div>
-      <ScrollToTopButton />
+      <ScrollToTopButton isScrolled={isScrolled} />
     </div>
     </>
   ) : null;

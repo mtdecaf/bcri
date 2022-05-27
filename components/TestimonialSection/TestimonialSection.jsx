@@ -35,7 +35,7 @@ const TestimonialSection = ({mounted, windowWidth}) => {
                 {testimonialData.map((data, key) => <TestimonialCard testimonialData={data} key={key} index={key} mounted={mounted} windowWidth={windowWidth} />)}
             </div>
             <div className={cx("testimonial-section__button-wrap")}>
-                <Link href="/"><a className={cx("testimonial-section__button")}>SEE MORE TESTIMONIALS</a></Link>
+                <Link href="/testimonies"><a className={cx("testimonial-section__button")}>SEE MORE TESTIMONIALS</a></Link>
             </div>
         </section>
     )
