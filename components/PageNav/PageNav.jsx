@@ -5,7 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import bcriLogo from '../../public/bcri-logo.png';
 import { FiPhone } from "react-icons/fi";
+
 import BurgerMenu from "./components/BurgerMenu";
+import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
 
 import styles from "./PageNav.module.scss";
 import classNames from 'classnames/bind';
@@ -125,6 +127,7 @@ const PageNav = () => {
           <a className={cx("page-nav__button", "page-nav__contact")} onClick={(e) => scrollTo(e, "footer-section")}>CONTACT US</a>
         </div>
       </div>
+      <ScrollToTopButton isScrolled={isScrolled} />
     </div>
   ) : mounted ? (
     <>
@@ -140,6 +143,7 @@ const PageNav = () => {
         </div>
         <MenuRoundedIcon className={cx("page-nav__burger")} fontSize="large" onClick={() => handleClick()} />
       </div>
+      <ScrollToTopButton />
     </div>
     </>
   ) : null;
