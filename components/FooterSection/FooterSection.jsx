@@ -58,7 +58,11 @@ const FooterSection = () => {
           </div>
         </div>
         <div className={cx("footer-section__overlay-wrap")}>
-
+            <div className={cx("footer-section__overlay-title-wrap")}>
+                <h3 className={cx("footer-section__overlay-title")}>Ready to get Started?</h3>
+                <h3 className={cx("footer-section__overlay-title")}>Get in touch today</h3>
+            </div>
+            <a className={cx("footer-section__overlay-button")} href="mailto: info@bcroofinspections.com">REQUEST A QUOTE</a>
         </div>
       </div>
     </div>
