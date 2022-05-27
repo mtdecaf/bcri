@@ -1,4 +1,6 @@
 import Link from "next/link";
+import ScrollAnimation from 'react-animate-on-scroll';
+
 import services from "../../data/servicesData.json";
 
 import styles from "./FooterSection.module.scss";
@@ -8,7 +10,7 @@ let cx = classNames.bind(styles);
 const FooterSection = () => {
   const { servicesData } = services;
   return (
-    <div className={cx("footer-section")}>
+    <div className={cx("footer-section")}  id="footer-section">
       <div className={cx("footer-section__inner-wrap")}>
         <div className={cx("footer-section__about-wrap")}>
           <h3 className={cx("footer-section__about-title", "footer-section__title")}>About Us</h3>
@@ -57,13 +59,13 @@ const FooterSection = () => {
             </a>
           </div>
         </div>
-        <div className={cx("footer-section__overlay-wrap")}>
+        <ScrollAnimation animateIn="zoomIn" animateOnce={true} className={cx("footer-section__overlay-wrap")}>
             <div className={cx("footer-section__overlay-title-wrap")}>
                 <h3 className={cx("footer-section__overlay-title")}>Ready to get Started?</h3>
                 <h3 className={cx("footer-section__overlay-title")}>Get in touch today</h3>
             </div>
             <a className={cx("footer-section__overlay-button")} href="mailto: info@bcroofinspections.com">REQUEST A QUOTE</a>
-        </div>
+        </ScrollAnimation>
       </div>
     </div>
   );

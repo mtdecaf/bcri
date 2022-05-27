@@ -61,7 +61,7 @@
             color: $primary-blue;
             position: absolute;
             height: 7rem;
-            width: calc(100vw - 2rem);
+            width: calc(100vw - 4rem);
             top: -3.5rem;
             left: 0;
             right: 0;
@@ -73,7 +73,7 @@
             align-items: center;
             font-weight: 600;
             @include tablet {
-                width: calc(100vw - 4rem);
+                width: calc(100vw - 8rem);
                 flex-direction: row;
                 justify-content: space-between;
                 padding: 0 3rem;

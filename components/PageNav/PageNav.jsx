@@ -120,9 +120,9 @@ const PageNav = () => {
       <div className={cx("page-nav__list-wrap")} style={navListStyle}>
         <div className={cx("page-nav__list")}>
           <Link href="/services"><a className={cx("page-nav__button", "page-nav__services")}>SERVICES</a></Link>
-          <a className={cx("page-nav__button", "page-nav__testimonial")} href="" onClick={(e) => scrollTo(e, "testimonial-section")}>TESTIMONIALS</a>
-          <a className={cx("page-nav__button", "page-nav__company")} href="">COMPANY</a>
-          <a className={cx("page-nav__button", "page-nav__contact")} href="">CONTACT US</a>
+          <a className={cx("page-nav__button", "page-nav__testimonial")} onClick={(e) => scrollTo(e, "testimonial-section")}>TESTIMONIALS</a>
+          <a className={cx("page-nav__button", "page-nav__company")}>COMPANY</a>
+          <a className={cx("page-nav__button", "page-nav__contact")} onClick={(e) => scrollTo(e, "footer-section")}>CONTACT US</a>
         </div>
       </div>
     </div>
