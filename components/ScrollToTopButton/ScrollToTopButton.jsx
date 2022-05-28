@@ -5,7 +5,6 @@ import classNames from 'classnames/bind';
 let cx = classNames.bind(styles);
 
 const ScrollToTopButton = ({isScrolled}) => {
-    console.log(isScrolled)
 
     const fadeAnimation = {
         opacity: isScrolled ? 1 : 0,
