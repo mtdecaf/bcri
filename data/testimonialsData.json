@@ -1,0 +1,22 @@
+{
+    "testimonialsData": [
+        {
+            "name": "John Doe",
+            "rating": 4.5,
+            "company": "Google",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget nisl id libero consectetur fermentum. Nulla euismod, urna eu tempor consectetur, nisi nisl aliquam nunc, euismod aliquam nisl nisi euismod."
+        },
+        {
+            "name": "John Smith",
+            "rating": 5,
+            "company": "Apple",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget nisl id libero consectetur fermentum. Nulla euismod, urna eu tempor consectetur, nisi nisl aliquam nunc, euismod aliquam nisl nisi euismod."
+        },
+        {
+            "name": "Shirley Jones",
+            "rating": 5,
+            "company": "Facebook",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget nisl id libero consectetur fermentum. Nulla euismod, urna eu tempor consectetur, nisi nisl aliquam nunc, euismod aliquam nisl nisi euismod."
+        }
+    ]
+}
