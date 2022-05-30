@@ -1,43 +1,52 @@
-import { useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import styles from "./CustomersSection.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
-const CustomersSection = () => {
+const CustomersSection = ({ mounted }) => {
   const customersNum = 41;
-  const customers = [];
-  const customersRef = useRef(null);
+  const [customers, setCustomers] = useState([]);
 
-  const createCustomer = () => {
+  const initializeCustomer = () => {
+    // create a list of customers to display
     for (let i = 1; i <= customersNum; i++) {
-      customers.push(
+      setCustomers((customers) => [
+        ...customers,
         <div
-        className={cx("customers-section__logo-container")}
-        key={i}
+          className={cx("customers-section__logo-container")}
+          key={i + customers.length}
         >
           <img
             className={cx("customers-section__logo")}
-            ref={customersRef}
             src={`/customers-logo/customer${i}.png`}
             alt={`customer${i}`}
-            />
-        </div>
-      );
+          />
+        </div>,
+      ]);
     }
   };
+  
+  useEffect(() => {
+    initializeCustomer();
+  }, []);
 
   return (
-    <div className={cx("customers-section")}>
-      <div className={cx("customers-section__title-wrap")}>
-        <h2 className={cx("customers-section__title")}>Trusted By</h2>
+    mounted && (
+      <div className={cx("customers-section")}>
+        <div className={cx("customers-section__title-wrap")}>
+          <h2 className={cx("customers-section__title")}>Trusted By</h2>
+        </div>
+        {/* create an image for every file in customers-logo folder */}
+        <div className={cx("customers-section__logos-wrap")}>
+          <div
+            className={cx("customers-section__logos-marquee")}
+          >
+            {customers}
+          </div>
+        </div>
       </div>
-      {/* create an image for every file in customers-logo folder */}
-      <div className={cx("customers-section__logos-wrap")}>
-        {createCustomer()}
-        {customers}
-      </div>
-    </div>
+    )
   );
 };
 

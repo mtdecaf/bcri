@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <LandingSection mounted={mounted} windowWidth={windowWidth} />
-      <CustomersSection />
+      <CustomersSection mounted={mounted} />
       <ServicesSection />
       <TestimonialSection mounted={mounted} windowWidth={windowWidth} />
     </div>
