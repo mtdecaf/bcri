@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="6026.722 6762 8490.278 4205.419" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <style bx:fonts="Souvenir">@font-face { font-family: Souvenir; font-variant: normal; font-weight: bold; }</style>
+    <style type="text/css">.fil4 { fill: rgb(254, 254, 254); }.fil1 { fill: rgb(254, 254, 254); }.fil2 { fill: rgb(40, 37, 37); }.fil0 { fill: rgb(40, 37, 37); }.fil3 { fill: rgb(62, 64, 149); }.fnt0 { font-weight: bold; font-size: 846.67px; font-family: Souvenir; }</style>
+  </defs>
+  <rect class="fil0" x="9496" y="6976" width="1179" height="1893"/>
+  <rect class="fil1" x="9616" y="7054" width="132" height="139"/>
+  <rect class="fil1" x="9884" y="7051" width="132" height="139"/>
+  <rect class="fil1" x="10142" y="7051" width="132" height="139"/>
+  <rect class="fil1" x="10420" y="7051" width="132" height="139"/>
+  <rect class="fil1" x="9616" y="7282" width="132" height="139"/>
+  <rect class="fil1" x="9884" y="7280" width="132" height="139"/>
+  <rect class="fil1" x="10142" y="7280" width="132" height="139"/>
+  <rect class="fil1" x="10420" y="7280" width="132" height="139"/>
+  <rect class="fil1" x="9616" y="7511" width="132" height="139"/>
+  <rect class="fil1" x="9884" y="7508" width="132" height="139"/>
+  <rect class="fil1" x="10142" y="7508" width="132" height="139"/>
+  <rect class="fil1" x="10420" y="7508" width="132" height="139"/>
+  <rect class="fil1" x="9616" y="7739" width="132" height="139"/>
+  <rect class="fil1" x="9884" y="7737" width="132" height="139"/>
+  <rect class="fil1" x="10142" y="7737" width="132" height="139"/>
+  <rect class="fil1" x="10420" y="7737" width="132" height="139"/>
+  <rect class="fil1" x="9616" y="7993" width="132" height="139"/>
+  <rect class="fil1" x="9884" y="7991" width="132" height="139"/>
+  <rect class="fil1" x="10142" y="7991" width="132" height="139"/>
+  <rect class="fil1" x="10420" y="7991" width="132" height="139"/>
+  <rect class="fil1" x="9616" y="8222" width="132" height="139"/>
+  <rect class="fil1" x="9884" y="8219" width="132" height="139"/>
+  <rect class="fil1" x="10142" y="8219" width="132" height="139"/>
+  <rect class="fil1" x="10420" y="8219" width="132" height="139"/>
+  <rect class="fil2" x="9686" y="6832" width="779" height="158"/>
+  <rect class="fil2" x="9799" y="6762" width="540" height="194"/>
+  <rect class="fil1" x="9616" y="8451" width="132" height="139"/>
+  <rect class="fil1" x="9884" y="8448" width="132" height="139"/>
+  <rect class="fil1" x="10142" y="8448" width="132" height="139"/>
+  <rect class="fil1" x="10420" y="8448" width="132" height="139"/>
+  <rect class="fil0" x="8106" y="7831" width="1262" height="1071"/>
+  <rect class="fil0" x="8543" y="7221" width="109" height="520"/>
+  <rect class="fil0" x="8243" y="7680" width="612" height="194"/>
+  <rect class="fil1" x="8111" y="8026" width="952.55" height="77.03"/>
+  <rect class="fil1" x="8113" y="8204" width="952.55" height="77.03"/>
+  <rect class="fil1" x="8115" y="8373" width="952.55" height="77.03"/>
+  <rect class="fil1" x="8110" y="8545" width="952.55" height="77.03"/>
+  <rect class="fil1" x="8110" y="8722" width="713.11" height="77.03"/>
+  <rect class="fil1" x="9180" y="7898" width="130" height="125"/>
+  <rect class="fil1" x="9180" y="8076" width="130" height="125"/>
+  <rect class="fil1" x="9180" y="8254" width="130" height="125"/>
+  <rect class="fil1" x="9180" y="8432" width="130" height="125"/>
+  <polygon class="fil0" points="8512,9615 7747,9070 8456,9073 9233,9619 "/>
+  <rect class="fil0" x="9068" y="9100" width="482" height="315"/>
+  <polygon class="fil3" points="7430,9618 6924,9618 7663,9120 7882,9284 "/>
+  <rect class="fil0" x="12848" y="9302" width="482" height="315"/>
+  <polygon class="fil0" points="14054,9615 13194,9054 13421,8895 14517,9615 "/>
+  <g transform="matrix(1.12194, 0, 0, 1, -6084.620117, -3187.790039)">
+    <text x="10795" y="13970" class="fil3 fnt0" style="white-space: pre;">BC Roof Inspections</text>
+  </g>
+  <polygon class="fil0" points="8684,9233 8456,9073 8960,8723 9205,8894 "/>
+  <rect class="fil1" x="9616" y="8679" width="132" height="139"/>
+  <rect class="fil1" x="9884" y="8677" width="132" height="139"/>
+  <rect class="fil1" x="10142" y="8677" width="132" height="139"/>
+  <rect class="fil1" x="10420" y="8677" width="132" height="139"/>
+  <polygon class="fil3" points="10759,9621 9089,8721 11861,8966 11854,8823 12393,8790 12390,9095 12615,8995 12612,8893 13326,8883 11980,9624 "/>
+  <polygon class="fil4" points="9371,8913 9189,8904 9293,8831 9372,8873 "/>
+</svg>
