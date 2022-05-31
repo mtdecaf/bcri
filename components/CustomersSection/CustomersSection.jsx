@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { useEffectOnce } from "../../custom_hooks/useEffectOnce";
 
 import styles from "./CustomersSection.module.scss";
 import classNames from "classnames/bind";
@@ -26,11 +27,12 @@ const CustomersSection = ({ mounted }) => {
       ]);
     }
   };
-  
-  useEffect(() => {
+
+  useEffectOnce(() => {
+    initializeCustomer();
     initializeCustomer();
   }, []);
-
+  
   return (
     mounted && (
       <div className={cx("customers-section")}>
@@ -39,9 +41,7 @@ const CustomersSection = ({ mounted }) => {
         </div>
         {/* create an image for every file in customers-logo folder */}
         <div className={cx("customers-section__logos-wrap")}>
-          <div
-            className={cx("customers-section__logos-marquee")}
-          >
+          <div className={cx("customers-section__logos-marquee")}>
             {customers}
           </div>
         </div>
