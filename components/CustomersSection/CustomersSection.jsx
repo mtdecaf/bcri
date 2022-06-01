@@ -3,13 +3,17 @@ import { useEffectOnce } from "../../custom_hooks/useEffectOnce";
 
 import styles from "./CustomersSection.module.scss";
 import classNames from "classnames/bind";
+
 let cx = classNames.bind(styles);
 
 const CustomersSection = ({ mounted }) => {
+  const hasWindow = typeof window !== "undefined";
   const customersNum = 41;
   const [customers, setCustomers] = useState([]);
+  const [selectedSubgroup, setSelectedSubgroup] = useState(0);
+  let currentPercent = 0;
 
-  const initializeCustomer = () => {
+  const createCustomer = () => {
     // create a list of customers to display
     for (let i = 1; i <= customersNum; i++) {
       setCustomers((customers) => [
@@ -29,10 +33,43 @@ const CustomersSection = ({ mounted }) => {
   };
 
   useEffectOnce(() => {
-    initializeCustomer();
-    initializeCustomer();
+    createCustomer();
+    createCustomer();
   }, []);
+
+  // timeout subgroup change
+  useEffect(() => {
+    if (selectedSubgroup > 0) {
+      setTimeout(() => {
+        setSelectedSubgroup(0);
+      }, 5000);
+    }
+  }, [selectedSubgroup]);
+
+  const handleSubgroupClick = (subgroup) => {
+    setSelectedSubgroup(subgroup);
+  };
+
+  // check the translateX value of the customers section
   
+  // styles for the subgroups
+  const subgroupOneStyle = {
+    backgroundColor: selectedSubgroup === 1 ? "rgb(94, 94, 94)" : "",
+  };
+  const subgroupTwoStyle = {
+    backgroundColor: selectedSubgroup === 2 ? "rgb(94, 94, 94)" : "",
+  };
+  const subgroupThreeStyle = {
+    backgroundColor: selectedSubgroup === 3 ? "rgb(94, 94, 94)" : "",
+  };
+  const subgroupFourStyle = {
+    backgroundColor: selectedSubgroup === 4 ? "rgb(94, 94, 94)" : "",
+  };
+
+  const marqueeDynamicSyle = {
+    animationPlayState: selectedSubgroup > 0 ? "paused" : "running",
+  };
+
   return (
     mounted && (
       <div className={cx("customers-section")}>
@@ -41,8 +78,33 @@ const CustomersSection = ({ mounted }) => {
         </div>
         {/* create an image for every file in customers-logo folder */}
         <div className={cx("customers-section__logos-wrap")}>
-          <div className={cx("customers-section__logos-marquee")}>
+          <div
+            className={cx("customers-section__logos-marquee")}
+            style={marqueeDynamicSyle}
+          >
             {customers}
+          </div>
+          <div className={cx("customers-section__selector-wrap")}>
+            <span
+              className={cx("customers-section__selector")}
+              onClick={() => handleSubgroupClick(1)}
+              style={subgroupOneStyle}
+            ></span>
+            <span
+              className={cx("customers-section__selector")}
+              onClick={() => handleSubgroupClick(2)}
+              style={subgroupTwoStyle}
+            ></span>
+            <span
+              className={cx("customers-section__selector")}
+              onClick={() => handleSubgroupClick(3)}
+              style={subgroupThreeStyle}
+            ></span>
+            <span
+              className={cx("customers-section__selector")}
+              onClick={() => handleSubgroupClick(4)}
+              style={subgroupFourStyle}
+            ></span>
           </div>
         </div>
       </div>

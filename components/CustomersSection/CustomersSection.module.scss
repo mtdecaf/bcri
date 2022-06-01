@@ -76,4 +76,21 @@
             align-self: center;
         }
     }
+    &__selector {
+        background-color: rgb(167, 167, 167);
+        border-radius: 50%;
+        width: 0.75rem;
+        height: 0.75rem;
+        display: inline-block;
+        &-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            gap: 0.75rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
 }
