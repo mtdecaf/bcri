@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useEffectOnce } from "../../custom_hooks/useEffectOnce";
 
 import styles from "./CustomersSection.module.scss";
@@ -7,11 +7,9 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const CustomersSection = ({ mounted }) => {
-  const hasWindow = typeof window !== "undefined";
   const customersNum = 41;
   const [customers, setCustomers] = useState([]);
   const [selectedSubgroup, setSelectedSubgroup] = useState(0);
-  let currentPercent = 0;
 
   const createCustomer = () => {
     // create a list of customers to display
@@ -47,11 +45,13 @@ const CustomersSection = ({ mounted }) => {
   }, [selectedSubgroup]);
 
   const handleSubgroupClick = (subgroup) => {
-    setSelectedSubgroup(subgroup);
+    if (subgroup === selectedSubgroup) {
+      setSelectedSubgroup(0);
+    } else {
+      setSelectedSubgroup(subgroup);
+    }
   };
 
-  // check the translateX value of the customers section
-  
   // styles for the subgroups
   const subgroupOneStyle = {
     backgroundColor: selectedSubgroup === 1 ? "rgb(94, 94, 94)" : "",
@@ -67,7 +67,9 @@ const CustomersSection = ({ mounted }) => {
   };
 
   const marqueeDynamicSyle = {
-    animationPlayState: selectedSubgroup > 0 ? "paused" : "running",
+    // animationPlayState: selectedSubgroup > 0 ? "paused" : "",
+    // translateX is used to move the marquee
+    animation: selectedSubgroup > 0 ? "marquee 0.5s linear infinite" : "",
   };
 
   return (
