@@ -10,6 +10,9 @@ const CustomersSection = ({ mounted }) => {
   const customersNum = 41;
   const [customers, setCustomers] = useState([]);
   const [selectedSubgroup, setSelectedSubgroup] = useState(0);
+  // const [translateX, setTranslateX] = useState(0);
+  // const [clientX , setclientX] = useState(0);
+  // const [isDragging, setIsDragging] = useState(false);
 
   const createCustomer = () => {
     // create a list of customers to display
@@ -53,24 +56,25 @@ const CustomersSection = ({ mounted }) => {
   };
 
   // styles for the subgroups
-  const subgroupOneStyle = {
-    backgroundColor: selectedSubgroup === 1 ? "rgb(94, 94, 94)" : "",
-  };
-  const subgroupTwoStyle = {
-    backgroundColor: selectedSubgroup === 2 ? "rgb(94, 94, 94)" : "",
-  };
-  const subgroupThreeStyle = {
-    backgroundColor: selectedSubgroup === 3 ? "rgb(94, 94, 94)" : "",
-  };
-  const subgroupFourStyle = {
-    backgroundColor: selectedSubgroup === 4 ? "rgb(94, 94, 94)" : "",
-  };
+  // const subgroupOneStyle = {
+  //   backgroundColor: selectedSubgroup === 1 ? "rgb(94, 94, 94)" : "",
+  // };
+  // const subgroupTwoStyle = {
+  //   backgroundColor: selectedSubgroup === 2 ? "rgb(94, 94, 94)" : "",
+  // };
+  // const subgroupThreeStyle = {
+  //   backgroundColor: selectedSubgroup === 3 ? "rgb(94, 94, 94)" : "",
+  // };
+  // const subgroupFourStyle = {
+  //   backgroundColor: selectedSubgroup === 4 ? "rgb(94, 94, 94)" : "",
+  // };
 
-  const marqueeDynamicSyle = {
-    // animationPlayState: selectedSubgroup > 0 ? "paused" : "",
-    // translateX is used to move the marquee
-    animation: selectedSubgroup > 0 ? "marquee 0.5s linear infinite" : "",
-  };
+  // const marqueeDynamicSyle = {
+  //   animationPlayState: selectedSubgroup > 0 ? "paused" : "",
+  // };
+
+  // drag left and right logic
+  
 
   return (
     mounted && (
@@ -82,11 +86,11 @@ const CustomersSection = ({ mounted }) => {
         <div className={cx("customers-section__logos-wrap")}>
           <div
             className={cx("customers-section__logos-marquee")}
-            style={marqueeDynamicSyle}
+            // style={marqueeDynamicSyle}
           >
             {customers}
           </div>
-          <div className={cx("customers-section__selector-wrap")}>
+          {/* <div className={cx("customers-section__selector-wrap")}>
             <span
               className={cx("customers-section__selector")}
               onClick={() => handleSubgroupClick(1)}
@@ -107,7 +111,7 @@ const CustomersSection = ({ mounted }) => {
               onClick={() => handleSubgroupClick(4)}
               style={subgroupFourStyle}
             ></span>
-          </div>
+          </div> */}
         </div>
       </div>
     )
