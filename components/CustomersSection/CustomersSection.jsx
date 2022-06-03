@@ -38,35 +38,12 @@ const CustomersSection = ({ mounted }) => {
     }
   }, [selectedSubgroup]);
 
-  //   const handleSubgroupClick = (subgroup) => {
-  //     if (subgroup === selectedSubgroup) {
-  //       setSelectedSubgroup(0);
-  //     } else {
-  //       setSelectedSubgroup(subgroup);
-  //     }
-  //   };
-
-  // styles for the subgroups
-  // const subgroupOneStyle = {
-  //   backgroundColor: selectedSubgroup === 1 ? "rgb(94, 94, 94)" : "",
-  // };
-  // const subgroupTwoStyle = {
-  //   backgroundColor: selectedSubgroup === 2 ? "rgb(94, 94, 94)" : "",
-  // };
-  // const subgroupThreeStyle = {
-  //   backgroundColor: selectedSubgroup === 3 ? "rgb(94, 94, 94)" : "",
-  // };
-  // const subgroupFourStyle = {
-  //   backgroundColor: selectedSubgroup === 4 ? "rgb(94, 94, 94)" : "",
-  // };
-
   // reset translateX to 0 when translateX is -100%
   useEffect(() => {
     if (translateX < -100) {
       setTranslateX(0);
     }
   }, [translateX]);
-  // console.log(translateX)
 
   return (
     mounted && (
@@ -141,28 +118,6 @@ const CustomersSection = ({ mounted }) => {
               </div>
             </div>
           </div>
-          {/* <div className={cx("customers-section__selector-wrap")}>
-            <span
-              className={cx("customers-section__selector")}
-              onClick={() => handleSubgroupClick(1)}
-              style={subgroupOneStyle}
-            ></span>
-            <span
-              className={cx("customers-section__selector")}
-              onClick={() => handleSubgroupClick(2)}
-              style={subgroupTwoStyle}
-            ></span>
-            <span
-              className={cx("customers-section__selector")}
-              onClick={() => handleSubgroupClick(3)}
-              style={subgroupThreeStyle}
-            ></span>
-            <span
-              className={cx("customers-section__selector")}
-              onClick={() => handleSubgroupClick(4)}
-              style={subgroupFourStyle}
-            ></span>
-          </div> */}
         </div>
       </div>
     )
