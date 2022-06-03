@@ -10,32 +10,23 @@ const CustomersSection = ({ mounted }) => {
   const customersNum = 41;
   const [customers, setCustomers] = useState([]);
   const [selectedSubgroup, setSelectedSubgroup] = useState(0);
-  // const [translateX, setTranslateX] = useState(0);
+  const [translateX, setTranslateX] = useState(0);
   // const [clientX , setclientX] = useState(0);
   // const [isDragging, setIsDragging] = useState(false);
 
-  const createCustomer = () => {
-    // create a list of customers to display
+  const createCustomerIndex = () => {
+    // create a list of customers
     for (let i = 1; i <= customersNum; i++) {
-      setCustomers((customers) => [
-        ...customers,
-        <div
-          className={cx("customers-section__logo-container")}
-          key={i + customers.length}
-        >
-          <img
-            className={cx("customers-section__logo")}
-            src={`/customers-logo/customer${i}.png`}
-            alt={`customer${i}`}
-          />
-        </div>,
-      ]);
+      setCustomers((customers) => [...customers, i]);
     }
   };
 
   useEffectOnce(() => {
-    createCustomer();
-    createCustomer();
+    createCustomerIndex();
+    const interval = setInterval(() => {
+      setTranslateX((translateX) => translateX - 0.05);
+    }, 10);
+    return () => clearInterval(interval);
   }, []);
 
   // timeout subgroup change
@@ -47,13 +38,13 @@ const CustomersSection = ({ mounted }) => {
     }
   }, [selectedSubgroup]);
 
-  const handleSubgroupClick = (subgroup) => {
-    if (subgroup === selectedSubgroup) {
-      setSelectedSubgroup(0);
-    } else {
-      setSelectedSubgroup(subgroup);
-    }
-  };
+  //   const handleSubgroupClick = (subgroup) => {
+  //     if (subgroup === selectedSubgroup) {
+  //       setSelectedSubgroup(0);
+  //     } else {
+  //       setSelectedSubgroup(subgroup);
+  //     }
+  //   };
 
   // styles for the subgroups
   // const subgroupOneStyle = {
@@ -69,12 +60,13 @@ const CustomersSection = ({ mounted }) => {
   //   backgroundColor: selectedSubgroup === 4 ? "rgb(94, 94, 94)" : "",
   // };
 
-  // const marqueeDynamicSyle = {
-  //   animationPlayState: selectedSubgroup > 0 ? "paused" : "",
-  // };
-
-  // drag left and right logic
-  
+  // reset translateX to 0 when translateX is -100%
+  useEffect(() => {
+    if (translateX < -100) {
+      setTranslateX(0);
+    }
+  }, [translateX]);
+  // console.log(translateX)
 
   return (
     mounted && (
@@ -86,9 +78,68 @@ const CustomersSection = ({ mounted }) => {
         <div className={cx("customers-section__logos-wrap")}>
           <div
             className={cx("customers-section__logos-marquee")}
-            // style={marqueeDynamicSyle}
+            style={{ transform: `translateX(${translateX}%)` }}
           >
-            {customers}
+            <div className={cx("customers-section__logos-row-one")}>
+              <div className={cx("customers-section__logos-row-inner-wrap")}>
+                {customers.slice(0, 20).map((customer) => (
+                  <div
+                    className={cx("customers-section__logo-container")}
+                    key={customer}
+                  >
+                    <img
+                      className={cx("customers-section__logo")}
+                      src={`/customers-logo/customer${customer}.png`}
+                      alt={`customer${customer}`}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className={cx("customers-section__logos-row-inner-wrap")}>
+                {customers.slice(0, 20).map((customer) => (
+                  <div
+                    className={cx("customers-section__logo-container")}
+                    key={customer}
+                  >
+                    <img
+                      className={cx("customers-section__logo")}
+                      src={`/customers-logo/customer${customer}.png`}
+                      alt={`customer${customer}`}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={cx("customers-section__logos-row-two")}>
+              <div className={cx("customers-section__logos-row-inner-wrap")}>
+                {customers.slice(20, 41).map((customer) => (
+                  <div
+                    className={cx("customers-section__logo-container")}
+                    key={customer}
+                  >
+                    <img
+                      className={cx("customers-section__logo")}
+                      src={`/customers-logo/customer${customer}.png`}
+                      alt={`customer${customer}`}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className={cx("customers-section__logos-row-inner-wrap")}>
+                {customers.slice(20, 41).map((customer) => (
+                  <div
+                    className={cx("customers-section__logo-container")}
+                    key={customer}
+                  >
+                    <img
+                      className={cx("customers-section__logo")}
+                      src={`/customers-logo/customer${customer}.png`}
+                      alt={`customer${customer}`}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
           {/* <div className={cx("customers-section__selector-wrap")}>
             <span
