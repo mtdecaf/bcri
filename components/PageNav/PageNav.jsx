@@ -105,7 +105,6 @@ const PageNav = () => {
     <div className={cx("page-nav", "page-nav--large")}>
       <div className={cx("page-nav__contact-bar--large")} style={navBarStyle}>
         <div className={cx("page-nav__contact-bar__wrap")}>
-          {/* <div className={cx("page-nav__logo-wrap")} style={navBarLogoStyle}> */}
           <Link href="/">
             <a className={cx("page-nav__logo-wrap")} style={navBarLogoStyle} >
               <Image
@@ -118,7 +117,6 @@ const PageNav = () => {
               />
             </a>
           </Link>
-          {/* </div> */}
           <div className={cx("page-nav__contact-bar-info")}>
             <div
               className={cx("page-nav__contact-phone__wrap")}
