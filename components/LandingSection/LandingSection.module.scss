@@ -87,22 +87,21 @@
         &-wrap {
             clip-path: polygon(0 0, 100% 0, 43% 100%, 0% 100%);
             left: -0%;
-            animation: slide-out-left 3s ease-in-out;
+            animation: slide-out-left 1s ease-in-out;
+            animation-delay: 2s;
         }
     }
     &__right-overlay {
         &-wrap {
             clip-path: polygon(57% 0, 100% 0, 100% 100%, 0% 100%);
             right: -0%;
-            animation: slide-out-right 3s ease-in-out;
+            animation: slide-out-right 1s ease-in-out;
+            animation-delay: 2s;
         }
     }
 }
 @keyframes slide-out-left {
     0% {
-        left: 0;
-    }
-    75% {
         left: 0;
     }
     100% {
@@ -112,9 +111,6 @@
 
 @keyframes slide-out-right {
     0% {
-        right: 0;
-    }
-    75% {
         right: 0;
     }
     100% {

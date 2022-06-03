@@ -72,6 +72,24 @@
       padding: 0.25rem 0;
       display: flex;
       align-self: center;
+      // position: absolute;
+      // animation: move-to-position 3s ease-in-out;
+      // @keyframes move-to-position {
+      //   // move from the center of the page to the top left corner
+      //   0% {
+      //     top: 50%; 
+      //     right: 50%;
+      //     transform: translate(50%,-50%);
+      //   }
+      //   75% {
+      //     top: 50%; 
+      //     right: 50%;
+      //     transform: translate(50%,-50%);
+      //   }
+      //   100% {
+      //     transform: translateX(0) translateY(0);
+      //   }
+      // }
     }
   }
 

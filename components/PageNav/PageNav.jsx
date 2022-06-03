@@ -173,14 +173,16 @@ const PageNav = () => {
     <>
       <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} scrollTo={scrollTo} />
       <div className={cx("page-nav", "page-nav--small")}>
-        <div className={cx("page-nav__logo-wrap")} style={{ width: "6rem" }}>
+        <div className={cx("page-nav__logo-wrap")} style={{width: 96}}>
           <Link href="/">
             <a>
               <Image
                 className={cx("page-nav__logo")}
-                layout="responsive"
+                // layout="responsive"
                 src={bcriLogo}
                 alt="BCRI logo"
+                width={96}
+                height={50}
               />
             </a>
           </Link>
