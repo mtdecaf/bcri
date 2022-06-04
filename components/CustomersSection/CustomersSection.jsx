@@ -6,13 +6,16 @@ import classNames from "classnames/bind";
 
 let cx = classNames.bind(styles);
 
+// constants
+const PAUSED = 0;
+const RUNNING = 1;
+
 const CustomersSection = ({ mounted }) => {
   const customersNum = 41;
   const [customers, setCustomers] = useState([]);
   const [selectedSubgroup, setSelectedSubgroup] = useState(0);
   const [translateX, setTranslateX] = useState(0);
-  // const [clientX , setclientX] = useState(0);
-  // const [isDragging, setIsDragging] = useState(false);
+  const [animationState, setAnimationState] = useState(RUNNING);
 
   const createCustomerIndex = () => {
     // create a list of customers
@@ -23,10 +26,6 @@ const CustomersSection = ({ mounted }) => {
 
   useEffectOnce(() => {
     createCustomerIndex();
-    const interval = setInterval(() => {
-      setTranslateX((translateX) => translateX - 0.05);
-    }, 10);
-    return () => clearInterval(interval);
   }, []);
 
   // timeout subgroup change
@@ -45,6 +44,17 @@ const CustomersSection = ({ mounted }) => {
     }
   }, [translateX]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (animationState === RUNNING) {
+        setTranslateX((translateX) => translateX - 0.0035);
+      } else if (animationState === PAUSED) {
+        setTranslateX((translateX) => translateX);
+      }
+    }, 10);
+    return () => clearInterval(interval);
+  }, [animationState]);
+
   return (
     mounted && (
       <div className={cx("customers-section")}>
@@ -56,6 +66,8 @@ const CustomersSection = ({ mounted }) => {
           <div
             className={cx("customers-section__logos-marquee")}
             style={{ transform: `translateX(${translateX}%)` }}
+            onMouseEnter={() => setAnimationState(PAUSED)}
+            onMouseLeave={() => setAnimationState(RUNNING)}
           >
             <div className={cx("customers-section__logos-row-one")}>
               <div className={cx("customers-section__logos-row-inner-wrap")}>
