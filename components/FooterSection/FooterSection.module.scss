@@ -22,6 +22,7 @@
         flex-direction: column;
         @include side-padding-mobile;
         padding-top: 6rem;
+        padding-bottom: 3rem;
         @include tablet {
             @include side-padding-tablet;
             padding-top: 6rem;
