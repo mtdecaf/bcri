@@ -1,5 +1,6 @@
 import Link from "next/link";
-import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollAnimation from "react-animate-on-scroll";
+import { BsLinkedin } from "react-icons/bs";
 
 import services from "../../data/servicesData.json";
 
@@ -10,10 +11,17 @@ let cx = classNames.bind(styles);
 const FooterSection = () => {
   const { servicesData } = services;
   return (
-    <div className={cx("footer-section")}  id="footer-section">
+    <div className={cx("footer-section")} id="footer-section">
       <div className={cx("footer-section__inner-wrap")}>
         <div className={cx("footer-section__about-wrap")}>
-          <h3 className={cx("footer-section__about-title", "footer-section__title")}>About Us</h3>
+          <h3
+            className={cx(
+              "footer-section__about-title",
+              "footer-section__title"
+            )}
+          >
+            About Us
+          </h3>
           <div className={cx("footer-section__about-content-wrap")}>
             <p className={cx("footer-section__about-content")}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
@@ -24,7 +32,14 @@ const FooterSection = () => {
           </div>
         </div>
         <div className={cx("footer-section__services-wrap")}>
-          <h3 className={cx("footer-section__services-title", "footer-section__title")}>Services</h3>
+          <h3
+            className={cx(
+              "footer-section__services-title",
+              "footer-section__title"
+            )}
+          >
+            Services
+          </h3>
           <ul className={cx("footer-section__services-list")}>
             {servicesData.map((data, key) => (
               <li
@@ -41,7 +56,14 @@ const FooterSection = () => {
           </ul>
         </div>
         <div className={cx("footer-section__contact-wrap")}>
-          <h3 className={cx("footer-section__contact-title", "footer-section__title")}>Contact Us</h3>
+          <h3
+            className={cx(
+              "footer-section__contact-title",
+              "footer-section__title"
+            )}
+          >
+            Contact Us
+          </h3>
           <div className={cx("footer-section__contact-phone-wrap")}>
             <a
               className={cx("footer-section__contact-phone-link")}
@@ -58,13 +80,31 @@ const FooterSection = () => {
               Email: info@bcroofinspections.com
             </a>
           </div>
+          <div className={cx("footer-section__contact-socials-wrap")}>
+            <a className={cx("footer-section__contact-socials-link")} href="">
+              <BsLinkedin size={32}/>
+            </a>
+          </div>
         </div>
-        <ScrollAnimation animateIn="zoomIn" animateOnce={true} className={cx("footer-section__overlay-wrap")}>
-            <div className={cx("footer-section__overlay-title-wrap")}>
-                <h3 className={cx("footer-section__overlay-title")}>Ready to get Started?</h3>
-                <h3 className={cx("footer-section__overlay-title")}>Get in touch today</h3>
-            </div>
-            <a className={cx("footer-section__overlay-button")} href="mailto: info@bcroofinspections.com">REQUEST A QUOTE</a>
+        <ScrollAnimation
+          animateIn="zoomIn"
+          animateOnce={true}
+          className={cx("footer-section__overlay-wrap")}
+        >
+          <div className={cx("footer-section__overlay-title-wrap")}>
+            <h3 className={cx("footer-section__overlay-title")}>
+              Ready to get Started?
+            </h3>
+            <h3 className={cx("footer-section__overlay-title")}>
+              Get in touch today
+            </h3>
+          </div>
+          <a
+            className={cx("footer-section__overlay-button")}
+            href="mailto: info@bcroofinspections.com"
+          >
+            REQUEST A QUOTE
+          </a>
         </ScrollAnimation>
       </div>
     </div>
