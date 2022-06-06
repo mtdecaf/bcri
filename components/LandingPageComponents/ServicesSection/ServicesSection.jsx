@@ -1,5 +1,5 @@
 import ServicesCard from "./components/ServicesCard";
-import services from "../../data/servicesData.json";
+import services from "../../../data/servicesData.json";
 
 import styles from "./ServicesSection.module.scss";
 import classNames from "classnames/bind";

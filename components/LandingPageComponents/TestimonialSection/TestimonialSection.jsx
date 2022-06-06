@@ -1,5 +1,5 @@
 import TestimonialCard from "./components/TestimonialCard";
-import tesimonials from "../../data/testimonialsData.json";
+import tesimonials from "../../../data/testimonialsData.json";
 import Link from "next/link";
 
 import styles from "./TestimonialSection.module.scss";

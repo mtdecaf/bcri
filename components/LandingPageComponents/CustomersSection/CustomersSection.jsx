@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useEffectOnce } from "../../custom_hooks/useEffectOnce";
+import { useEffectOnce } from "../../../custom_hooks/useEffectOnce";
 
 import styles from "./CustomersSection.module.scss";
 import classNames from "classnames/bind";

@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
 import styles from "../styles/Home.module.css";
-import LandingSection from "../components/LandingSection/LandingSection";
-import ServicesSection from "../components/ServicesSection/ServicesSection";
-import TestimonialSection from "../components/TestimonialSection/TestimonialSection";
-import CustomersSection from "../components/CustomersSection/CustomersSection";
+import LandingSection from "../components/LandingPageComponents/LandingSection/LandingSection";
+import ServicesSection from "../components/LandingPageComponents/ServicesSection/ServicesSection";
+import TestimonialSection from "../components/LandingPageComponents/TestimonialSection/TestimonialSection";
+import CustomersSection from "../components/LandingPageComponents/CustomersSection/CustomersSection";
 
 export default function Home() {
   const hasWindow = typeof window !== "undefined";
