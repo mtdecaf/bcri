@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 import styles from "./LandingSection.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);

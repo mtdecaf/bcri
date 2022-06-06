@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useEffectOnce } from "../../../custom_hooks/useEffectOnce";
 
 import styles from "./CustomersSection.module.scss";
