@@ -1,7 +1,6 @@
+import Link from "next/link";
 import { IoHome, IoDocumentText } from "react-icons/io5";
 import { RiPencilRuler2Fill } from "react-icons/ri";
-
-import Link from "next/link";
 
 import styles from "./ServicesCard.module.scss";
 import classNames from "classnames/bind";

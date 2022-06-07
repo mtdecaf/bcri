@@ -1,5 +1,5 @@
 import ServicesDetailsSection from "../../components/ServicesPageComponents/ServicesDetailsSection/ServicesDetailsSection";
-import { useServicesContext } from "../../context/state";
+import { useServicesContext } from "../../context/services";
 
 import styles from "./ServicesPage.module.scss";
 import classNames from 'classnames/bind';
