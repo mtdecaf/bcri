@@ -7,6 +7,7 @@ let cx = classNames.bind(styles);
 
 const ServicesSection = () => {
     const { servicesData } = services;
+    
     return (
         <section className={cx("service-section")} id="services-section">
             <div className={cx("service-section__title-wrap")}>
