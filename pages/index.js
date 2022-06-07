@@ -9,6 +9,7 @@ import CustomersSection from "../components/LandingPageComponents/CustomersSecti
 export default function Home() {
   const hasWindow = typeof window !== "undefined";
 
+
   const [mounted, setMounted] = useState(false);
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
 

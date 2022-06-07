@@ -88,7 +88,8 @@ const FooterSection = () => {
         </div>
         <ScrollAnimation
           animateIn="zoomIn"
-          animateOnce={true}
+          animateOnce
+          animatePreScroll={false}
           className={cx("footer-section__overlay-wrap")}
         >
           <div className={cx("footer-section__overlay-title-wrap")}>

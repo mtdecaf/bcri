@@ -1,0 +1,19 @@
+@use "styles/global/colors.scss" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.services-details {
+    &__title {
+        color: white;
+        &-wrap {
+            background-color: $tundora;
+            height: 7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include tablet {
+                height: 9rem;
+            }
+        }
+    }
+}
