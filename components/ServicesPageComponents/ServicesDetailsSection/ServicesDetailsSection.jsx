@@ -11,6 +11,8 @@ const ServicesDetailsSection = ({ servicesData, currentService }) => {
         <h2 className={cx("services-details__title")}>Our Services</h2>
       </div>
       <ServicesTabs servicesData={servicesData} currentService={currentService} />
+        <div className={cx("services-details__content")}>
+        </div>
     </div>
   );
 };
