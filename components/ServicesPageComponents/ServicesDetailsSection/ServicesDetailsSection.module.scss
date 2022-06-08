@@ -3,6 +3,7 @@
 @use "styles/global/variables.scss" as *;
 
 .services-details {
+    position: relative;
     &__title {
         color: white;
         &-wrap {
