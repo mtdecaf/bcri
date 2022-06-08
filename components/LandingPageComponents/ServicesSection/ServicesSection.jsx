@@ -20,7 +20,7 @@ const ServicesSection = () => {
                             key={index}
                             title={service.title}
                             icon={service.icon}
-                            description={service.description}
+                            shortDescription={service.shortDescription}
                         />
                     );
                 })}

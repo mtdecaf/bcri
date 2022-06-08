@@ -7,7 +7,7 @@ import styles from "./ServicesCard.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
-const ServicesCard = ({icon, title, description}) => {
+const ServicesCard = ({icon, title, shortDescription}) => {
     const { handleServiceSelected } = useServicesContext();
 
     return (
@@ -21,7 +21,7 @@ const ServicesCard = ({icon, title, description}) => {
                 <p className={cx("services-card__title")}>{title}</p>
             </div>
             <div className={cx("services-card__description-wrap")}>
-                <p className={cx("services-card__description")}>{description}</p>
+                <p className={cx("services-card__description")}>{shortDescription}</p>
             </div>
             <div className={cx("services-card__button-wrap")}>
                 <Link href="/services"><a className={cx("services-card__button")} onClick={() => handleServiceSelected(title)}>Learn More &gt;</a></Link>
