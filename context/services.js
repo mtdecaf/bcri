@@ -8,7 +8,11 @@ export const ServicesContextProvider = ({ children }) => {
   const [selectedService, setSelectedService] = useState();
   !selectedService && setSelectedService(servicesData[0].title);
   const handleServiceSelected = (title) => {
-    setSelectedService(title);
+    if (!title) {
+      setSelectedService(servicesData[0].title);
+    } else {
+      setSelectedService(title);
+    }
   };
   return (
     <servicesContext.Provider value={{selectedService, handleServiceSelected}}>

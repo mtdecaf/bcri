@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useServicesContext } from "../../context/services";
+
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import Image from "next/image";
@@ -15,6 +17,7 @@ let cx = classNames.bind(styles);
 
 const PageNav = () => {
   const hasWindow = typeof window !== "undefined";
+  const { handleServiceSelected } = useServicesContext();
 
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
   const [mounted, setMounted] = useState(false);
@@ -149,7 +152,7 @@ const PageNav = () => {
       <div className={cx("page-nav__list-wrap")} style={navListStyle}>
         <div className={cx("page-nav__list")}>
           <Link href="/services">
-            <a className={cx("page-nav__button", "page-nav__services")}>
+            <a className={cx("page-nav__button", "page-nav__services")}onClick={() => handleServiceSelected()}>
               SERVICES
             </a>
           </Link>
