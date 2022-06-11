@@ -1,7 +1,8 @@
 const TestimoniesPage = () => {
     return (
         <div className="testimonies-page">
-            Testimonies
+            <div className="testimonies-page__title-wrap">
+            </div>
         </div>
     )
 };

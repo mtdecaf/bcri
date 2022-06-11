@@ -8,12 +8,12 @@
         color: white;
         &-wrap {
             background-color: $tundora;
-            height: 7rem;
+            height: 8rem;
             display: flex;
             justify-content: center;
             align-items: center;
             @include tablet {
-                height: 9rem;
+                height: 12rem;
             }
         }
     }

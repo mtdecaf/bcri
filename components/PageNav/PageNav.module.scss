@@ -152,6 +152,10 @@
     align-items: center;
   }
 
+  &__services-wrap {
+    cursor: pointer;
+  }
+
   &__button {
     color: $primary-blue;
     font-size: 1.25rem;
