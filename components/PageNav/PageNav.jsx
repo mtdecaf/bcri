@@ -3,12 +3,16 @@ import { useServicesContext } from "../../context/services";
 
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
 import Link from "next/link";
 import bcriLogo from "../../public/bcri-logo.svg";
 import { FiPhone } from "react-icons/fi";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import services from "../../data/servicesData.json";
 
-import BurgerMenu from "./components/BurgerMenu";
+import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
 import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
 
 import styles from "./PageNav.module.scss";
@@ -18,11 +22,14 @@ let cx = classNames.bind(styles);
 const PageNav = () => {
   const hasWindow = typeof window !== "undefined";
   const { handleServiceSelected } = useServicesContext();
+  const { servicesData } = services;
 
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState();
+  const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   useEffect(() => {
     setMounted(true);
@@ -44,7 +51,7 @@ const PageNav = () => {
     }
   }, [hasWindow]);
 
-  const handleClick = () => {
+  const handleBurgerMenuClick = () => {
     setIsOpen(!isOpen);
   };
 
@@ -67,6 +74,11 @@ const PageNav = () => {
     } else {
       setIsScrolled(false);
     }
+  };
+
+  const handleServiceDropDownClick = (e) => {
+    setAnchorEl(e.currentTarget);
+    setServicesMenuOpen(true);
   };
 
   useEffect(() => {
@@ -109,14 +121,14 @@ const PageNav = () => {
       <div className={cx("page-nav__contact-bar--large")} style={navBarStyle}>
         <div className={cx("page-nav__contact-bar__wrap")}>
           <Link href="/">
-            <a className={cx("page-nav__logo-wrap")} style={navBarLogoStyle} >
+            <a className={cx("page-nav__logo-wrap")} style={navBarLogoStyle}>
               <Image
                 className={cx("page-nav__logo")}
                 src={bcriLogo}
                 alt="BCRI logo"
                 width={isScrolled ? 144 : 136}
                 height={50}
-                style={{transition: "all 0.75s"}}
+                style={{ transition: "all 0.75s" }}
               />
             </a>
           </Link>
@@ -151,11 +163,47 @@ const PageNav = () => {
       </div>
       <div className={cx("page-nav__list-wrap")} style={navListStyle}>
         <div className={cx("page-nav__list")}>
-          <Link href="/services">
-            <a className={cx("page-nav__button", "page-nav__services")}onClick={() => handleServiceSelected()}>
-              SERVICES
-            </a>
-          </Link>
+          <div className={cx("page-nav__services-wrap")}>
+            <Link href="/services">
+              <a
+                className={cx("page-nav__button", "page-nav__services")}
+                onClick={() => handleServiceSelected()}
+              >
+                SERVICES
+              </a>
+            </Link>
+            <RiArrowDropDownLine
+              className={cx("page-nav__services-dropdown-icon")}
+              size={32}
+              onClick={(e) => handleServiceDropDownClick(e)}
+              color="#043454"
+            />
+            <Menu
+              id="services-menu"
+              className={cx("page-nav__services-menu")}
+              anchorEl={anchorEl}
+              open={servicesMenuOpen}
+              onClose={() => setServicesMenuOpen(false)}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'center',
+              }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+            >
+              {servicesData.map((service) => (
+                <MenuItem
+                  key={service.id}
+                  className={cx("page-nav__service-item")}
+                  onClick={() => handleServiceSelected(service.title)}
+                >
+                  <Link href="/services">{service.title}</Link>
+                </MenuItem>
+              ))}
+            </Menu>
+          </div>
           <Link href="/testimonies">
             <a className={cx("page-nav__button", "page-nav__testimonial")}>
               TESTIMONIALS
@@ -176,12 +224,11 @@ const PageNav = () => {
     <>
       <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} scrollTo={scrollTo} />
       <div className={cx("page-nav", "page-nav--small")}>
-        <div className={cx("page-nav__logo-wrap")} style={{width: 96}}>
+        <div className={cx("page-nav__logo-wrap")} style={{ width: 96 }}>
           <Link href="/">
             <a>
               <Image
                 className={cx("page-nav__logo")}
-                // layout="responsive"
                 src={bcriLogo}
                 alt="BCRI logo"
                 width={96}
@@ -203,7 +250,7 @@ const PageNav = () => {
           <MenuRoundedIcon
             className={cx("page-nav__burger")}
             fontSize="large"
-            onClick={() => handleClick()}
+            onClick={() => handleBurgerMenuClick()}
           />
         </div>
         <ScrollToTopButton isScrolled={isScrolled} />

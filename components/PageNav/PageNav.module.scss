@@ -147,6 +147,11 @@
     }
   }
 
+  &__services-wrap {
+    display: flex;
+    align-items: center;
+  }
+
   &__button {
     color: $primary-blue;
     font-size: 1.25rem;
