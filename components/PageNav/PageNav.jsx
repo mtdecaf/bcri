@@ -204,7 +204,7 @@ const PageNav = () => {
               ))}
             </Menu>
           </div>
-          <Link href="/testimonies">
+          <Link href="/testimonials">
             <a className={cx("page-nav__button", "page-nav__testimonial")}>
               TESTIMONIALS
             </a>
