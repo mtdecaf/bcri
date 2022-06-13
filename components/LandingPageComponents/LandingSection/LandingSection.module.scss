@@ -133,7 +133,7 @@
         }
         @include desktop {
             padding: 0;
-            width: $desktop;
+            max-width: $desktop;
         }
         &-wrap {
             background-color: $tundora;

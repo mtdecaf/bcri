@@ -1,0 +1,20 @@
+@use "styles/global/colors.scss" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.testimonies-page {
+    position: relative;
+    &__title {
+        color: white;
+        &-wrap {
+            background-color: $tundora;
+            height: 8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include tablet {
+                height: 12rem;
+            }
+        }
+    }
+}
