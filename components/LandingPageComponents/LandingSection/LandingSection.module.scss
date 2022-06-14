@@ -128,11 +128,11 @@
     &__bottom-overlay {
         display: flex;
         gap: 0.25rem;
+        width: 100%;
         @include tablet {
             gap: 1rem;
         }
         @include desktop {
-            padding: 0;
             max-width: $desktop;
         }
         &-wrap {
@@ -152,6 +152,7 @@
             }
             @include desktop {
                 justify-content: center;
+                padding: 0;
             }
         }
         &-image {

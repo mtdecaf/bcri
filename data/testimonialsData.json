@@ -1,22 +1,22 @@
 {
     "testimonialsData": [
         {
-            "name": "John Doe",
+            "name": "Linda MacSeafraidh BA",
             "rating": 4.5,
-            "company": "Google",
-            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget nisl id libero consectetur fermentum. Nulla euismod, urna eu tempor consectetur, nisi nisl aliquam nunc, euismod aliquam nisl nisi euismod."
+            "company": "Property Manager, Strata West",
+            "testimonial": "I have worked with Dean at BC Roof Inspections on two major projects, both of which involved complicated roofing systems. Dean has provided all the information needed by the Owners of the Strata Corporation to make decisions and has communicated this information effectively to larger groups at general meetings. He prepares clear specifications and oversees a fair tendering process.\n Dean’s hands on knowledge and exacting standards in overseeing roofing contractors have resulted in the installation of top quality roofs. Dean is on site on a regular basis, addresses the needs of the individual owners as they come up, keeps the residents informed of the progress of the work and any requirements of the owners, such as removing plant materials that may be affected by scaffolding and other work materials. Dean works hard to keep the job moving on schedule.\n Dean is diligent in his role as roofing consultant and advocate for the Owners and Residents of Strata Corporations. I have no hesitation in recommending him as a Roof Consultant and Project Manager and look forward to working with him on future projects."
         },
         {
-            "name": "John Smith",
+            "name": "Joanne Maclennen",
             "rating": 5,
-            "company": "Apple",
-            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget nisl id libero consectetur fermentum. Nulla euismod, urna eu tempor consectetur, nisi nisl aliquam nunc, euismod aliquam nisl nisi euismod."
+            "company": "Strata President & Roofing Committee Project Manager, Berkshyre Gardens",
+            "testimonial": "I am writing to tell you how pleased we are with the services provided by your company.\n Both you and Ted Neef were extremely professional and knowledgeable. From the original inspection, through the bidding process to the final inspection and sign off, you and Ted worked diligently to ensure that all work was performed to the proper specifications and our interests as owners were fully protected.\n As you know we established a roofing committee and chose to take on the management of this project ourselves. You and Ted were extremely helpful and always available to answer our questions and provide sound advice.\n It was a real pleasure working with both of you over the course of this project and we look forward to seeing you again at the two-year inspection.\n Our strata will be pleased to recommend your company to others seeking roof inspection services."
         },
         {
-            "name": "Shirley Jones",
+            "name": "Ian Campbell",
             "rating": 5,
-            "company": "Facebook",
-            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget nisl id libero consectetur fermentum. Nulla euismod, urna eu tempor consectetur, nisi nisl aliquam nunc, euismod aliquam nisl nisi euismod."
+            "company": "Courthouse Square",
+            "testimonial": "Dean assisted me finding roof leaks on my commercial office building, roof-size 5300 sq-ft.\n Three contractors offered to repair/renew my commercial torch-on roof for prices ranging from $5000 to $70,000. Dean suggested he find the leaks and repair them.\n Dean studied my problem and isolated the leaks in a few hours, and guided me to use a skilled repair contractor who fixed the leaks in 3 hours for less than $500.\n Dean is a great treasure and I will use him again for any roof problem I have in the future."
         }
     ]
 }

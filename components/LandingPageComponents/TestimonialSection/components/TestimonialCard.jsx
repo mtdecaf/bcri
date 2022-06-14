@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Rating } from "@mui/material";
+import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import styles from "./TestimonialCard.module.scss";
@@ -6,6 +8,8 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const TestimonialCard = ({ testimonialData, index, mounted, windowWidth }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const testimonialCardStyle = {
     justifyContent:
       windowWidth < 768
@@ -13,6 +17,15 @@ const TestimonialCard = ({ testimonialData, index, mounted, windowWidth }) => {
         : index === 0 || index % 2 === 0
         ? "flex-start"
         : "flex-end",
+  };
+
+  const testimonialCardTextStyle = {
+    maxHeight: isExpanded ? "100%" : "15rem",
+    transition: "max-height 0.75s",
+  };
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
   };
 
   return (
@@ -31,9 +44,25 @@ const TestimonialCard = ({ testimonialData, index, mounted, windowWidth }) => {
             readOnly
           />
           <div className={cx("testimonial-card__content-wrap")}>
-            <p className={cx("testimonial-card__content")}>
+            <p
+              className={cx("testimonial-card__content")}
+              style={testimonialCardTextStyle}
+            >
               {testimonialData.testimonial}
             </p>
+            {isExpanded ? (
+              <BsChevronCompactUp
+                className={cx("testimonial-card__content-expand")}
+                onClick={toggleExpand}
+                size={24}
+              />
+            ) : (
+              <BsChevronCompactDown
+                className={cx("testimonial-card__content-expand")}
+                onClick={toggleExpand}
+                size={24}
+              />
+            )}
           </div>
           <div className={cx("testimonial-card__name-wrap")}>
             <p className={cx("testimonial-card__name")}>

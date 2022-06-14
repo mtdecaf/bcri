@@ -10,6 +10,7 @@ const TestimonialsPage = () => {
       <div className={cx("testimonials-page")}>
         <div className={cx("testimonials-page__title-wrap")}>
           <h2 className={cx("testimonials-page__title")}>Tesimonials</h2>
+          <p className={cx("testimonials-page__subtext")}>See Why People Trust Us For Roofing Services</p>
         </div>
       </div>
       <CompanyStatsSection />
