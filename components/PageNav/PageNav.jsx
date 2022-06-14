@@ -107,7 +107,7 @@ const PageNav = () => {
   };
 
   const navBarfontStyle = {
-    fontSize: isScrolled ? "1.2rem" : "1rem",
+    fontSize: isScrolled ? "1.1rem" : "1rem",
     transition: "font-size 0.75s",
   };
 

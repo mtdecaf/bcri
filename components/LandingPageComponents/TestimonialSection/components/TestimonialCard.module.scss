@@ -8,10 +8,7 @@
     padding: 2rem 1.25rem;
     width: calc(100% - 2rem);
     @include tablet {
-        width: 65%;
-    }
-    @include desktop {
-        max-width: 35rem;
+        max-width: 40rem;
     }
     &-wrap {
         display: flex;
@@ -23,7 +20,6 @@
     &__content {
         font-size: 1.25rem;
         line-height: 1.5;
-        overflow: hidden;
         &:after{
             content: "";
             position: absolute;
@@ -36,6 +32,7 @@
             height: 4em;
         }
         &-wrap {
+            overflow: hidden;
             position: relative;
         }
         &-expand {
@@ -53,8 +50,12 @@
         }
     }
     &__company {
-        font-size: 1rem;
-        letter-spacing: 0.2rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.15rem;
         font-weight: 600;
+        @include tablet {
+            font-size: 1rem;
+            letter-spacing: 0.2rem;
+        }
     }
 }

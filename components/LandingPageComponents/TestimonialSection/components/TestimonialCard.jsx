@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Rating } from "@mui/material";
 import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -17,11 +17,15 @@ const TestimonialCard = ({ testimonialData, index, mounted, windowWidth }) => {
         : index === 0 || index % 2 === 0
         ? "flex-start"
         : "flex-end",
+    height: "100%",
+    maxHeight: isExpanded ? "100rem" : "441px",
+    transition: "all 0.75s",
   };
 
   const testimonialCardTextStyle = {
+    height: isExpanded ? "" : "100%",
     maxHeight: isExpanded ? "100%" : "15rem",
-    transition: "max-height 0.75s",
+    transition: "all 0.75s",
   };
 
   const toggleExpand = () => {
@@ -43,27 +47,27 @@ const TestimonialCard = ({ testimonialData, index, mounted, windowWidth }) => {
             precision={0.5}
             readOnly
           />
-          <div className={cx("testimonial-card__content-wrap")}>
-            <p
-              className={cx("testimonial-card__content")}
-              style={testimonialCardTextStyle}
-            >
+          <div
+            className={cx("testimonial-card__content-wrap")}
+            style={testimonialCardTextStyle}
+          >
+            <p className={cx("testimonial-card__content")}>
               {testimonialData.testimonial}
             </p>
-            {isExpanded ? (
-              <BsChevronCompactUp
-                className={cx("testimonial-card__content-expand")}
-                onClick={toggleExpand}
-                size={24}
-              />
-            ) : (
-              <BsChevronCompactDown
-                className={cx("testimonial-card__content-expand")}
-                onClick={toggleExpand}
-                size={24}
-              />
-            )}
           </div>
+          {isExpanded ? (
+            <BsChevronCompactUp
+              className={cx("testimonial-card__content-expand")}
+              onClick={toggleExpand}
+              size={24}
+            />
+          ) : (
+            <BsChevronCompactDown
+              className={cx("testimonial-card__content-expand")}
+              onClick={toggleExpand}
+              size={24}
+            />
+          )}
           <div className={cx("testimonial-card__name-wrap")}>
             <p className={cx("testimonial-card__name")}>
               {testimonialData.name.toUpperCase()}
