@@ -17,6 +17,8 @@ const TestimonialCard = ({ testimonialData, index, mounted, windowWidth }) => {
   const testimonialTextRef = useRef();
   const testimonialTextContainerRef = useRef();
   const { name, company, testimonial, rating } = testimonialData;
+  // convert \n to line break and indentation
+  const formatedTestimonial = JSON.stringify(testimonial).replace(/\\n/g, "<br />").split("<br />");
 
   useEffect(() => {
     if (mounted) {
@@ -36,7 +38,6 @@ const TestimonialCard = ({ testimonialData, index, mounted, windowWidth }) => {
   useEffect(() => {
     // if the testimonial isn't expanded and is overflowed, add a class to the text box
     if (mounted && !isExpanded && isOverflowed) {
-      console.log("run")
       testimonialTextRef.current.classList.add(
         cx("testimonial-card__content--fade")
       );
@@ -68,7 +69,6 @@ const TestimonialCard = ({ testimonialData, index, mounted, windowWidth }) => {
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
-  console.log(isOverflowed);
 
   return (
     mounted && (
@@ -94,7 +94,13 @@ const TestimonialCard = ({ testimonialData, index, mounted, windowWidth }) => {
               className={cx("testimonial-card__content")}
               ref={testimonialTextRef}
             >
-              {testimonial}
+              {/* map out the formatedTestimonial and add a line break in between */}
+              {formatedTestimonial.map((line, key) => (
+                <span key={key}>
+                  {line}
+                  <br />
+                </span>
+              ))}
             </p>
           </div>
           {isOverflowed && isExpanded ? (

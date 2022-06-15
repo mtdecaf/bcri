@@ -8,16 +8,19 @@ let cx = classNames.bind(styles);
 
 const TestimonialSection = ({mounted, windowWidth}) => {
     const { testimonialsData } = tesimonials;
+    console.log(testimonialsData);
+    // limit testimonials to 3
+    const testimonials = testimonialsData.slice(0, 3);
     return(
         <section className={cx("testimonial-section")} id="testimonial-section">
             <div className={cx("testimonial-section__title-wrap")}>
                 <h2 className={cx("testimonial-section__title")}>Why People Choose Us</h2>
             </div>
             <div className={cx("testimonial-section__cards-wrap")}>
-                {testimonialsData.map((data, key) => <TestimonialCard testimonialData={data} key={key} index={key} mounted={mounted} windowWidth={windowWidth} />)}
+                {testimonials.map((data, key) => <TestimonialCard testimonialData={data} key={key} index={key} mounted={mounted} windowWidth={windowWidth} />)}
             </div>
             <div className={cx("testimonial-section__button-wrap")}>
-                <Link href="/testimonies"><a className={cx("testimonial-section__button")}>SEE MORE TESTIMONIALS</a></Link>
+                <Link href="/testimonials"><a className={cx("testimonial-section__button")}>SEE MORE TESTIMONIALS</a></Link>
             </div>
         </section>
     )

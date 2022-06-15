@@ -20,6 +20,11 @@
     &__content {
         font-size: 1.25rem;
         line-height: 1.5;
+        & > span {
+            display:inline-block;
+            width: 100%;
+            text-indent: 2rem;
+        }
         &--fade:after{
             content: "";
             position: absolute;
