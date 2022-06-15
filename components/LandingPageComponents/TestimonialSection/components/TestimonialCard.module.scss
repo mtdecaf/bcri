@@ -20,7 +20,7 @@
     &__content {
         font-size: 1.25rem;
         line-height: 1.5;
-        &:after{
+        &--fade:after{
             content: "";
             position: absolute;
             z-index: 1;
