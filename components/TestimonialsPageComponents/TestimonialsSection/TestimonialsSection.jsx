@@ -16,6 +16,10 @@ const TestimonialsSection = ({ testimonialsData }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
 
+  const { name, company, testimonial, rating } = testimonialsData;
+  console.log(testimonialsData);
+  // const formatedTestimonial = JSON.stringify(testimonial).replace(/\\n/g, "<br />").split("<br />");
+  
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
   const scrollTo = useCallback(
@@ -48,7 +52,7 @@ const TestimonialsSection = ({ testimonialsData }) => {
     <button
       className={cx("testimonials__button", "testimonials__button--next")}
       onClick={onClick}
-      disabled={!enabled}
+      // disabled={!enabled}
     >
       <BsChevronCompactRight className={cx("testimonials__button__icon")} />
     </button>
