@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-import { useEffectOnce } from "/custom_hooks/useEffectOnce";
 import { Rating } from "@mui/material";
 import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
 import ScrollAnimation from "react-animate-on-scroll";

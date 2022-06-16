@@ -8,7 +8,6 @@ let cx = classNames.bind(styles);
 
 const TestimonialSection = ({mounted, windowWidth}) => {
     const { testimonialsData } = tesimonials;
-    console.log(testimonialsData);
     // limit testimonials to 3
     const testimonials = testimonialsData.slice(0, 3);
     return(
