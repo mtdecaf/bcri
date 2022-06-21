@@ -1,5 +1,10 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import {
+  BsChevronCompactLeft,
+  BsChevronCompactRight,
+  BsFillChatQuoteFill,
+} from "react-icons/bs";
+import { Rating } from "@mui/material";
 
 import useEmblaCarousel from "embla-carousel-react";
 import styles from "./TestimonialsSection.module.scss";
@@ -16,10 +21,14 @@ const TestimonialsSection = ({ testimonialsData }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
 
-  const { name, company, testimonial, rating } = testimonialsData;
-  console.log(testimonialsData);
-  // const formatedTestimonial = JSON.stringify(testimonial).replace(/\\n/g, "<br />").split("<br />");
-  
+  // console.log(testimonialsData);
+  const formattedTestimonialsData = testimonialsData.map((data) => {
+    return {
+      ...data,
+      testimonial: data.testimonial.replace(/\n/g, "<br />").split("<br />"),
+    };
+  });
+  // console.log(formattedTestimonialsData)
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
   const scrollTo = useCallback(
@@ -27,11 +36,20 @@ const TestimonialsSection = ({ testimonialsData }) => {
     [embla]
   );
 
+  const renderTestimonials = (formatedTestimonial) => {
+    return formatedTestimonial.map((line, key) => (
+      <span key={key}>
+        {line}
+        <br />
+      </span>
+    ));
+  };
+
   const DotButton = ({ selected, onClick }) => (
     <button
       className={cx(
-        "testimonials__dot",
-        `testimonials__dot${selected ? "--is-selected" : ""}`
+        "testimonials-section__dot",
+        `testimonials-section__dot${selected ? "--is-selected" : ""}`
       )}
       type="button"
       onClick={onClick}
@@ -40,21 +58,21 @@ const TestimonialsSection = ({ testimonialsData }) => {
 
   const PrevButton = ({ enabled, onClick }) => (
     <button
-      className={cx("testimonials__button", "testimonials__button--prev")}
+      className={cx("testimonials-section__button", "testimonials-section__button--prev")}
       onClick={onClick}
       // disabled={!enabled}
     >
-      <BsChevronCompactLeft className={cx("testimonials__button__icon")} />
+      <BsChevronCompactLeft className={cx("testimonials-section__button__icon")} />
     </button>
   );
 
   const NextButton = ({ enabled, onClick }) => (
     <button
-      className={cx("testimonials__button", "testimonials__button--next")}
+      className={cx("testimonials-section__button", "testimonials-section__button--next")}
       onClick={onClick}
       // disabled={!enabled}
     >
-      <BsChevronCompactRight className={cx("testimonials__button__icon")} />
+      <BsChevronCompactRight className={cx("testimonials-section__button__icon")} />
     </button>
   );
   const onSelect = useCallback(() => {
@@ -73,27 +91,47 @@ const TestimonialsSection = ({ testimonialsData }) => {
 
   return (
     <>
-      <div className={cx("testimonials")}>
-        <div className={cx("testimonials__wrap")}>
-          <PrevButton onClick={scrollPrev} 
-          // enabled={prevBtnEnabled}
-           />
-          <div className={cx("testimonials__viewport")} ref={viewportRef}>
-            <div className={cx("testimonials__container")}>
-              {testimonialsData.map((testimonial, index) => (
-                <div className={cx("testimonials__slide")} key={index}>
-                  <div className={cx("testimonials__slide__inner")}>
-                    {testimonial.testimonial}
+      <div className={cx("testimonials-section")}>
+        <div className={cx("testimonials-section__wrap")}>
+          <PrevButton
+            onClick={scrollPrev}
+            // enabled={prevBtnEnabled}
+          />
+          <div className={cx("testimonials-section__viewport")} ref={viewportRef}>
+            <div className={cx("testimonials-section__container")}>
+              {formattedTestimonialsData.map((testimonial, index) => (
+                <div className={cx("testimonials-section__slide")} key={index}>
+                  <div className={cx("testimonials-section__slide__inner")}>
+                    <div className={cx("testimonials-section__slide__top-wrap")}>
+                      <Rating
+                        name="testimonials-section__rating"
+                        value={testimonial.rating}
+                        readOnly
+                        className={cx("testimonials-section__rating")}
+                      />
+                      <div className={cx("testimonials-section__content-wrap")}>
+                        <p className={cx("testimonials-section__content")}>{renderTestimonials(testimonial.testimonial)}</p>
+                      </div>
+                    </div>
+                    <div className={cx("testimonials-section__slide__bottom-wrap")}>
+                      <div className={cx("testimonials-section__author-wrap")}>
+                        <p className={cx("testimonials-section__author")}>{testimonial.name.toUpperCase()}</p>
+                      </div>
+                      <div className={cx("testimonials-section__company-wrap")}>
+                        <p className={cx("testimonials-section__company")}>{testimonial.company}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <NextButton onClick={scrollNext} 
-          // enabled={nextBtnEnabled}
-           />
+          <NextButton
+            onClick={scrollNext}
+            // enabled={nextBtnEnabled}
+          />
         </div>
-        <div className={cx("testimonials__dots")}>
+        <div className={cx("testimonials-section__dots")}>
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
