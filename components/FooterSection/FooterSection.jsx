@@ -64,6 +64,9 @@ const FooterSection = () => {
           >
             Contact Us
           </h3>
+          <div>
+            <p>Address: 201 – 19486 60th Avenue,<br></br> Surrey, B.C. V3S 3S7</p>
+          </div>
           <div className={cx("footer-section__contact-phone-wrap")}>
             <a
               className={cx("footer-section__contact-phone-link")}
@@ -82,7 +85,7 @@ const FooterSection = () => {
           </div>
           <div className={cx("footer-section__contact-socials-wrap")}>
             <a className={cx("footer-section__contact-socials-link")} href="">
-              <BsLinkedin size={32}/>
+              <BsLinkedin size={32} />
             </a>
           </div>
         </div>

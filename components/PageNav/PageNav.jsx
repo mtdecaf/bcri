@@ -214,7 +214,7 @@ const PageNav = () => {
             className={cx("page-nav__button", "page-nav__contact")}
             onClick={(e) => scrollTo(e, "footer-section")}
           >
-            CONTACT US
+            PROJECTS
           </a>
         </div>
       </div>

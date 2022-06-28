@@ -5,8 +5,8 @@ import {
   BsFillChatQuoteFill,
 } from "react-icons/bs";
 import { Rating } from "@mui/material";
-
 import useEmblaCarousel from "embla-carousel-react";
+
 import styles from "./TestimonialsSection.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
@@ -21,14 +21,12 @@ const TestimonialsSection = ({ testimonialsData }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
 
-  // console.log(testimonialsData);
   const formattedTestimonialsData = testimonialsData.map((data) => {
     return {
       ...data,
       testimonial: data.testimonial.replace(/\n/g, "<br />").split("<br />"),
     };
   });
-  // console.log(formattedTestimonialsData)
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
   const scrollTo = useCallback(
