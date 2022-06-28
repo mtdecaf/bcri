@@ -25,7 +25,7 @@
         letter-spacing: 0.15rem;
         font-weight: 600;
         &-wrap {
-            height: 2.5rem;
+            min-height: 2.5rem;
         }
     }
     &__description {

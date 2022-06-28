@@ -193,9 +193,9 @@ const PageNav = () => {
                 horizontal: 'left',
               }}
             >
-              {servicesData.map((service) => (
+              {servicesData.map((service, key) => (
                 <MenuItem
-                  key={service.id}
+                  key={key}
                   className={cx("page-nav__service-item")}
                   onClick={() => handleServiceSelected(service.title)}
                 >
