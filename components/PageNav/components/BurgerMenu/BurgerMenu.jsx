@@ -24,6 +24,10 @@ const BurgerMenu = ({ isOpen, setIsOpen }) => {
           onClick={() => setIsOpen(false)}
         />
         <div className={cx("burger-menu__list")}>
+          <Link href="/">
+            <a className={cx("burger-menu__button", "burger-menu__home")}>HOME</a>
+          </Link>
+          <hr className={cx("burger-menu__divider")} />
           <Link href="/services">
             <a
               className={cx("burger-menu__button")}
@@ -33,24 +37,23 @@ const BurgerMenu = ({ isOpen, setIsOpen }) => {
             </a>
           </Link>
           <hr className={cx("burger-menu__divider")} />
-          <Link href="/testimonials">
+          <Link href="/about">
             <a
               className={cx("burger-menu__button")}
-              onClick={() => setIsOpen(false)}
             >
-              TESTIMONIALS
+              ABOUT US
             </a>
           </Link>
           <hr className={cx("burger-menu__divider")} />
-          {/* <Link href="/"> */}
+          <Link href="/projects">
           <a className={cx("burger-menu__button")} href="">
-            COMPANY
+            PROJECTS
           </a>
-          {/* </Link> */}
+          </Link>
           <hr className={cx("burger-menu__divider")} />
           <Link href="/projects">
             <a className={cx("burger-menu__button")} href="">
-              PROJECTS
+              CONTACT US
             </a>
           </Link>
         </div>

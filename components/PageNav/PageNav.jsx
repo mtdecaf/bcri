@@ -19,14 +19,11 @@ let cx = classNames.bind(styles);
 const PageNav = () => {
   const hasWindow = typeof window !== "undefined";
   const { handleServiceSelected } = useServicesContext();
-  const { servicesData } = services;
 
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState();
-  const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null);
 
   useEffect(() => {
     setMounted(true);
@@ -88,7 +85,7 @@ const PageNav = () => {
   // large nav transition styles
   const navBarStyle = {
     padding: isScrolled && "1.5rem 0",
-    maxHeight: isScrolled ? "7rem" : "4rem",
+    maxHeight: isScrolled ? "6.5rem" : "4rem",
     transition: "all 0.75s",
   };
 
@@ -109,7 +106,7 @@ const PageNav = () => {
   };
 
   const navListStyle = {
-    maxHeight: isScrolled ? "0" : "3rem",
+    maxHeight: isScrolled ? "0" : "2.5rem",
     transition: "max-height 0.75s",
   };
 
@@ -160,27 +157,32 @@ const PageNav = () => {
       </div>
       <div className={cx("page-nav__list-wrap")} style={navListStyle}>
         <div className={cx("page-nav__list")}>
-          <div className={cx("page-nav__services-wrap")}>
-            <Link href="/services">
-              <a
-                className={cx("page-nav__button", "page-nav__services")}
-                onClick={() => handleServiceSelected()}
-              >
-                SERVICES
-              </a>
-            </Link>
-          </div>
-          <Link href="/testimonials">
-            <a className={cx("page-nav__button", "page-nav__testimonial")}>
-              TESTIMONIALS
+          <Link href="/">
+            <a className={cx("page-nav__button", "page-nav__home")}>HOME</a>
+          </Link>
+          <Link href="/services">
+            <a
+              className={cx("page-nav__button", "page-nav__services")}
+              onClick={() => handleServiceSelected()}
+            >
+              SERVICES
             </a>
           </Link>
-          <a className={cx("page-nav__button", "page-nav__company")}>COMPANY</a>
+          <Link href="/about">
+            <a className={cx("page-nav__button", "page-nav__about")}>
+              ABOUT US
+            </a>
+          </Link>
+          <Link href="/projects">
+            <a className={cx("page-nav__button", "page-nav__projects")}>
+              PROJECTS
+            </a>
+          </Link>
           <a
             className={cx("page-nav__button", "page-nav__contact")}
             onClick={(e) => scrollTo(e, "footer-section")}
           >
-            PROJECTS
+            CONTACT US
           </a>
         </div>
       </div>
