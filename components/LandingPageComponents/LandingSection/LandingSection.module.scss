@@ -33,7 +33,7 @@
 
     &__title {
         font-size: 2rem;
-        color: $primary-blue;
+        color: $navy-blue;
         @include tablet {
             font-size: 2.5rem;
         }
@@ -62,14 +62,14 @@
             }
         }
         &--primary {
-            background-color: $primary-blue;
+            background-color: $navy-blue;
             color: white;
             border: none;
         }
         &--sub {
             background-color: white;
-            color: $primary-blue;
-            border: 3px solid $primary-blue;
+            color: $navy-blue;
+            border: 3px solid $navy-blue;
         }
     }
     &__left-overlay {
@@ -125,47 +125,6 @@
                         left: $desktop-displacement;
                     }
                 }
-            }
-        }
-    }
-    &__bottom-overlay {
-        display: flex;
-        gap: 0.25rem;
-        width: 100%;
-        @include tablet {
-            gap: 0.5rem;
-            justify-content: flex-end;
-        }
-        @include desktop {
-            max-width: $desktop;
-        }
-        &-wrap {
-            background-color: $tundora;
-            height: 5rem;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            left: 0;
-            z-index: 5;
-            display: flex;
-            align-items: center;
-            @include side-padding-mobile;
-            @include tablet {
-                height: 7rem;
-                @include side-padding-tablet;
-            }
-            @include desktop {
-                justify-content: center;
-                padding: 0;
-            }
-        }
-        &-image {
-            height: 3rem;
-            @include tablet {
-                height: 4.25rem;
-            }
-            @include desktop {
-                height: 5rem;
             }
         }
     }

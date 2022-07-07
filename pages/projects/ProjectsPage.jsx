@@ -5,7 +5,9 @@ let cx = classNames.bind(styles);
 const ProjectsPage = () => {
     return (
         <div className={cx("projects-page")}>
-
+            <div className={cx("prjects-page__title-wrap")}>
+                
+            </div>
         </div>
     )
 }

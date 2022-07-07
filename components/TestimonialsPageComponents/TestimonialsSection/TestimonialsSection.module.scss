@@ -4,7 +4,7 @@
 
 .testimonials-section {
     position: relative;
-    background-color: $dark-grey;
+    background-color: $grey;
     padding: 4rem 0;
     display: flex;
     flex-direction: column;
@@ -93,7 +93,7 @@
             opacity: 0.5;
         }
         &__icon {
-            fill: $primary-blue;
+            fill: $navy-blue;
             width: 3rem;
             height: 3rem;
         }
@@ -129,7 +129,7 @@
             content: "";
         }
         &--is-selected:after {
-            background-color: $light-blue;
+            background-color: $navy-blue;
             opacity: 1;
         }
     }

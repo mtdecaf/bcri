@@ -29,7 +29,7 @@
     height: 2rem;
     display: flex;
     justify-content: flex-end;
-    background-color: $primary-blue;
+    background-color: $navy-blue;
     @include side-padding-mobile;
     @include tablet {
       @include side-padding-tablet;
@@ -87,7 +87,7 @@
       font-size: 1rem;
     }
     &__wrap {
-      background-color: $light-blue;
+      background-color: $rust-red;
       display: flex;
       align-items: center;
       padding: 0.3rem 0.75rem;
@@ -113,7 +113,7 @@
       padding: 0.3rem 0.75rem;
       border-radius: 5px;
       justify-self: flex-end;
-      color: $primary-blue;
+      color: $navy-blue;
       gap: 0.5rem;
       position: relative;
       right: -0.75rem;
@@ -132,7 +132,7 @@
     }
     
     &-wrap {
-      background-color: $light-grey;
+      background-color: $navy-blue;
       display: flex;
       justify-content: center;
       width: 100%;
@@ -157,7 +157,7 @@
   }
 
   &__button {
-    color: $primary-blue;
+    color: $off-white;
     font-size: 1.25rem;
     font-weight: 600;
     cursor: pointer;
@@ -167,7 +167,7 @@
   }
   
   &__burger {
-    color: $primary-blue;
+    color: $navy-blue;
     cursor: pointer;
     position: relative;
     right: -0.25rem;

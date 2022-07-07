@@ -46,24 +46,8 @@ const LandingSection = ({ mounted, windowWidth }) => {
         <div className={cx("landing-section__left-overlay-wrap")}>
           <img className={cx("landing-section__left-overlay")} src="/svg-assets/landing_geometry.svg" alt="" />
         </div>
-        <div className={cx("landing-section__bottom-overlay-wrap")}>
-          <div className={cx("landing-section__bottom-overlay")}>
-            <img
-              className={cx("landing-section__bottom-overlay-image")}
-              src="/partners/partner1.png"
-              alt="business association Better Business Bureau Accredited Business"
-            />
-            <img
-              className={cx("landing-section__bottom-overlay-image")}
-              src="/partners/partner2.png"
-              alt="business association"
-            />
-            <img
-              className={cx("landing-section__bottom-overlay-image")}
-              src="/partners/partner3.png"
-              alt="business association RCABC Roofing Contractors Associations of British Columbia"
-            />
-          </div>
+        <div className={cx("landing-section__right-overlay-wrap")}>
+          <img className={cx("landing-section__right-overlay")} src="/svg-assets/landing_geometry.svg" alt="" />
         </div>
       </section>
     )

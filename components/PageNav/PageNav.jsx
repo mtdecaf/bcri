@@ -3,13 +3,10 @@ import { useServicesContext } from "../../context/services";
 
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
 import Link from "next/link";
 import bcriLogo from "../../public/bcri-logo.svg";
 import { FiPhone } from "react-icons/fi";
-import { RiArrowDropDownLine } from "react-icons/ri";
 import services from "../../data/servicesData.json";
 
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
@@ -172,37 +169,6 @@ const PageNav = () => {
                 SERVICES
               </a>
             </Link>
-            <RiArrowDropDownLine
-              className={cx("page-nav__services-dropdown-icon")}
-              size={32}
-              onClick={(e) => handleServiceDropDownClick(e)}
-              color="#043454"
-            />
-            <Menu
-              id="services-menu"
-              className={cx("page-nav__services-menu")}
-              anchorEl={anchorEl}
-              open={servicesMenuOpen}
-              onClose={() => setServicesMenuOpen(false)}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'center',
-              }}
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-            >
-              {servicesData.map((service, key) => (
-                <MenuItem
-                  key={key}
-                  className={cx("page-nav__service-item")}
-                  onClick={() => handleServiceSelected(service.title)}
-                >
-                  <Link href="/services">{service.title}</Link>
-                </MenuItem>
-              ))}
-            </Menu>
           </div>
           <Link href="/testimonials">
             <a className={cx("page-nav__button", "page-nav__testimonial")}>
