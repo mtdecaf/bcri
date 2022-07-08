@@ -3,129 +3,123 @@
 @use "styles/global/variables.scss" as *;
 
 .landing-section {
-    height: 30rem;
+  height: 30rem;
+  background-image: url("/stock1.jpeg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  @include side-padding-mobile;
+  @include tablet {
+    height: calc(100vh - 6.5rem);
+    @include side-padding-tablet;
+  }
+  @include desktop {
+    align-items: center;
+    padding: 0;
+  }
+  &__inner-wrap {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    position: relative;
-    @include side-padding-mobile;
+    align-items: center;
+    gap: 1rem;
     @include tablet {
-        height: calc(100vh - 6rem);
-        @include side-padding-tablet;
+      gap: 2rem;
     }
     @include desktop {
-        align-items: center;
-        padding: 0;
+      width: 100%;
+      max-width: $desktop;
     }
-    &__inner-wrap{
-        display: flex; 
-        flex-direction: column;
-        gap: 1rem;
-        z-index: 15;
-        @include tablet {
-            gap: 2.5rem;
-        }
-        @include desktop {
-            width: 100%;
-            max-width: $desktop;
-        }
-    }
+  }
 
-    &__title {
-        font-size: 2rem;
-        color: $navy-blue;
-        @include tablet {
-            font-size: 2.5rem;
-        }
+  &__title {
+    font-size: 2rem;
+    color: $off-white;
+    text-align: center;
+    @include tablet {
+      font-size: 2.5rem;
     }
-    
-    &__button {
-        border-radius: 5px;
-        cursor: pointer;
-        padding: 0.5rem 0;
-        width: 9rem;
-        white-space: nowrap;
-        font-size: 0.8rem;
-        @include tablet {
-            width: 12rem;
-            padding: 0.75rem 0;
-            font-size: 1.1rem;
-        }
-        &-wrap {
-            display: flex;
-            gap: 1rem;
-            @include tablet {
-                gap: 2rem;
-            }
-            @include desktop {
-                gap: 3rem;
-            }
-        }
-        &--primary {
-            background-color: $navy-blue;
-            color: white;
-            border: none;
-        }
-        &--sub {
-            background-color: white;
-            color: $navy-blue;
-            border: 3px solid $navy-blue;
-        }
+    @include desktop {
+      font-size: 3.5rem;
     }
-    &__left-overlay {
-        height: 100%;
-        opacity: 0.5;
-        &-wrap {
-            position: absolute;
-            width: 70%;
-            height: 30rem;
-            $mobile-displacement: -72.5rem;
-            left: $mobile-displacement;
-            animation: slide-out-left-mobile 3s ease-out;
-            @keyframes slide-out-left-mobile {
-                0% {
-                    left: 0%;
-                }
-                25% {
-                    left: 0%;
-                }
-                100% {
-                    left: $mobile-displacement;
-                }
-            }
-            @include tablet {
-                height: calc(100vh - 7rem);
-                $tablet-displacement: -105rem;
-                left: $tablet-displacement;
-                animation: slide-out-left-tablet 3s ease-out;
-                @keyframes slide-out-left-tablet {
-                    0% {
-                        left: 0%;
-                    }
-                    25% {
-                        left: 0%;
-                    }
-                    100% {
-                        left: $tablet-displacement;
-                    }
-                }
-            }
-            @include desktop {
-                $desktop-displacement: calc(-115rem + (100vw - $desktop)); 
-                left: $desktop-displacement;
-                animation: slide-out-left-desktop 3s ease-out;
-                @keyframes slide-out-left-desktop {
-                    0% {
-                        left: 0%;
-                    }
-                    25% {
-                        left: 0%;
-                    }
-                    100% {
-                        left: $desktop-displacement;
-                    }
-                }
-            }
-        }
+  }
+
+  &__sub-text {
+    color: $off-white;
+    font-size: 1rem;
+    @include tablet {
+      font-size: 1.2rem;
     }
+  }
+
+  &__button {
+    background-color: $navy-blue;
+    border-radius: 0.75rem;
+    border: none;
+    color: $off-white;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    width: 9rem;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    @include tablet {
+      width: 10rem;
+      padding: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+  }
+  &__left-overlay,
+  &__right-overlay {
+    height: 30rem;
+    position: absolute;
+    display: flex;
+    @include tablet {
+      height: calc(100vh - 6.5rem);
+    }
+    &-square {
+      position: absolute;
+      font-size: 0;
+      width: calc((100vw - 273px) / 2);
+      height: 100%;
+      background-color: $rust-red;
+      @include tablet {
+        width: calc((100vw - (100vh * 0.5)) / 2);
+      }
+    }
+    &-polygon {
+      position: absolute;
+      left: calc((100vw - 273px) / 2);
+      height: 100%;
+      @include tablet {
+        left: calc((100vw - (100vh * 0.5)) / 2);
+      }
+    }
+  }
+  &__left-overlay {
+    left: calc(((-100vw - 5rem) / 2));
+    animation: slide-out-left-mobile 1s linear;
+    @keyframes slide-out-left-mobile {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: calc(((-100vw - 5rem) / 2));
+      }
+    }
+  }
+  &__right-overlay {
+    transform: scale(-1);
+    right: calc(((-100vw - 5rem) / 2));
+    animation: slide-out-right-mobile 1s linear;
+    @keyframes slide-out-right-mobile {
+      0% {
+        right: 0;
+      }
+      100% {
+        right: calc(((-100vw - 5rem) / 2));
+      }
+    }
+  }
 }
