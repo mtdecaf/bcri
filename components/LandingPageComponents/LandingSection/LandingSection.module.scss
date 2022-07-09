@@ -42,7 +42,7 @@
       font-size: 2.5rem;
     }
     @include desktop {
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
   }
 
@@ -63,11 +63,10 @@
     padding: 0.5rem 0;
     width: 9rem;
     white-space: nowrap;
-    font-size: 0.8rem;
+    font-size: 1rem;
     @include tablet {
       width: 10rem;
       padding: 0.5rem 0;
-      font-size: 1.1rem;
     }
   }
   &__left-overlay,

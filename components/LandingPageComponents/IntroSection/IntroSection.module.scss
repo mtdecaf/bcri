@@ -1,0 +1,57 @@
+@use "styles/global/colors.scss" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.intro-section {
+    background-color: $beige;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__inner-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: center;
+        @include side-padding-mobile;
+        @include tablet {
+            gap: 2.5rem;
+            @include side-padding-tablet
+        }
+        @include desktop {
+            gap: 2.75rem;
+            padding: 0 3rem;
+            max-width: $desktop;
+        }
+    }
+    &__title {
+        letter-spacing: 0.5rem;
+        color: $rust-red;
+    }
+    &__text {
+        line-height: 1.6rem;
+        @include tablet {
+            font-size: 1.1rem;
+        }
+        @include desktop {
+            line-height: 1.8rem;
+            font-size: 1.25rem;
+        }
+    }
+    &__button {
+        background-color: $navy-blue;
+        border-radius: 0.75rem;
+        border: none;
+        color: $off-white;
+        cursor: pointer;
+        padding: 0.5rem 0;
+        width: 9rem;
+        white-space: nowrap;
+        font-size: 1rem;
+        @include tablet {
+          width: 10rem;
+          padding: 0.5rem 0;
+        }
+      }
+}

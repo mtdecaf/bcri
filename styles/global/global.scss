@@ -21,6 +21,7 @@ h1, h2 {
   color: $navy-blue;
   font-size: 1.75rem;
   font-family: "Roboto Slab", serif;
+  font-weight: 400;
   @include desktop {
     font-size: 2.5rem;
   }

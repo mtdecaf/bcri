@@ -3,7 +3,7 @@ import classNames from "classnames/bind";
 import Link from "next/link";
 let cx = classNames.bind(styles);
 
-const LandingSection = ({ mounted, windowWidth }) => {
+const LandingSection = ({ mounted }) => {
   return (
     mounted && (
       <section className={cx("landing-section")} id="landing-section">

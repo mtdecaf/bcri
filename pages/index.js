@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import styles from "../styles/Home.module.css";
 import LandingSection from "../components/LandingPageComponents/LandingSection/LandingSection";
+import IntroSection from "../components/LandingPageComponents/IntroSection/IntroSection";
 import ServicesSection from "../components/LandingPageComponents/ServicesSection/ServicesSection";
 import TestimonialSection from "../components/LandingPageComponents/TestimonialSection/TestimonialSection";
 import CustomersSection from "../components/LandingPageComponents/CustomersSection/CustomersSection";
@@ -36,6 +37,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <LandingSection mounted={mounted} windowWidth={windowWidth} />
+      <IntroSection />
       <CustomersSection mounted={mounted} />
       <ServicesSection />
       <TestimonialSection mounted={mounted} windowWidth={windowWidth} />
