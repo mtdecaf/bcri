@@ -3,44 +3,40 @@
 @use "styles/global/variables.scss" as *;
 
 .services-card {
-    border-radius: 5px;
-    width: calc(100% - 2rem);
-    aspect-ratio: 1;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    &__icon {
-        padding: 1.25rem;
-        &-wrap {
-            background-color: $off-white;
-            border-radius: 50px;
-            height: 6.5rem;
-            width: 6.5rem;
-            margin-bottom: 1rem;
-        }
+  background-color: white;
+  border-radius: 15px;
+  max-width: 25rem;
+  padding: 1.5rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  &__title {
+    color: $navy-blue;
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+    font-weight: 600;
+    &-wrap {
+      min-height: 2.5rem;
     }
-    &__title {
-        color: $navy-blue;
-        font-size: 1.5rem;
-        letter-spacing: 0.15rem;
-        font-weight: 600;
-        &-wrap {
-            min-height: 2.5rem;
-        }
+  }
+  &__description {
+    color: $navy-blue;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+  }
+  &__button {
+    background-color: $navy-blue;
+    border-radius: 0.75rem;
+    border: none;
+    color: $off-white;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    width: 9rem;
+    white-space: nowrap;
+    font-size: 1rem;
+    @include tablet {
+      width: 10rem;
+      padding: 0.5rem 0;
     }
-    &__description {
-        color: $navy-blue;
-        font-size: 1.25rem;
-        line-height: 1.25rem;
-    }
-    &__button {
-        color: $navy-blue;
-        font-size: 1rem;
-        font-weight: 600;
-        &-wrap {
-            height: 2.5rem;
-            display: flex;
-            align-items: center;
-        }
-    }
+  }
 }
