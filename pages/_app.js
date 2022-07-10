@@ -1,4 +1,5 @@
 import { ServicesContextProvider } from "../context/services";
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import "../styles/global/global.scss";
 import Layout from "../components/layout";
@@ -11,9 +12,11 @@ function MyApp({ Component, pageProps }) {
        <title>BC Roof Insepctions</title>
       </Head>
       <ServicesContextProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <ParallaxProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ParallaxProvider>
       </ServicesContextProvider>
     </>
   );
