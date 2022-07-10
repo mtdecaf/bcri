@@ -4,7 +4,7 @@ let cx = classNames.bind(styles);
 
 const IntroSection = () => {
   return (
-    <div className={cx("intro-section")}>
+    <section className={cx("intro-section")}>
       <div className={cx("intro-section__inner-wrap")}>
         <h3 className={cx("intro-section__title")}>PROVIDING PEACE OF MIND</h3>
         <p className={cx("intro-section__text")}>
@@ -18,7 +18,7 @@ const IntroSection = () => {
         </p>
         <button className={cx("intro-section__button")}>WHAT WE DO</button>
       </div>
-    </div>
+    </section>
   );
 };
 

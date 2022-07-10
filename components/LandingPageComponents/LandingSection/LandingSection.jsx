@@ -1,6 +1,7 @@
+import Link from "next/link";
+
 import styles from "./LandingSection.module.scss";
 import classNames from "classnames/bind";
-import Link from "next/link";
 let cx = classNames.bind(styles);
 
 const LandingSection = ({ mounted }) => {
