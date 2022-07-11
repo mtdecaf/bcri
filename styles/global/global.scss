@@ -27,6 +27,22 @@ h1, h2 {
   }
 }
 
+// change title color when accordion expanded
 .MuiAccordionSummary-expandIconWrapper.Mui-expanded {
+  display: none;
+}
+
+// change title color when accordion expanded
+.MuiAccordionSummary-content.Mui-expanded {
+  color: $rust-red;
+}
+
+// adds rounded border
+.MuiPaper-rounded {
+  border-radius: 15px !important;
+}
+
+// removes accordion border
+.MuiPaper-root.MuiAccordion-root::before  {
   display: none;
 }

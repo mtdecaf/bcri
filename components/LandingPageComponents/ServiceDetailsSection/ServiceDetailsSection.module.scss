@@ -4,14 +4,36 @@
 
 .service-details-section {
     background-color: white;
+    min-height: 35rem;
+    @include side-padding-mobile;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    @include tablet {
+        @include side-padding-tablet;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    @include desktop{
+        padding: 5rem 0;
+    }
     &__inner-wrap {
         display: flex;
         flex-direction: column;
+        gap: 1.5rem;
         @include tablet {
+            gap: 3rem;
             flex-direction: row;
+        }
+        @include desktop {
+            max-width: $desktop;
         }
     }
     &__tab-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
         @include tablet {
             width: 50%;
         }
