@@ -1,0 +1,19 @@
+@use "styles/global/colors" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.service-details-section {
+    background-color: white;
+    &__inner-wrap {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+    &__tab-wrap {
+        @include tablet {
+            width: 50%;
+        }
+    }
+}

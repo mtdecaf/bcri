@@ -1,0 +1,20 @@
+@use "styles/global/colors" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.description {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        width: 50%;
+    }
+    &__subtitle {
+        color: $rust-red;
+    }
+    &__title {
+        font-size: 2rem;
+    }
+    &__content {
+        color: $grey;
+    }
+}

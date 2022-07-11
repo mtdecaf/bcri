@@ -1,0 +1,13 @@
+@use "styles/global/colors" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.service-tab {
+    background-color: $beige;
+    box-shadow: none;
+    width: 100%;
+    &:first-child {
+        border-radius: 15px;
+    }
+}
+

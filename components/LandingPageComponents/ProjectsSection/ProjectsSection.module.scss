@@ -17,7 +17,12 @@
     padding: 0;
   }
   &__background {
-    width: 120%;
+    width: 275%;
+    margin-left: -125%;
+    @include tablet {
+      width: 120%;
+      margin: 0;
+    }
     &-wrap {
       position: absolute;
       overflow: hidden;
