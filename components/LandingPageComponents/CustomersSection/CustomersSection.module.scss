@@ -11,6 +11,10 @@
         align-items: center;
         position: relative;
         width: 100%;
+        padding: 4rem 0;
+        @include tablet {
+            padding: 0;
+        }
         @include desktop {
             max-width: $desktop;
         }

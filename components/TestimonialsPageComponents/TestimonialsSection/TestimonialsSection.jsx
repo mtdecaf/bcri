@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import {
   BsChevronCompactLeft,
   BsChevronCompactRight,
-  BsFillChatQuoteFill,
 } from "react-icons/bs";
 import { Rating } from "@mui/material";
 import useEmblaCarousel from "embla-carousel-react";

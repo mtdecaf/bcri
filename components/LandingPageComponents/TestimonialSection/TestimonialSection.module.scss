@@ -4,7 +4,7 @@
 
 .testimonial-section{
     @include side-padding-mobile;
-    background-image: url("/svg-assets/testimonials_background.svg");
+    background-color: $beige;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
         padding: 0;
     }
     &__title {
-        color: white;
+        color: $rust-red;
         &-wrap {
             width: 100%;
             height: 3rem;
