@@ -46,10 +46,15 @@
       }
     }
   }
-
-  &__services {
-    &-list-item {
-      list-style: none;
+  &__partners {
+    max-height: 4.5rem;
+    &-wrap {
+      gap: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      @include tablet {
+        padding-left: 8rem;
+      }
     }
   }
 
@@ -98,11 +103,12 @@
       }
     }
     &-button {
-      font-size: 1rem;
+      font-size: 0.95rem;
+      font-weight: 600;
       background-color: $off-white;
       border-radius: 15px;
       color: $rust-red;
-      padding: 0.25rem 1rem;
+      padding: 0.45rem 1rem;
     }
   }
 }

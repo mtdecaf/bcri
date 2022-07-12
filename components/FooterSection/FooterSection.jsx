@@ -11,7 +11,7 @@ let cx = classNames.bind(styles);
 const FooterSection = () => {
   const { servicesData } = services;
   return (
-    <div className={cx("footer-section")} id="footer-section">
+    <section className={cx("footer-section")} id="footer-section">
       <div className={cx("footer-section__inner-wrap")}>
         <div className={cx("footer-section__about-wrap")}>
           <h3
@@ -31,29 +31,10 @@ const FooterSection = () => {
             </p>
           </div>
         </div>
-        <div className={cx("footer-section__services-wrap")}>
-          <h3
-            className={cx(
-              "footer-section__services-title",
-              "footer-section__title"
-            )}
-          >
-            Services
-          </h3>
-          <ul className={cx("footer-section__services-list")}>
-            {servicesData.map((data, key) => (
-              <li
-                className={cx("footer-section__services-list-item")}
-                key={key}
-              >
-                <Link href="/services">
-                  <a className={cx("footer-section__services-list-item-link")}>
-                    {data.title}
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
+        <div className={cx("footer-section__partners-wrap")}>
+          <img className={cx("footer-section__partners")} src="/partners/partner1.png" alt="Better Business Bureau" />
+          <img className={cx("footer-section__partners")} src="/partners/partner2.png" alt="International Institute of Building Enclosure Consultant" />
+          <img className={cx("footer-section__partners")} src="/partners/partner3.png" alt="" />
         </div>
         <div className={cx("footer-section__contact-wrap")}>
           <h3
@@ -64,15 +45,12 @@ const FooterSection = () => {
           >
             Contact Us
           </h3>
-          <div>
-            <p>Address: 201 – 19486 60th Avenue,<br></br> Surrey, B.C. V3S 3S7</p>
-          </div>
           <div className={cx("footer-section__contact-phone-wrap")}>
             <a
               className={cx("footer-section__contact-phone-link")}
               href="tel:+16045392510"
             >
-              Phone: (604)-539-2510
+              (604)-539-2510
             </a>
           </div>
           <div className={cx("footer-section__contact-email-wrap")}>
@@ -80,7 +58,7 @@ const FooterSection = () => {
               className={cx("footer-section__contact-email-link")}
               href="mailto: info@bcroofinspections.com"
             >
-              Email: info@bcroofinspections.com
+              info@bcroofinspections.com
             </a>
           </div>
           <div className={cx("footer-section__contact-socials-wrap")}>
@@ -111,7 +89,7 @@ const FooterSection = () => {
           </a>
         </ScrollAnimation>
       </div>
-    </div>
+    </section>
   );
 };
 

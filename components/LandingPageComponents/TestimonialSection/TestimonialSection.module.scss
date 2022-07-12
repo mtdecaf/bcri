@@ -75,7 +75,9 @@
   &__author-wrap {
     line-height: 1.35rem;
     color: $grey;
-    padding: 0 2rem;
+    @include tablet {
+      padding: 0 2rem;
+    }
   }
   &__author-wrap {
     padding-top: 1rem;
