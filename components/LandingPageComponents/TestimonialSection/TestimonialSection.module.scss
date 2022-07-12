@@ -2,83 +2,99 @@
 @use "styles/global/mixins.scss" as *;
 @use "styles/global/variables.scss" as *;
 
-.testimonial-section{
+.testimonial-section {
+  background-color: $beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 9rem 0 9rem;
+  &__inner-wrap {
+    width: 100%;
     @include side-padding-mobile;
-    background-color: $beige;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     @include tablet {
-        @include side-padding-tablet;
+      @include side-padding-tablet;
     }
     @include desktop {
-        padding: 0;
+      padding: 0;
+      max-width: $desktop;
     }
-    &__title {
-        color: $rust-red;
-        &-wrap {
-            width: 100%;
-            height: 3rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            @include tablet {
-                justify-content: flex-start;
-            }
-            @include desktop {
-                height: 4.5rem;
-                max-width: $desktop;
-            }
-        }
+  }
+  &__title {
+    color: $rust-red;
+    &-wrap {
+      width: 100%;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 3rem;
+      letter-spacing: 0.25rem;
+      @include desktop {
+        height: 4.5rem;
+        max-width: $desktop;
+      }
     }
-    &__cards-wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.25rem;
-        margin: 2.375rem 0 3rem 0;
-        width: 100%;
-        @include tablet {
-            display: flex;
-            @include side-padding-tablet;
-        }
-        @include desktop {
-            max-width: $desktop;
-            padding: 0;
-        }
+  }
+  &__carousel-wrap {
+    display: flex;
+    width: 100%;
+    @include side-padding-mobile;
+    text-align: center;
+  }
+  &__viewport {
+    overflow: hidden;
+    width: 100%;
+    &.is-draggable {
+      cursor: move;
+      cursor: grab;
     }
-
-    &__button {
-        background-color: $off-white;
-        color: $navy-blue;
-        border-radius: 5px;
-        padding: 0.5rem 0;
-        margin-bottom: 6rem;
-        width: 11rem;
-        font-size: 0.8rem;
-        font-weight: 600;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-        @include tablet {
-            width: 15rem;
-            padding: 0.75rem 0;
-            font-size: 1.1rem;
-        }
-        &-wrap {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            @include side-padding-mobile;
-            @include tablet {
-                @include side-padding-tablet;
-                justify-content: flex-end;
-            }
-            @include desktop {
-                padding: 0;
-                max-width: $desktop;
-            }
-        }
+    .is-dragging {
+      cursor: grabbing;
     }
+  }
+  &__carousel {
+    display: flex;
+  }
+  &__slide {
+    position: relative;
+    min-width: 100%;
+    padding: 0 1rem;
+    @include tablet {
+      padding: 0 2rem;
+    }
+    &__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  &__content-wrap,
+  &__author-wrap {
+    line-height: 1.35rem;
+    color: $grey;
+    padding: 0 2rem;
+  }
+  &__author-wrap {
+    padding-top: 1rem;
+    font-size: 0.8rem;
+  }
+  &__button {
+    background-color: transparent;
+    cursor: pointer;
+    touch-action: manipulation;
+    border: 0;
+    padding: 0;
+    &:disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+    &__icon {
+      fill: $navy-blue;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
 }
