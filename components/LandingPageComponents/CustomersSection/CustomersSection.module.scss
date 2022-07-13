@@ -54,10 +54,12 @@
   }
   &__logo {
     max-height: 100%;
-    max-width: 100%;
+    width: 100%;
+    max-width: 15rem;
     &-wrap {
       background-color: $beige;
       display: flex;
+      width: 100%;
       justify-content: center;
       align-items: center;
       aspect-ratio: 1;

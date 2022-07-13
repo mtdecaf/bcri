@@ -56,7 +56,11 @@
       display: flex;
       flex-wrap: wrap;
       @include tablet {
-        padding-left: 8rem;
+        margin-left: 2rem;
+        margin-right: -4rem;
+      }
+      @include desktop {
+        margin-left: 4rem;
       }
     }
   }
