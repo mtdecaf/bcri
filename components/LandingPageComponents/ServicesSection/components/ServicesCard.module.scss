@@ -21,8 +21,11 @@
   }
   &__description {
     color: $navy-blue;
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    @include desktop {
+      line-height: 2rem;
+    }
   }
   &__button {
     background-color: $navy-blue;

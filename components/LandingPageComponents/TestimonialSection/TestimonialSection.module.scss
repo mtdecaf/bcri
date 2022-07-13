@@ -75,10 +75,13 @@
   }
   &__content-wrap,
   &__author-wrap {
-    line-height: 1.35rem;
+    line-height: 1.8rem;
     color: $grey;
     @include tablet {
       padding: 0 2rem;
+    }
+    @include desktop {
+      line-height: 2rem;
     }
   }
   &__author-wrap {

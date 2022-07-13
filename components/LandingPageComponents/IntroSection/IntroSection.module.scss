@@ -30,12 +30,12 @@
     color: $rust-red;
   }
   &__text {
-    line-height: 1.6rem;
+    line-height: 1.8rem;
     @include tablet {
       font-size: 1.1rem;
     }
     @include desktop {
-      line-height: 1.8rem;
+      line-height: 2rem;
       font-size: 1.25rem;
     }
   }
