@@ -28,10 +28,9 @@ const CustomersSection = ({ mounted }) => {
     mounted && (
       <div className={cx("customers-section")}>
         <div className={cx("customers-section__inner-wrap")}>
-          <div className={cx("customers-section__desc-outter-wrap")}>
-            <div className={cx("customers-section__desc-container")}>
-              <h3 className={cx("customers-section__desc")}>PROPERTIES WHO TRUST BCRI</h3>
-            </div>
+          <div className={cx("customers-section__title-wrap")}>
+            <h2 className={cx("customers-section__title")}>Our Customers</h2>
+              <h3 className={cx("customers-section__subtitle")}>You&apos;re in good company when you choose to work with BC Roof Inspections</h3>
           </div>
           <div className={cx("customers-section__grid")}>
             {customers.map((customer) => (

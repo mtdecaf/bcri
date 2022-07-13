@@ -82,60 +82,31 @@ const PageNav = () => {
     }
   }, [hasWindow]);
 
-  // large nav transition styles
-  const navBarStyle = {
-    padding: isScrolled && "1.5rem 0",
-    maxHeight: isScrolled ? "6.5rem" : "4rem",
-    transition: "all 0.75s",
-  };
-
-  const navBarLogoStyle = {
-    width: isScrolled ? "9rem" : "8.5rem",
-    height: "100%",
-    transition: "all 0.75s",
-  };
-
-  const navBarPhoneWrapStyle = {
-    padding: isScrolled ? "0.6rem 1rem" : "0.3rem 0.75rem",
-    transition: "padding 0.75s",
-  };
-
-  const navBarfontStyle = {
-    fontSize: isScrolled ? "1.1rem" : "1rem",
-    transition: "font-size 0.75s",
-  };
-
-  const navListStyle = {
-    maxHeight: isScrolled ? "0" : "2.5rem",
-    transition: "max-height 0.75s",
-  };
-
   return mounted && windowWidth >= 768 ? (
     <div className={cx("page-nav", "page-nav--large")}>
-      <div className={cx("page-nav__contact-bar--large")} style={navBarStyle}>
+      <div className={cx("page-nav__contact-bar--large")} 
+      >
         <div className={cx("page-nav__contact-bar__wrap")}>
           <Link href="/">
-            <a className={cx("page-nav__logo-wrap")} style={navBarLogoStyle}>
+            <a className={cx("page-nav__logo-wrap")} 
+            >
               <Image
                 className={cx("page-nav__logo")}
                 src={bcriLogo}
                 alt="BCRI logo"
                 width={isScrolled ? 144 : 136}
                 height={50}
-                style={{ transition: "all 0.75s" }}
               />
             </a>
           </Link>
           <div className={cx("page-nav__contact-bar-info")}>
             <div
               className={cx("page-nav__contact-phone__wrap")}
-              style={navBarPhoneWrapStyle}
             >
               <FiPhone className={cx("page-nav__contact-phone-icon")} />
               <a
                 href="tel:+16045392510"
                 className={cx("page-nav__contact-phone")}
-                style={navBarfontStyle}
               >
                 (604)-539-2510
               </a>
@@ -147,7 +118,6 @@ const PageNav = () => {
               <a
                 href="mailto:info@bcroofinspections.com"
                 className={cx("page-nav__contact-email")}
-                style={navBarfontStyle}
               >
                 info@bcroofinspections.com
               </a>
@@ -155,7 +125,8 @@ const PageNav = () => {
           </div>
         </div>
       </div>
-      <div className={cx("page-nav__list-wrap")} style={navListStyle}>
+      <div className={cx("page-nav__list-wrap")} 
+      >
         <div className={cx("page-nav__list")}>
           <Link href="/">
             <a className={cx("page-nav__button", "page-nav__home")}>HOME</a>

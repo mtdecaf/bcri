@@ -9,19 +9,19 @@
   padding: 1.5rem 3rem 3rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
   &__title {
     color: $navy-blue;
     font-size: 1.5rem;
     letter-spacing: 0.15rem;
-    font-weight: 600;
+    font-weight: 400;
     &-wrap {
       min-height: 2.5rem;
     }
   }
   &__description {
-    color: $navy-blue;
-    font-size: 1.1rem;
+    color: $grey;
+    font-size: 1rem;
     line-height: 1.8rem;
     @include desktop {
       line-height: 2rem;

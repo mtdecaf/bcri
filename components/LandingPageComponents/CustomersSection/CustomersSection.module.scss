@@ -3,74 +3,68 @@
 @use "styles/global/variables.scss" as *;
 
 .customers-section {
+  display: flex;
+  justify-content: center;
+  &__inner-wrap {
     display: flex;
-    justify-content: center;
-    &__inner-wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 4rem 0;
+    @include side-padding-mobile;
+    @include tablet {
+      padding: 0;
+    }
+    @include desktop {
+      max-width: $desktop;
+    }
+  }
+  &__title {
+    font-size: 2rem;
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 4rem;
+      text-align: center;
+    }
+  }
+  &__subtitle {
+    color: $grey;
+    font-size: 1rem;
+  }
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      @include side-padding-tablet;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    @include desktop {
         padding: 4rem 0;
-        @include tablet {
-            padding: 0;
-        }
-        @include desktop {
-            max-width: $desktop;
-        }
     }
-    &__desc {
-        color: $off-white;
-        font-size: 1.1rem;
-        font-weight: 400;
-        line-height: 1.6rem;
-        &-container {
-            background-color: $navy-blue;
-            display: flex;
-            width: 10.5rem;
-            height: 8.5rem;
-            padding: 2rem 1.5rem;
-            border-radius: 15px 15px 15px 0;
-        }
-        &-outter-wrap {
-            @include tablet {
-                display: flex;
-                justify-content: center;
-                position: absolute;
-                width: calc((100vw - 9rem) / 4);
-                top: 4rem;
-                left: 3rem;
-            }
-            @include desktop {
-                width: calc(($desktop - 9rem) / 4);
-            }
-        }
-    }
-    &__grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 1rem;
-        @include tablet {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            padding: 4rem 3rem;
-        }
-        // @include
-    }
-    &__logo {
-        max-height: 100%;
+  }
+  &__logo {
+    max-height: 100%;
+    max-width: 100%;
+    &-wrap {
+      background-color: $beige;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1;
+      padding: 1.45rem;
+      @include tablet {
         max-width: 100%;
-        &-wrap {
-            height: 3.75rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            @include tablet {
-                max-width: 100%;
-                max-height: 4rem;
-            }
-        }
+      }
     }
+  }
 }

@@ -83,10 +83,12 @@
   &__contact-phone {
     font-size: 0.85rem;
     font-weight: 600;
+    white-space: nowrap;
     @include tablet {
       font-size: 1rem;
     }
     &__wrap {
+      width: 100%;
       background-color: $rust-red;
       display: flex;
       align-items: center;
