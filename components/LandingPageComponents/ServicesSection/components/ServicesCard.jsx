@@ -24,7 +24,7 @@ const ServicesCard = ({icon, title, shortDescription}) => {
                 <p className={cx("services-card__description")}>{shortDescription}</p>
             </div>
             <div className={cx("services-card__button-wrap")}>
-                <Link href="/services"><button className={cx("services-card__button")} onClick={() => handleServiceSelected(title)}>Learn More</button></Link>
+                <Link href="/services"><button className={cx("services-card__button", "blue-button")} onClick={() => handleServiceSelected(title)}>Learn More</button></Link>
             </div>
         </div>
     )

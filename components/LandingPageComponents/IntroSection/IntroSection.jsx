@@ -16,7 +16,7 @@ const IntroSection = () => {
           laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
           veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
         </p>
-        <button className={cx("intro-section__button")}>WHAT WE DO</button>
+        <button className={cx("intro-section__button", "blue-button")}>WHAT WE DO</button>
       </div>
     </section>
   );

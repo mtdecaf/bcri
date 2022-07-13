@@ -22,7 +22,7 @@ const ProjectsSection = () => {
         <h2 className={cx("projects-section__title")}>
           Qualified, Trusted Inspectors for All Roofing Projects
         </h2>
-        <Link href="/projects"><button className={cx("projects-section__button")}>OUR PROJECTS</button></Link>
+        <Link href="/projects"><button className={cx("projects-section__button", "red-button")}>OUR PROJECTS</button></Link>
       </div>
     </section>
   );

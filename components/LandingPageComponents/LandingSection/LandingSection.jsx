@@ -19,7 +19,7 @@ const LandingSection = ({ mounted }) => {
             <button
               className={cx(
                 "landing-section__button",
-                "landing-section__button--sub",
+                "blue-button",
                 "landing-section__button-service"
               )}
             >
