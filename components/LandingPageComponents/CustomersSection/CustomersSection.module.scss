@@ -36,11 +36,12 @@
   }
   &__grid {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 1rem;
-
+    gap: 2rem;
+    padding: 4rem 0;
     @include tablet {
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -49,7 +50,7 @@
       padding-bottom: 4rem;
     }
     @include desktop {
-        padding: 4rem 0;
+      padding: 4rem 0;
     }
   }
   &__logo {
@@ -60,6 +61,7 @@
       background-color: $beige;
       display: flex;
       width: 100%;
+      max-width: 12.5rem;
       justify-content: center;
       align-items: center;
       aspect-ratio: 1;
