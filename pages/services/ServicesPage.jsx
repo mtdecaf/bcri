@@ -1,4 +1,4 @@
-import ServicesDetailsSection from "../../components/ServicesPageComponents/ServicesDetailsSection/ServicesDetailsSection";
+import HeaderSection from "../../components/ServicesPageComponents/HeaderSection/HeaderSection";
 import { useServicesContext } from "../../context/services";
 import services from "../../data/servicesData.json";
 
@@ -11,7 +11,7 @@ const ServicesPage = () => {
   const { servicesData } = services;
   return (
     <div className={cx("services-page")}>
-      <ServicesDetailsSection servicesData={servicesData} currentService={currentService} />
+      <HeaderSection />
     </div>
   );
 };

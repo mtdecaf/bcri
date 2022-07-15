@@ -14,7 +14,7 @@ const ProjectsSection = () => {
       >
         <img
           className={cx("projects-section__background")}
-          src="/stock-images/stocstock2.jpeg"
+          src="/stock-images/stock2.jpeg"
           alt=""
         />
       </Parallax>
@@ -23,8 +23,8 @@ const ProjectsSection = () => {
           <span className={cx("projects-section__overlay-square")}></span>
           <img
             className={cx("projects-section__overlay-polygon")}
-            src="/svg-assets/projects_geometry.svg"
-            alt=""
+            src="/svg-assets/polygon_geometry.svg"
+            alt="page overlay geometry"
           />
         </div>
         <div className={cx("projects-section__content-container")}>
