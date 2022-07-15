@@ -14,7 +14,7 @@ const ProjectsSection = () => {
       >
         <img
           className={cx("projects-section__background")}
-          src="/stock2.jpeg"
+          src="/stock-images/stocstock2.jpeg"
           alt=""
         />
       </Parallax>
