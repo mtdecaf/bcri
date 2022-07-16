@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ScrollAnimation from "react-animate-on-scroll";
 import { BsLinkedin } from "react-icons/bs";
 

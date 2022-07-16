@@ -11,10 +11,13 @@
     width: 100%;
   }
   &__grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    padding: 4rem 0;
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      padding: 4rem 0;
+      gap: 2rem;
+    }
   }
 }

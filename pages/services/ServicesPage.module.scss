@@ -1,0 +1,10 @@
+.services-page {
+  height: 100%;
+  &__image {
+    height: 100%;
+    &-wrap {
+      height: calc(100vw / 2);
+      font-size: 0;
+    }
+  }
+}

@@ -28,6 +28,10 @@ h1, h2 {
   }
 }
 
+.over-flow-wrapper {
+  overflow-x: hidden;
+}
+
 // change title color when accordion expanded
 .MuiAccordionSummary-expandIconWrapper.Mui-expanded {
   display: none;
