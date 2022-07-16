@@ -6,11 +6,11 @@ let cx = classNames.bind(styles);
 
 const HeaderSection = ({ background }) => {
   return (
-    <section className={cx("header-section")}>
+    <div className={cx("header-section")}>
       <div className={cx("header-section__background-wrap")}>
         <img
           className={cx("header-section__background")}
-          src="/stock-images/services-stock-default.jpeg"
+          src={`/stock-images/${background}.jpeg`}
           alt=""
         />
       </div>
@@ -28,14 +28,16 @@ const HeaderSection = ({ background }) => {
           <h2 className={cx("header-section__title")}>
             Roofing Is Our Specialty
           </h2>
-          <Link href="/projects">
-            <button className={cx("header-section__button", "red-button")}>
+          <button className={cx("header-section__button", "red-button")}>
+            <a
+              href="mailto: info@bcroofinspections.com"
+            >
               CONTACT US
-            </button>
-          </Link>
+            </a>
+          </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

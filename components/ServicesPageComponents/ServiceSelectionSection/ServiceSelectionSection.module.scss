@@ -1,0 +1,20 @@
+@use "styles/global/colors.scss" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.service-selection-section {
+  width: 100%;
+  background-color: $beige;
+  &__inner-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  &__grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 4rem 0;
+    gap: 2rem;
+  }
+}

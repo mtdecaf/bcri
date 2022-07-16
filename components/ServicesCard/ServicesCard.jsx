@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { IoHome, IoDocumentText } from "react-icons/io5";
 import { RiPencilRuler2Fill } from "react-icons/ri";
-import { useServicesContext } from "../../../../context/services";
+import { useServicesContext } from "../../context/services";
 
 import styles from "./ServicesCard.module.scss";
 import classNames from "classnames/bind";

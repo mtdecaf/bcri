@@ -1,4 +1,4 @@
-import ServicesCard from "./components/ServicesCard";
+import ServicesCard from "../../ServicesCard/ServicesCard.jsx";
 import services from "../../../data/servicesData.json";
 
 import styles from "./ServicesSection.module.scss";

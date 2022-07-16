@@ -1,4 +1,5 @@
 import HeaderSection from "../../components/ServicesPageComponents/HeaderSection/HeaderSection";
+import ServiceSelectionSection from "../../components/ServicesPageComponents/ServiceSelectionSection/ServiceSelectionSection";
 import { useServicesContext } from "../../context/services";
 import services from "../../data/servicesData.json";
 
@@ -10,9 +11,10 @@ const ServicesPage = () => {
   const currentService = useServicesContext();
   const { servicesData } = services;
   return (
-    <div className={cx("services-page")}>
-      <HeaderSection />
-    </div>
+    <section className={cx("services-page")}>
+      <HeaderSection background={"services-stock-default"} />
+      <ServiceSelectionSection servicesData={servicesData} />
+    </section>
   );
 };
 
