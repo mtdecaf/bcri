@@ -7,7 +7,6 @@
   flex-wrap: wrap;
   gap: 1rem;
   max-width: 33rem;
-  padding-bottom: 5rem;
   @include tablet {
     max-width: 53rem;
     flex-wrap: nowrap;

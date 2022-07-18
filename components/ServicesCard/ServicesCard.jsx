@@ -13,9 +13,9 @@ const ServicesCard = ({icon, title, shortDescription}) => {
     return (
         <div className={cx("services-card")}>
             <div className={cx("services-card__icon-wrap")}>
-                {icon === "IoHome" && <IoHome className={cx("services-card__icon")} size={72} color={"#a63523"} />}
-                {icon === "IoDocumentText" && <IoDocumentText className={cx("services-card__icon")} size={72} color={"#a63523"} />}
-                {icon === "RiPencilRuler2Fill" && <RiPencilRuler2Fill className={cx("services-card__icon")} size={72} color={"#a63523"} />}
+                {icon === "IoHome" && <IoHome className={cx("services-card__icon")} size={64} color={"#a63523"} />}
+                {icon === "IoDocumentText" && <IoDocumentText className={cx("services-card__icon")} size={64} color={"#a63523"} />}
+                {icon === "RiPencilRuler2Fill" && <RiPencilRuler2Fill className={cx("services-card__icon")} size={64} color={"#a63523"} />}
             </div>
             <div  className={cx("services-card__title-wrap")}>
                 <h1 className={cx("services-card__title")}>{title}</h1>
@@ -24,7 +24,7 @@ const ServicesCard = ({icon, title, shortDescription}) => {
                 <p className={cx("services-card__description")}>{shortDescription}</p>
             </div>
             <div className={cx("services-card__button-wrap")}>
-                <Link href="/services"><button className={cx("services-card__button", "blue-button")} onClick={() => handleServiceSelected(title)}>Learn More</button></Link>
+                <Link href={`/services/${title.replace(/\s/g, '').toLowerCase()}`}><button className={cx("services-card__button", "blue-button")} onClick={() => handleServiceSelected(title)}>Learn More</button></Link>
             </div>
         </div>
     )
