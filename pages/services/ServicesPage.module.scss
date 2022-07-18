@@ -4,7 +4,9 @@
     height: 100%;
     &-wrap {
       height: calc(100vw / 2);
+      max-height: 50rem;
       font-size: 0;
+      overflow-y: hidden;
     }
   }
 }

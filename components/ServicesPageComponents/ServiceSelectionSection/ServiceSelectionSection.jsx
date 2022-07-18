@@ -5,17 +5,17 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const ServiceSelectionSection = ({ servicesData }) => {
-  console.log(servicesData);
   return (
     <div className={cx("service-selection-section")}>
       <div className={cx("service-selection-section__inner-wrap")}>
         <div className={cx("service-selection-section__grid")}>
-            {servicesData.map((service) => {
+            {servicesData.map((service, key) => {
               return (
                 <ServicesCard
                   icon={service.icon}
                   title={service.title}
                   shortDescription={service.shortDescription}
+                  key={key}
                 />
               );
             })}

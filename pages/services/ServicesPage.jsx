@@ -1,6 +1,8 @@
 import HeaderSection from "../../components/ServicesPageComponents/HeaderSection/HeaderSection";
 import ServiceSelectionSection from "../../components/ServicesPageComponents/ServiceSelectionSection/ServiceSelectionSection";
+import GuarenteeSection from "../../components/GuaranteeSection/GuaranteeSection";
 import { useServicesContext } from "../../context/services";
+import { BsPatchCheckFill } from "react-icons/bs";
 import services from "../../data/servicesData.json";
 import Image from "next/image";
 
@@ -23,6 +25,7 @@ const ServicesPage = () => {
           src="/stock-images/young-contractor-in-a-hard-hat-talking-on-the-phone.jpg"
         />
       </div>
+      <GuarenteeSection />
     </section>
   );
 };

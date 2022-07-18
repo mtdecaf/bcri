@@ -1,0 +1,34 @@
+@use "styles/global/colors" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.guarantee-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 33rem;
+  padding-bottom: 5rem;
+  @include tablet {
+    max-width: 53rem;
+    flex-wrap: nowrap;
+    gap: 2.5rem;
+    @include side-padding-tablet;
+  }
+  @include desktop {
+    width: 100%;
+    justify-content: space-between;
+    max-width: $desktop;
+    gap: 0;
+    padding: 0;
+  }
+  &__item {
+    width: 16rem;
+    &-title {
+      font-size: 1.5rem;
+    }
+    &-content {
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+    }
+  }
+}
