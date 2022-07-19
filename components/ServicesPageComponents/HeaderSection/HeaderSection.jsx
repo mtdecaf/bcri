@@ -5,12 +5,9 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const HeaderSection = ({ background, serviceSelectedData }) => {
-  console.log(serviceSelectedData);
   const router = useRouter();
   const serviceQuery = router.query.service;
   // const
-
-  console.log(serviceQuery);
   return (
     <div className={cx("header-section")}>
       <div

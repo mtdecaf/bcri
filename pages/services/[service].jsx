@@ -12,8 +12,8 @@ const ServicePage = () => {
   const { servicesData } = services;
   const router = useRouter();
   const serviceSelected = router.query.service;
-  const serviceSelectedData = servicesData.find (service => service.title.replace(/\s/g, '').toLowerCase() === serviceSelected)
-  console.log(serviceSelectedData);
+  const serviceSelectedData = servicesData.find (service => service.title.replace(/\s/g, '').toLowerCase() === serviceSelected);
+
   return (
     <section className={cx("service-page")}>
       <HeaderSection background={"services-stock-selected"} serviceSelectedData={serviceSelectedData} />
