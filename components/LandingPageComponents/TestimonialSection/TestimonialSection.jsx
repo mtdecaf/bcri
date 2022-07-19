@@ -29,7 +29,10 @@ const TestimonialSection = ({ mounted, windowWidth }) => {
       onClick={onClick}
       // disabled={!enabled}
     >
-      <IoChevronBack className={cx("testimonial-section__button__icon")} color="#514c50"/>
+      <IoChevronBack
+        className={cx("testimonial-section__button__icon")}
+        color="#514c50"
+      />
     </button>
   );
 
@@ -42,7 +45,10 @@ const TestimonialSection = ({ mounted, windowWidth }) => {
       onClick={onClick}
       // disabled={!enabled}
     >
-      <IoChevronForward className={cx("testimonial-section__button__icon")} color="#514c50"/>
+      <IoChevronForward
+        className={cx("testimonial-section__button__icon")}
+        color="#514c50"
+      />
     </button>
   );
 
@@ -97,9 +103,11 @@ const TestimonialSection = ({ mounted, windowWidth }) => {
                         )}
                       >
                         <div className={cx("testimonial-section__author-wrap")}>
-                          <i className={cx("testimonial-section__author")}>
-                            -{data.name} {data.company}
-                          </i>
+                          <p className={cx("testimonial-section__author")}>
+                            <i>
+                              -{data.name} {data.company}
+                            </i>
+                          </p>
                         </div>
                       </div>
                     </div>

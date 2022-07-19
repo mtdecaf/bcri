@@ -30,7 +30,7 @@ const CustomersSection = ({ mounted }) => {
         <div className={cx("customers-section__inner-wrap")}>
           <div className={cx("customers-section__title-wrap")}>
             <h2 className={cx("customers-section__title")}>Our Customers</h2>
-              <h3 className={cx("customers-section__subtitle")}>You&apos;re in good company when you choose to work with BC Roof Inspections</h3>
+              <p className={cx("customers-section__subtitle")}>You&apos;re in good company when you choose to work with BC Roof Inspections</p>
           </div>
           <div className={cx("customers-section__grid")}>
             {customers.map((customer) => (

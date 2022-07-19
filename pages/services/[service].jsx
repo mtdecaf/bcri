@@ -1,5 +1,6 @@
 import HeaderSection from "../../components/ServicesPageComponents/HeaderSection/HeaderSection";
 import GuarenteeSection from "../../components/GuaranteeSection/GuaranteeSection";
+import ServiceDescription from "../../components/ServicesPageComponents/ServiceDescription/ServiceDescription";
 import { useRouter } from "next/router";
 import services from "../../data/servicesData.json";
 
@@ -16,6 +17,7 @@ const ServicePage = () => {
   return (
     <section className={cx("service-page")}>
       <HeaderSection background={"services-stock-selected"} serviceSelectedData={serviceSelectedData} />
+      <ServiceDescription serviceSelectedData={serviceSelectedData} />
       <GuarenteeSection />
     </section>
   );
