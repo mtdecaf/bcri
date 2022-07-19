@@ -11,7 +11,7 @@ const ServicesSection = () => {
     return (
         <section className={cx("service-section")} id="services-section">
             <div className={cx("service-section__cards-wrap")}>
-                {servicesData.map((service, index) => {
+                {servicesData.slice(0, 3).map((service, index) => {
                     return (
                         <ServicesCard
                             key={index}

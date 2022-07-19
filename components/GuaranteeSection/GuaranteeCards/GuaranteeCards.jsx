@@ -3,7 +3,6 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const GuaranteeCard = ({ cardData }) => {
-  console.log(cardData);
   return (
     <div className={cx("guarantee-cards")}>
       {cardData.map((data, key) => {

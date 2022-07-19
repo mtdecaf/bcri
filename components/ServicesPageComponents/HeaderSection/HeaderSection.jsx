@@ -1,10 +1,16 @@
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 import styles from "./HeaderSection.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
-const HeaderSection = ({ background }) => {
+const HeaderSection = ({ background, serviceSelectedData }) => {
+  console.log(serviceSelectedData);
+  const router = useRouter();
+  const serviceQuery = router.query.service;
+  // const 
+
+  console.log(serviceQuery);
   return (
     <div className={cx("header-section")}>
       <div className={cx("header-section__background-wrap")}>
@@ -24,16 +30,14 @@ const HeaderSection = ({ background }) => {
           />
         </div>
         <div className={cx("header-section__content-container")}>
-          <p className={cx("header-section__sub-text")}>WHAT WE DO</p>
+          <p className={cx("header-section__sub-text")}>
+            {serviceQuery ? "OUR SERVICES" : "WHAT WE DO"}
+          </p>
           <h2 className={cx("header-section__title")}>
-            Roofing Is Our Specialty
+            {serviceQuery ? serviceSelectedData.title : "Roofing Is Our Specialty"}
           </h2>
           <button className={cx("header-section__button", "red-button")}>
-            <a
-              href="mailto: info@bcroofinspections.com"
-            >
-              CONTACT US
-            </a>
+            <a href="mailto: info@bcroofinspections.com">CONTACT US</a>
           </button>
         </div>
       </div>
