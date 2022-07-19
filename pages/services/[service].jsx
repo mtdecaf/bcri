@@ -15,7 +15,7 @@ const ServicePage = () => {
   console.log(serviceSelectedData);
   return (
     <section className={cx("service-page")}>
-      <HeaderSection background={"services-stock-default"} serviceSelectedData={serviceSelectedData} />
+      <HeaderSection background={"services-stock-selected"} serviceSelectedData={serviceSelectedData} />
       <GuarenteeSection />
     </section>
   );

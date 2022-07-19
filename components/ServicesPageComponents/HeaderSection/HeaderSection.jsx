@@ -8,16 +8,36 @@ const HeaderSection = ({ background, serviceSelectedData }) => {
   console.log(serviceSelectedData);
   const router = useRouter();
   const serviceQuery = router.query.service;
-  // const 
+  // const
 
   console.log(serviceQuery);
   return (
     <div className={cx("header-section")}>
-      <div className={cx("header-section__background-wrap")}>
+      <div
+        className={cx("header-section__background-wrap")}
+        style={
+          background === "services-stock-selected"
+            ? {
+                height: "auto",
+                marginTop: "-20rem",
+                marginRight: "-12rem"
+
+              }
+            : null
+        }
+      >
         <img
           className={cx("header-section__background")}
           src={`/stock-images/${background}.jpeg`}
           alt=""
+          style={
+            background === "services-stock-selected"
+              ? {
+                  width: "50rem",
+                  height: "auto",
+                }
+              : null
+          }
         />
       </div>
       <div className={cx("header-section__inner-wrap")}>
@@ -34,7 +54,9 @@ const HeaderSection = ({ background, serviceSelectedData }) => {
             {serviceQuery ? "OUR SERVICES" : "WHAT WE DO"}
           </p>
           <h2 className={cx("header-section__title")}>
-            {serviceQuery ? serviceSelectedData.title : "Roofing Is Our Specialty"}
+            {serviceQuery
+              ? serviceSelectedData.title
+              : "Roofing Is Our Specialty"}
           </h2>
           <button className={cx("header-section__button", "red-button")}>
             <a href="mailto: info@bcroofinspections.com">CONTACT US</a>
