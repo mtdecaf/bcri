@@ -8,7 +8,6 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const ServicesCard = ({icon, title, shortDescription}) => {
-    const { handleServiceSelected } = useServicesContext();
 
     return (
         <div className={cx("services-card")}>
@@ -24,7 +23,7 @@ const ServicesCard = ({icon, title, shortDescription}) => {
                 <p className={cx("services-card__description")}>{shortDescription}</p>
             </div>
             <div className={cx("services-card__button-wrap")}>
-                <Link href={`/services/${title.replace(/\s/g, '').toLowerCase()}`}><button className={cx("services-card__button", "blue-button")} onClick={() => handleServiceSelected(title)}>Learn More</button></Link>
+                <Link href={`/services/${title.replace(/\s/g, '').toLowerCase()}`}><button className={cx("services-card__button", "blue-button")}>Learn More</button></Link>
             </div>
         </div>
     )

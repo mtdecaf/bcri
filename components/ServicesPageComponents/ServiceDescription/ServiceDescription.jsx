@@ -3,7 +3,6 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const ServiceDescription = ({ serviceSelectedData }) => {
-  console.log(serviceSelectedData?.description);
   return (
     serviceSelectedData && (
       <div className={cx("service-description")}>

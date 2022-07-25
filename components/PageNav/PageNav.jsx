@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useServicesContext } from "../../context/services";
 
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
@@ -17,13 +16,14 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const PageNav = () => {
+  const { servicesData } = services;
   const hasWindow = typeof window !== "undefined";
-  const { handleServiceSelected } = useServicesContext();
 
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState();
+  const [serviesDropDownOpen, setServiesDropDownOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -70,11 +70,6 @@ const PageNav = () => {
     }
   };
 
-  const handleServiceDropDownClick = (e) => {
-    setAnchorEl(e.currentTarget);
-    setServicesMenuOpen(true);
-  };
-
   useEffect(() => {
     if (hasWindow) {
       window.addEventListener("scroll", handleScroll);
@@ -84,12 +79,10 @@ const PageNav = () => {
 
   return mounted && windowWidth >= 768 ? (
     <div className={cx("page-nav", "page-nav--large")}>
-      <div className={cx("page-nav__contact-bar--large")} 
-      >
+      <div className={cx("page-nav__contact-bar--large")}>
         <div className={cx("page-nav__contact-bar__wrap")}>
           <Link href="/">
-            <a className={cx("page-nav__logo-wrap")} 
-            >
+            <a className={cx("page-nav__logo-wrap")}>
               <Image
                 className={cx("page-nav__logo")}
                 src={bcriLogo}
@@ -100,9 +93,7 @@ const PageNav = () => {
             </a>
           </Link>
           <div className={cx("page-nav__contact-bar-info")}>
-            <div
-              className={cx("page-nav__contact-phone__wrap")}
-            >
+            <div className={cx("page-nav__contact-phone__wrap")}>
               <FiPhone className={cx("page-nav__contact-phone-icon")} />
               <a
                 href="tel:+16045392510"
@@ -125,20 +116,43 @@ const PageNav = () => {
           </div>
         </div>
       </div>
-      <div className={cx("page-nav__list-wrap")} 
-      >
+      <div className={cx("page-nav__list-wrap")}>
         <div className={cx("page-nav__list")}>
           <Link href="/">
             <a className={cx("page-nav__button", "page-nav__home")}>HOME</a>
           </Link>
-          <Link href="/services">
-            <a
-              className={cx("page-nav__button", "page-nav__services")}
-              onClick={() => handleServiceSelected()}
-            >
-              SERVICES
-            </a>
-          </Link>
+          <div className={cx("page-nav__services-wrap")}>
+            <Link href="/services">
+              <a
+                className={cx("page-nav__button", "page-nav__services")}
+                onMouseEnter={() => setServiesDropDownOpen(true)}
+                onMouseLeave={() => setServiesDropDownOpen(false)}
+              >
+                SERVICES
+              </a>
+            </Link>
+            {serviesDropDownOpen && (
+              <div
+                className={cx("page-nav__services-drop-down")}
+                onMouseEnter={() => setServiesDropDownOpen(true)}
+                onMouseLeave={() => setServiesDropDownOpen(false)}
+              >
+                {servicesData.map((service) => {
+                  return (
+                    <Link
+                      href={`/services/${service.title
+                        .replace(/\s/g, "")
+                        .toLowerCase()}`}
+                    >
+                      <p className={cx("page-nav__services-drop-down-item")} onClick= {() => setServiesDropDownOpen(false)}>
+                        {service.title}
+                      </p>
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
+          </div>
           <Link href="/about">
             <a className={cx("page-nav__button", "page-nav__about")}>
               ABOUT US
