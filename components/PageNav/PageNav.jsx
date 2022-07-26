@@ -137,12 +137,13 @@ const PageNav = () => {
                 onMouseEnter={() => setServiesDropDownOpen(true)}
                 onMouseLeave={() => setServiesDropDownOpen(false)}
               >
-                {servicesData.map((service) => {
+                {servicesData.map((service, key) => {
                   return (
                     <Link
                       href={`/services/${service.title
                         .replace(/\s/g, "")
                         .toLowerCase()}`}
+                        key={key}
                     >
                       <p className={cx("page-nav__services-drop-down-item")} onClick= {() => setServiesDropDownOpen(false)}>
                         {service.title}
