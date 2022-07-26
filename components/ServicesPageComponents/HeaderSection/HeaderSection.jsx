@@ -12,16 +12,6 @@ const HeaderSection = ({ background, serviceSelectedData }) => {
     <div className={cx("header-section")}>
       <div
         className={cx("header-section__background-wrap")}
-        style={
-          background === "services-stock-selected"
-            ? {
-                height: "auto",
-                marginTop: "-20rem",
-                marginRight: "-12rem"
-
-              }
-            : null
-        }
       >
         <img
           className={cx("header-section__background")}
@@ -30,8 +20,9 @@ const HeaderSection = ({ background, serviceSelectedData }) => {
           style={
             background === "services-stock-selected"
               ? {
-                  width: "50rem",
+                  width: "100%",
                   height: "auto",
+                  marginRight: "-15%",
                 }
               : null
           }
