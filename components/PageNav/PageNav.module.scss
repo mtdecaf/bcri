@@ -9,7 +9,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   &--small {
     justify-content: space-between;
     align-items: center;
@@ -19,7 +20,7 @@
       @include side-padding-tablet;
     }
   }
-  
+
   &--large {
     flex-direction: column;
     justify-content: space-between;
@@ -60,7 +61,7 @@
       }
     }
 
-    &-info{
+    &-info {
       display: flex;
     }
   }
@@ -92,7 +93,7 @@
     }
   }
 
-  &__right-wrap{
+  &__right-wrap {
     display: flex;
     gap: 0.5rem;
   }
@@ -144,9 +145,13 @@
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    padding: 10px 4rem;
+    padding: 10px 2rem;
     list-style: none;
+    @include tablet {
+      padding: 10px 3rem;
+    }
     @include desktop {
+      padding: 10px 4rem;
       max-width: $desktop;
     }
     &-wrap {
@@ -170,7 +175,7 @@
     font-size: 1rem;
     cursor: pointer;
   }
-  
+
   &__burger {
     color: $navy-blue;
     cursor: pointer;

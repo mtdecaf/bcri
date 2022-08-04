@@ -7,7 +7,6 @@ let cx = classNames.bind(styles);
 const HeaderSection = ({ background, serviceSelectedData }) => {
   const router = useRouter();
   const serviceQuery = router.query.service;
-  // const
   return (
     <div className={cx("header-section")}>
       <div

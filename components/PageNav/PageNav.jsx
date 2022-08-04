@@ -24,7 +24,6 @@ const PageNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState();
   const [serviesDropDownOpen, setServiesDropDownOpen] = useState(false);
-  const [projectsDropDownOpen, setProjectsDropDownOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);

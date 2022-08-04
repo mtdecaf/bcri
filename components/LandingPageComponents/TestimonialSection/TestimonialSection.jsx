@@ -8,7 +8,7 @@ import styles from "./TestimonialSection.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
-const TestimonialSection = ({ mounted, windowWidth }) => {
+const TestimonialSection = ({ mounted }) => {
   const { testimonialsData } = tesimonials;
   const [viewportRef, embla] = useEmblaCarousel({
     loop: true,
