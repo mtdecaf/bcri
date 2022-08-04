@@ -24,6 +24,7 @@ const PageNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState();
   const [serviesDropDownOpen, setServiesDropDownOpen] = useState(false);
+  const [projectsDropDownOpen, setProjectsDropDownOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -143,9 +144,12 @@ const PageNav = () => {
                       href={`/services/${service.title
                         .replace(/\s/g, "")
                         .toLowerCase()}`}
-                        key={key}
+                      key={key}
                     >
-                      <p className={cx("page-nav__services-drop-down-item")} onClick= {() => setServiesDropDownOpen(false)}>
+                      <p
+                        className={cx("page-nav__services-drop-down-item")}
+                        onClick={() => setServiesDropDownOpen(false)}
+                      >
                         {service.title}
                       </p>
                     </Link>
@@ -159,11 +163,9 @@ const PageNav = () => {
               ABOUT US
             </a>
           </Link>
-          <Link href="/projects">
-            <a className={cx("page-nav__button", "page-nav__projects")}>
-              PROJECTS
-            </a>
-          </Link>
+          <a className={cx("page-nav__button", "page-nav__projects")}>
+            PROJECTS
+          </a>
           <a
             className={cx("page-nav__button", "page-nav__contact")}
             onClick={(e) => scrollTo(e, "footer-section")}
