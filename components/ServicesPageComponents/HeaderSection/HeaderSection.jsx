@@ -4,10 +4,11 @@ import styles from "./HeaderSection.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
-const HeaderSection = ({ background, serviceSelectedData }) => {
+const HeaderSection = ({ background, serviceSelectedData, mounted,  windowWidth }) => {
   const router = useRouter();
   const serviceQuery = router.query.service;
-  return (
+  console.log(windowWidth)
+  return mounted && (
     <div className={cx("header-section")}>
       <div
         className={cx("header-section__background-wrap")}
@@ -29,12 +30,12 @@ const HeaderSection = ({ background, serviceSelectedData }) => {
       </div>
       <div className={cx("header-section__inner-wrap")}>
         <div className={cx("header-section__overlay-wrap")}>
-          <span className={cx("header-section__overlay-square")}></span>
-          <img
+          <span className={cx("header-section__overlay-square")} style={(windowWidth > 425) ? {width: "50vw"} : {width: "15vw"}}></span>
+          {(windowWidth > 1024 || windowWidth <= 425) && <img
             className={cx("header-section__overlay-polygon")}
             src="/svg-assets/polygon_geometry.svg"
             alt="page overlay geometry"
-          />
+          />}
         </div>
         <div className={cx("header-section__content-container")}>
           <p className={cx("header-section__sub-text")}>
