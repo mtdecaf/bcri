@@ -15,13 +15,16 @@ const HeaderSection = ({
 
   return (
     mounted && (
-      <div
-        className={cx("header-section")}
-      >
-        <div className={cx("header-section__primary-wrap")} style={(windowWidth <= 1024 && windowWidth > 425) ? {height: "20rem"} : {height: "30rem"}}>
-          <div
-            className={cx("header-section__background-wrap")}
-          >
+      <div className={cx("header-section")}>
+        <div
+          className={cx("header-section__primary-wrap")}
+          style={
+            windowWidth <= 1024 && windowWidth > 425
+              ? { height: "14rem" }
+              : { height: "30rem" }
+          }
+        >
+          <div className={cx("header-section__background-wrap")}>
             <img
               className={cx("header-section__background")}
               src={`/stock-images/${background}.jpeg`}
@@ -44,7 +47,7 @@ const HeaderSection = ({
                 style={
                   windowWidth > 425
                     ? { width: "50vw" }
-                    : { width: "15vw", minWidth: "350px" }
+                    : { width: "15vw", minWidth: "250px" }
                 }
               ></span>
               {(windowWidth > 1024 || windowWidth <= 425) && (
@@ -72,7 +75,7 @@ const HeaderSection = ({
             )}
           </div>
         </div>
-        {(windowWidth <= 1024 && windowWidth > 425) && (
+        {windowWidth <= 1024 && windowWidth > 425 && (
           <div className={cx("header-section__subcontent-container")}>
             <p className={cx("header-section__sub-text")}>
               {serviceQuery ? "OUR SERVICES" : "WHAT WE DO"}
