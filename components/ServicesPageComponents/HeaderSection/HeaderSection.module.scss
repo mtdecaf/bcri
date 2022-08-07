@@ -97,4 +97,9 @@
       font-size: 2.25rem;
     }
   }
+  &__button {
+    width: min-content;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

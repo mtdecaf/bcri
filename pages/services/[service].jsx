@@ -2,6 +2,8 @@ import HeaderSection from "../../components/ServicesPageComponents/HeaderSection
 import GuarenteeSection from "../../components/GuaranteeSection/GuaranteeSection";
 import ServiceDescription from "../../components/ServicesPageComponents/ServiceDescription/ServiceDescription";
 import { useRouter } from "next/router";
+import { mountAndGetWidth } from "../../custom_hooks/mountAndGetWidth";
+
 import services from "../../data/servicesData.json";
 
 import styles from "./ServicePage.module.scss";
@@ -12,11 +14,19 @@ const ServicePage = () => {
   const { servicesData } = services;
   const router = useRouter();
   const serviceSelected = router.query.service;
-  const serviceSelectedData = servicesData.find (service => service.title.replace(/\s/g, '').toLowerCase() === serviceSelected);
+  const serviceSelectedData = servicesData.find(
+    (service) =>
+      service.title.replace(/\s/g, "").toLowerCase() === serviceSelected
+  );
 
   return (
     <section className={cx("service-page")}>
-      <HeaderSection background={"services-stock-selected"} serviceSelectedData={serviceSelectedData} />
+      <HeaderSection
+        background={"services-stock-selected"}
+        serviceSelectedData={serviceSelectedData}
+        mounted={mountAndGetWidth().mounted}
+        windowWidth={mountAndGetWidth().windowWidth}
+      />
       <ServiceDescription serviceSelectedData={serviceSelectedData} />
       <GuarenteeSection />
     </section>
