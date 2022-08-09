@@ -75,7 +75,7 @@
     }
   }
 
-  &__services {
+  &__item {
     &-wrap {
       position: relative;
     }
@@ -84,7 +84,7 @@
       background-color: $navy-blue;
       padding: 1rem 2rem;
       left: -2rem;
-      &-item {
+      &-text {
         white-space: nowrap;
         color: $off-white;
         cursor: pointer;

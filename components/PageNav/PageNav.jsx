@@ -24,6 +24,9 @@ const PageNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState();
   const [serviesDropDownOpen, setServiesDropDownOpen] = useState(false);
+  const [projectsDropDownOpen, setProjectsDropDownOpen] = useState(false);
+
+  const PROJECTS_CATEGORIES = ["Residential", "Strata", "Commercial"];
 
   useEffect(() => {
     setMounted(true);
@@ -121,7 +124,7 @@ const PageNav = () => {
           <Link href="/">
             <a className={cx("page-nav__button", "page-nav__home")}>HOME</a>
           </Link>
-          <div className={cx("page-nav__services-wrap")}>
+          <div className={cx("page-nav__services-wrap", "page-nav__item-wrap")}>
             <Link href="/services">
               <a
                 className={cx("page-nav__button", "page-nav__services")}
@@ -133,7 +136,7 @@ const PageNav = () => {
             </Link>
             {serviesDropDownOpen && (
               <div
-                className={cx("page-nav__services-drop-down")}
+                className={cx("page-nav__services-drop-down", "page-nav__item-drop-down")}
                 onMouseEnter={() => setServiesDropDownOpen(true)}
                 onMouseLeave={() => setServiesDropDownOpen(false)}
               >
@@ -146,7 +149,7 @@ const PageNav = () => {
                       key={key}
                     >
                       <p
-                        className={cx("page-nav__services-drop-down-item")}
+                        className={cx("page-nav__services-drop-down-item", "page-nav__item-drop-down-text")}
                         onClick={() => setServiesDropDownOpen(false)}
                       >
                         {service.title}
@@ -157,14 +160,44 @@ const PageNav = () => {
               </div>
             )}
           </div>
+
           <Link href="/about">
             <a className={cx("page-nav__button", "page-nav__about")}>
               ABOUT US
             </a>
           </Link>
-          <a className={cx("page-nav__button", "page-nav__projects")}>
-            PROJECTS
-          </a>
+          <div className={cx("page-nav__projects-wrap", "page-nav__item-wrap")}>
+            <a
+              className={cx("page-nav__button", "page-nav__projects")}
+              onMouseEnter={() => setProjectsDropDownOpen(true)}
+              onMouseLeave={() => setProjectsDropDownOpen(false)}
+            >
+              PROJECTS
+            </a>
+            {projectsDropDownOpen && (
+              <div
+                className={cx("page-nav__services-drop-down", "page-nav__item-drop-down")}
+                onMouseEnter={() => setProjectsDropDownOpen(true)}
+                onMouseLeave={() => setProjectsDropDownOpen(false)}
+              >
+                {PROJECTS_CATEGORIES.map((project, key) => {
+                  return (
+                    <Link
+                      href={`/projects/${project.toLowerCase()}`}
+                      key={key}
+                    >
+                      <p
+                        className={cx("page-nav__services-drop-down-text", "page-nav__item-drop-down-text")}
+                        onClick={() => setProjectsDropDownOpen(false)}
+                      >
+                        {project}
+                      </p>
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
+          </div>
           <a
             className={cx("page-nav__button", "page-nav__contact")}
             onClick={(e) => scrollTo(e, "footer-section")}

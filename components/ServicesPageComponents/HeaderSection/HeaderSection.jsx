@@ -33,17 +33,13 @@ const HeaderSection = ({
               style={
                 background === "services-stock-selected" && windowWidth > 1024
                   ? {
-                      width: "60vw",
-                      height: "min-content",
                       marginTop: "-20rem",
                       marginRight: "-6rem",
                     }
                   : background === "services-stock-selected" &&
                     windowWidth <= 1024
                   ? {
-                      width: "60vw",
                       minWidth: "30rem",
-                      height: "min-content",
                       marginTop: "-10rem",
                       marginRight: "-5rem",
                     }

@@ -23,7 +23,8 @@
     }
   }
   &__background {
-    height: 100%;
+    height: min-content;
+    width: 60%;
     &-wrap {
       width: 100vw;
       height: 30rem;
