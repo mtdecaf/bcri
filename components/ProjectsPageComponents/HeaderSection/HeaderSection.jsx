@@ -1,20 +1,17 @@
-import { useRouter } from "next/router";
-
 import styles from "./HeaderSection.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const HeaderSection = ({
   background,
-  serviceSelectedData,
+  projectCategorySelected,
   mounted,
   windowWidth,
 }) => {
-  const router = useRouter();
-  const serviceQuery = router.query.service;
-
+  console.log(projectCategorySelected);
   return (
-    mounted && (
+    mounted &&
+    projectCategorySelected && (
       <div className={cx("header-section")}>
         <div
           className={cx("header-section__primary-wrap")}
@@ -25,7 +22,7 @@ const HeaderSection = ({
           }
         >
           <div className={cx("header-section__background-wrap")}>
-            <img
+            {/* <img
               className={cx("header-section__background")}
               src={`/stock-images/${background}.jpeg`}
               alt=""
@@ -44,7 +41,7 @@ const HeaderSection = ({
                     }
                   : null
               }
-            />
+            /> */}
           </div>
           <div className={cx("header-section__inner-wrap")}>
             <div className={cx("header-section__overlay-wrap")}>
@@ -66,13 +63,12 @@ const HeaderSection = ({
             </div>
             {(windowWidth > 1024 || windowWidth <= 425) && (
               <div className={cx("header-section__content-container")}>
-                <p className={cx("header-section__sub-text")}>
-                  {serviceQuery ? "OUR SERVICES" : "WHAT WE DO"}
-                </p>
+                <p className={cx("header-section__sub-text")}>OUR PROJECTS</p>
                 <h2 className={cx("header-section__title")}>
-                  {serviceQuery
-                    ? serviceSelectedData.title
-                    : "Roofing Is Our Specialty"}
+                  {`${
+                    projectCategorySelected.charAt(0).toUpperCase() +
+                    projectCategorySelected.slice(1)
+                  } Roofing Projects`}
                 </h2>
                 <button className={cx("header-section__button", "red-button")}>
                   <a href="mailto: info@bcroofinspections.com">CONTACT US</a>
@@ -83,13 +79,12 @@ const HeaderSection = ({
         </div>
         {windowWidth <= 1024 && windowWidth > 425 && (
           <div className={cx("header-section__subcontent-container")}>
-            <p className={cx("header-section__sub-text")}>
-              {serviceQuery ? "OUR SERVICES" : "WHAT WE DO"}
-            </p>
+            <p className={cx("header-section__sub-text")}>OUR PROJECTS</p>
             <h2 className={cx("header-section__title")}>
-              {serviceQuery
-                ? serviceSelectedData.title
-                : "Roofing Is Our Specialty"}
+              {`${
+                projectCategorySelected.charAt(0).toUpperCase() +
+                projectCategorySelected.slice(1)
+              } Roofing Projects`}
             </h2>
             <button className={cx("header-section__button", "red-button")}>
               <a href="mailto: info@bcroofinspections.com">CONTACT US</a>
