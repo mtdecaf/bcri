@@ -3,7 +3,6 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const HeaderSection = ({
-  background,
   projectCategorySelected,
   mounted,
   windowWidth,
@@ -12,7 +11,7 @@ const HeaderSection = ({
   return (
     mounted &&
     projectCategorySelected && (
-      <div className={cx("header-section")}>
+      <section className={cx("header-section")}>
         <div
           className={cx("header-section__primary-wrap")}
           style={
@@ -91,7 +90,7 @@ const HeaderSection = ({
             </button>
           </div>
         )}
-      </div>
+      </section>
     )
   );
 };

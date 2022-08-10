@@ -1,0 +1,20 @@
+@use "styles/global/colors.scss" as *;
+@use "styles/global/mixins.scss" as *;
+@use "styles/global/variables.scss" as *;
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    &__content {
+        &-wrap {
+            background-color: $light-grey;
+        }
+    }
+    &__image {
+        &-wrap {
+            display: flex;
+            width: 100%;
+        }
+    }
+}

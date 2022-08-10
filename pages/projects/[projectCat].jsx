@@ -1,4 +1,5 @@
 import HeaderSection from "../../components/ProjectsPageComponents/HeaderSection/HeaderSection";
+import ProjectsGallery from "../../components/ProjectsPageComponents/ProjectsGallery/ProjectsGallery";
 import { useRouter } from "next/router";
 import { mountAndGetWidth } from "../../custom_hooks/mountAndGetWidth";
 
@@ -17,6 +18,10 @@ const ProjectsPage = () => {
         projectCategorySelected={projectCategorySelected}
         mounted={mountAndGetWidth().mounted}
         windowWidth={mountAndGetWidth().windowWidth}
+      />
+      <ProjectsGallery
+        projectCategorySelected={projectCategorySelected}
+        mounted={mountAndGetWidth().mounted}
       />
     </div>
   );
