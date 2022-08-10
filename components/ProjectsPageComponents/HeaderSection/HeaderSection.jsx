@@ -7,7 +7,7 @@ const HeaderSection = ({
   mounted,
   windowWidth,
 }) => {
-  console.log(projectCategorySelected);
+
   return (
     mounted &&
     projectCategorySelected && (

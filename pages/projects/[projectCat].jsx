@@ -11,7 +11,6 @@ const ProjectsPage = () => {
   const router = useRouter();
 
   const projectCategorySelected = router.query.projectCat;
-  console.log(projectCategorySelected);
   return (
     <div className={cx("projects-page")}>
       <HeaderSection

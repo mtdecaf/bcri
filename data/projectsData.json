@@ -1,0 +1,256 @@
+{
+    "residential": [
+        "862 Cumberland Crescent, North Vancouver",
+        "3478 Beach Avenue, Roberts Creek",
+        "6760 Coltsfoot Drive, Richmond",
+        "711 Wellington Avenue, Vancouver",
+        "4642 Deer Lane, West Vancouver",
+        "6249 Tisdall Street, Vancouver",
+        "3366 196A Street, Langley",
+        "4760 Gatenby Avenue, Burnaby",
+        "21476 76th Avenue, Langley",
+        "7600 253 Street, Langley",
+        "20510 67B Avenue, Langley",
+        "10516 Ashdown Place, Surrey",
+        "23202 88 Avenue, Langley",
+        "122 Granville Street, New Westminster",
+        "7665 Mayfield Street, Burnaby",
+        "3157 East 62 nd Avenue, Vancouver",
+        "10897 Canso Crescent, Richmond",
+        "34783 Brealy Court, Mission",
+        "30 Timbercrest Drive, Port Moody",
+        "26440 121 Avenue, Maple Ridge",
+        "11045 Southridge Road, Delta",
+        "1242 East 15 th Street, Vancouver",
+        "11349 154A Street, Surrey",
+        "1685 Alderlynn Drive, North Vancouver",
+        "4241 St. George Street, Vancouver",
+        "9671 Pickering Drive, Richmond",
+        "5957 Culloden Street, Vancouver",
+        "5498 Greenleaf Road, West Vancouver",
+        "5974 181A Street, Surrey",
+        "8674 Armstrong Avenue, Burnaby",
+        "3861 Blenheim Road, Vancouver",
+        "979 Chamberlain Drive, North Vancouver",
+        "12460 Gilbert Road, Richmond",
+        "15839 Suffolk Road, Surrey",
+        "6376 Collingwood Street, Vancouver",
+        "12436 23 Avenue, Surrey",
+        "12667 15A Avenue, Surrey",
+        "346 Alberta Street, New Westminster",
+        "2353 Oneida Drive, Coquitlam",
+        "9415 118 Street, Delta",
+        "3504 198 Street, Langley",
+        "6800 Thunderbird Court, Delta",
+        "3228 W 27 th Avenue, Vancouver",
+        "1160 Tall Tree Lane, North Vancouver",
+        "2725 Lyndene Road, North Vancouver",
+        "1993 Quilchena Crescent, Vancouver",
+        "2768 4 th Avenue, Vancouver",
+        "15875 20 Avenue, Surrey",
+        "12460 Gilbert Road, Richmond",
+        "2912 Silverlake Place, Coquitlam",
+        "16879 88 Avenue, Surrey",
+        "567 22 nd Avenue, East Vancouver",
+        "16108 13A Avenue, Surrey",
+        "1056 Jay Crescent, Squamish",
+        "584 East 51 Avenue, Vancouver",
+        "5638 Trafalgar Street, Vancouver"
+    ],
+    "commercial": [
+        {
+            "name": "Wendy’s",
+            "address": "15959 Fraser Highway, Surrey"
+        },
+        {
+            "name": "Cloverdale Rec Centre",
+            "address": "6188 176th Street, Cloverdale"
+        },
+        {
+            "name": "Warehouse",
+            "address": "1520 Cliveden Avenue, Delta"
+        },
+        {
+            "name": "WalMart",
+            "address": "20202 66th Avenue, Langley"
+        },
+        {
+            "name": "Shoppers Drug Mart",
+            "address": "2947 Granville Street, Vancouver"
+        },
+        {
+            "name": "Surrey City Library",
+            "address": "10350 University Drive, Surrey"
+        },
+        {
+            "name": "Homer Day Care",
+            "address": "1451 Homer Street, Vancouver"
+        },
+        {
+            "name": "Tim Hortons",
+            "address": "15255 Highway 10, Surrey"
+        },
+        {
+            "name": "RCMP E Division Headquarters",
+            "address": "14200 Green Timbers Way, Surrey"
+        },
+        {
+            "name": "Commercial Building",
+            "address": "5744 Glover Road, Langley"
+        },
+        {
+            "name": "Commercial Building, Montana Developments Ltd.",
+            "address": "11950 80 Avenue, Delta"
+        },
+        {
+            "name": "Commercial Building, NW 1773",
+            "address": "7551 Vantage Way, Delta"
+        },
+        {
+            "name": "Commercial Building",
+            "address": "2040-13478 78 Avenue, Surrey"
+        },
+        {
+            "name": "Commercial Building",
+            "address": "2368 No 5 Road, Richmond"
+        },
+        {
+            "name": "Commercial Building",
+            "address": "6249 205 Street, Langley"
+        },
+        {
+            "name": "Commercial Building",
+            "address": "20003 10A Avenue, Langley"
+        },
+        {
+            "name": "Commercial Building",
+            "address": "1725 Coast Meridian, Port Coquitlam"
+        },
+        {
+            "name": "Commercial Building",
+            "address": "9666 King George Boulevard, Surrey"
+        },
+        {
+            "name": "Commercial Building",
+            "address": "6249 205 Street, Langley"
+        },
+        {
+            "name": "Commercial Building",
+            "address": "1510-1520 West 3 rd Avenue, Vancouver"
+        },
+        {
+            "name": "Commercial Building",
+            "address": "2040-13478 78 Avenue, Surrey"
+        },
+        {
+            "name": "Comtech Communications",
+            "address": "13091 Vanier Place, Richmond"
+        }
+    ],
+    "strata": [
+        {
+            "name": "Village at Bedford Landing, Apartments",
+            "address": "23255 Billy Brown Road, Fort Langley"
+        },
+        {
+            "name": "Summerfield",
+            "address": "20751 87th Avenue, Langley"
+        },
+        {
+            "name": "The Laurels",
+            "address": "1150 Lynn Valley Road, North Vancouver"
+        },
+        {
+            "name": "Mont Charles",
+            "address": "1777 West 13th Avenue, Vancouver"
+        },
+        {
+            "name": "Riverwood Green",
+            "address": "1255 Riverside Drive, Port Coquitlam"
+        },
+        {
+            "name": "Nautica",
+            "address": "12639 No 2 Road, Richmond"
+        },
+        {
+            "name": "Parkside",
+            "address": "3980 Inlet Crescent, North Vancouver"
+        },
+        {
+            "name": "White Oaks",
+            "address": "5710 201 Street, Langley"
+        },
+        {
+            "name": "Berkshyre Gardens",
+            "address": "7837 120A Street, Surrey"
+        },
+        {
+            "name": "Pacifica",
+            "address": "503 West 16 th Avenue, Vancouver"
+        },
+        {
+            "name": "Island Gates",
+            "address": "1678 West 7 Avenue, Vancouver"
+        },
+        {
+            "name": "Caulfeild Cove",
+            "address": "4957 Marine Drive, West Vancouver"
+        },
+        {
+            "name": "The 501",
+            "address": "501 Pacific Street, Vancouver"
+        },
+        {
+            "name": "Cottonwood Park",
+            "address": "11600 Cottonwood Drive, Maple Ridge"
+        },
+        {
+            "name": "Carmel",
+            "address": "6833 Village Green, Burnaby"
+        },
+        {
+            "name": "Victoria Place",
+            "address": "123 East Keith Road, North Vancouver"
+        },
+        {
+            "name": "The Plateau",
+            "address": "2088 Winfield Drive, Abbotsford"
+        },
+        {
+            "name": "Serenity",
+            "address": "9229 University Crescent, Burnaby"
+        },
+        {
+            "name": "Laurelwood Gardens",
+            "address": "7300 Ledway Road, Richmond"
+        },
+        {
+            "name": "Meridian Pointe",
+            "address": "14968 24 Avenue, Surrey"
+        },
+        {
+            "name": "NWS2573",
+            "address": "7731 Moffat Road, Richmond"
+        },
+        {
+            "name": "Orangewood",
+            "address": "21937 48 Avenue, Langley"
+        },
+        {
+            "name": "Oxford Place",
+            "address": "1955 Suffolk Avenue, Port Coquitlam"
+        },
+        {
+            "name": "Paramount",
+            "address": "2130 Paramount Crescent, Surrey"
+        },
+        {
+            "name": "Park Place NW 3358",
+            "address": "20140 56 Avenue, Langley"
+        },
+        {
+            "name": "Sahalee",
+            "address": "1330 Hunter Road, Tsawwassen"
+        }
+    ]
+}

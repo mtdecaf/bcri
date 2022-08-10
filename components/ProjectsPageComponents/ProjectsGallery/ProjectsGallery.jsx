@@ -5,16 +5,21 @@ let cx = classNames.bind(styles);
 
 const ProjectsGallery = ({ projectCategorySelected, mounted }) => {
   return (
-    <section className={cx("projects-gallery")}>
-      <div className={cx("projects-gallery__title-wrap")}>
-        <h2 className={cx("projects-gallery__title")}>BC Roof Inspections</h2>
-        <h2 className={cx("projects-gallery__title-secondary")}>{`${
-          projectCategorySelected.charAt(0).toUpperCase() +
-          projectCategorySelected.slice(1)
-        } Roofing Projects`}</h2>
-      </div>
-      <ProjectCard />
-    </section>
+    mounted &&
+    projectCategorySelected && (
+      <section className={cx("projects-gallery")}>
+        <div className={cx("projects-gallery__title-wrap")}>
+          <h2 className={cx("projects-gallery__title")}>BC Roof Inspections</h2>
+          <h2 className={cx("projects-gallery__title-secondary")}>{`${
+            projectCategorySelected.charAt(0).toUpperCase() +
+            projectCategorySelected.slice(1)
+          } Roofing Projects`}</h2>
+        </div>
+        <div className={cx("projects-gallery__gallery")}>
+          <ProjectCard />
+        </div>
+      </section>
+    )
   );
 };
 

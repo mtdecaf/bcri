@@ -136,7 +136,10 @@ const PageNav = () => {
             </Link>
             {serviesDropDownOpen && (
               <div
-                className={cx("page-nav__services-drop-down", "page-nav__item-drop-down")}
+                className={cx(
+                  "page-nav__services-drop-down",
+                  "page-nav__item-drop-down"
+                )}
                 onMouseEnter={() => setServiesDropDownOpen(true)}
                 onMouseLeave={() => setServiesDropDownOpen(false)}
               >
@@ -149,7 +152,10 @@ const PageNav = () => {
                       key={key}
                     >
                       <p
-                        className={cx("page-nav__services-drop-down-item", "page-nav__item-drop-down-text")}
+                        className={cx(
+                          "page-nav__services-drop-down-item",
+                          "page-nav__item-drop-down-text"
+                        )}
                         onClick={() => setServiesDropDownOpen(false)}
                       >
                         {service.title}
@@ -176,18 +182,22 @@ const PageNav = () => {
             </a>
             {projectsDropDownOpen && (
               <div
-                className={cx("page-nav__services-drop-down", "page-nav__item-drop-down")}
+                className={cx(
+                  "page-nav__services-drop-down",
+                  "page-nav__item-drop-down"
+                )}
                 onMouseEnter={() => setProjectsDropDownOpen(true)}
                 onMouseLeave={() => setProjectsDropDownOpen(false)}
+                onTouchStart={() => console.log("hihi")}
               >
                 {PROJECTS_CATEGORIES.map((project, key) => {
                   return (
-                    <Link
-                      href={`/projects/${project.toLowerCase()}`}
-                      key={key}
-                    >
+                    <Link href={`/projects/${project.toLowerCase()}`} key={key}>
                       <p
-                        className={cx("page-nav__services-drop-down-text", "page-nav__item-drop-down-text")}
+                        className={cx(
+                          "page-nav__services-drop-down-text",
+                          "page-nav__item-drop-down-text"
+                        )}
                         onClick={() => setProjectsDropDownOpen(false)}
                       >
                         {project}
