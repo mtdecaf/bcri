@@ -188,7 +188,6 @@ const PageNav = () => {
                 )}
                 onMouseEnter={() => setProjectsDropDownOpen(true)}
                 onMouseLeave={() => setProjectsDropDownOpen(false)}
-                onTouchStart={() => console.log("hihi")}
               >
                 {PROJECTS_CATEGORIES.map((project, key) => {
                   return (

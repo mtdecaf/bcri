@@ -7,6 +7,7 @@
   flex-direction: column;
   width: 15rem;
   height: 100%;
+  cursor: pointer;
   &__content {
     &-wrap {
       width: 100%;
@@ -16,7 +17,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
-      padding: 0.5rem 0.25rem;
+      padding: 0.5rem;
       gap: 0.5rem;
     }
     &-title,
@@ -30,6 +31,21 @@
     &-wrap {
       display: flex;
       width: 100%;
+      position: relative;
+    }
+    &-overlay {
+      background-color: $grey;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      &-plus {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
     }
   }
 }

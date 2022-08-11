@@ -7,7 +7,6 @@ let cx = classNames.bind(styles);
 
 const ProjectsGallery = ({ projectCategorySelected, mounted }) => {
   const currentProjectData = projects[projectCategorySelected];
-
   return (
     mounted &&
     projectCategorySelected && (
