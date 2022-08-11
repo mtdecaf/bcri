@@ -3,6 +3,9 @@
 @use "styles/global/variables.scss" as *;
 
 .projects-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__title {
     &-wrap {
       display: flex;
@@ -24,9 +27,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+    padding-bottom: 8rem;
     @include tablet {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      width: fit-content;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 2rem;
+    }
+    @include desktop {
+      gap: 2.5rem;
     }
   }
 }

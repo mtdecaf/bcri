@@ -3,18 +3,33 @@
 @use "styles/global/variables.scss" as *;
 
 .project-card {
-    display: flex;
-    flex-direction: column;
-    width: 10rem;
-    &__content {
-        &-wrap {
-            background-color: $light-grey;
-        }
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  height: 100%;
+  &__content {
+    &-wrap {
+      width: 100%;
+      height: 100%;
+      background-color: $light-grey;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0.5rem 0.25rem;
+      gap: 0.5rem;
     }
-    &__image {
-        &-wrap {
-            display: flex;
-            width: 100%;
-        }
+    &-title,
+    &-desc {
+      color: $grey;
+      font-size: 0.85rem;
+      text-align: center;
     }
+  }
+  &__image {
+    &-wrap {
+      display: flex;
+      width: 100%;
+    }
+  }
 }
