@@ -19,8 +19,8 @@ const ProjectsGallery = ({ projectCategorySelected, mounted }) => {
           } Roofing Projects`}</h2>
         </div>
         <div className={cx("projects-gallery__gallery")}>
-          {currentProjectData.map((project) => {
-            return <ProjectCard project={project} />;
+          {currentProjectData.map((project, key) => {
+            return <ProjectCard project={project} key={key} />;
           })}
         </div>
       </section>

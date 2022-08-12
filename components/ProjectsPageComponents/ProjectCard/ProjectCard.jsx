@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ImPlus } from "react-icons/im";
+import PopUpModal from "../PopUpModal/PopUpModal";
 
 import Image from "next/image";
 
@@ -9,17 +10,24 @@ let cx = classNames.bind(styles);
 
 const ProjectCard = ({ project }) => {
   const [hoverd, setHovered] = useState(false);
+  const [modalOpened, setModalOpened] = useState(false);
+  const imageRef = useRef();
 
+  const imageURL = "https://via.placeholder.com/240";
+  // useEffect(() => {
+  //   console.log(imageRef);
+  // }, []);
   return (
     <div className={cx("project-card")}>
-      <div className={cx("project-card__image-wrap")}>
+      <div className={cx("project-card__image-wrap")} ref={imageRef}>
         <img
           className={cx("project-card__image")}
-          src="https://via.placeholder.com/240"
+          src={imageURL}
           alt="project image"
         />
         <span
           className={cx("project-card__image-overlay")}
+          onClick={() => setModalOpened(true)}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           style={hoverd ? { opacity: "0.75" } : { opacity: "0" }}
@@ -29,6 +37,12 @@ const ProjectCard = ({ project }) => {
           size={28}
           color={"FFF"}
           style={hoverd ? { opacity: "0.75" } : { opacity: "0" }}
+        />
+        <PopUpModal
+          imageSrc={"https://via.placeholder.com/240"}
+          modalOpened={modalOpened}
+          setModalOpened={setModalOpened}
+          imageURL={imageURL}
         />
       </div>
       <div className={cx("project-card__content-wrap")}>
