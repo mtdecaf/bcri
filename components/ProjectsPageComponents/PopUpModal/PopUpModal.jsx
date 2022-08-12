@@ -1,25 +1,41 @@
 import { Modal, Box } from "@mui/material/";
+import { useState, useRef, useEffect } from "react";
 
 import styles from "./PopUpModal.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  border: "none",
-};
 
-const PopUpModal = ({ modalOpened, setModalOpened, imageURL }) => {
+const PopUpModal = ({ modalOpened, setModalOpened, imageURL, imageRef }) => {
+  const containerRef = useRef();
+  const [startingTop, setStartingTop] = useState("50%");
+  const [startingLeft, setStartingLeft] = useState("50%");
+
+  useEffect(() => {
+    console.log(imageRef.current.getBoundingClientRect());
+    console.log(imageRef.current.offsetTop);
+    setStartingTop(`${imageRef.current.getBoundingClientRect().top}px`);
+    setStartingLeft(`${imageRef.current.getBoundingClientRect().left}px`);
+  }, [modalOpened]);
+  const style = {
+    position: "absolute",
+    top: startingTop,
+    left: startingLeft,
+    // transform: "translate(-50%, -50%)",
+    border: "none",
+    outline: "none",
+  };
+
   return (
     <Modal
       className={cx("pop-up-modal")}
       open={modalOpened}
       onClose={() => setModalOpened(false)}
-      style={{ border: "none", outline: "none" }}
     >
-      <Box className={cx("pop-up-modal__container")} style={style}>
+      <Box
+        className={cx("pop-up-modal__container")}
+        ref={containerRef}
+        style={style}
+      >
         <img
           className={cx("pop-up-modal__container-img")}
           src={imageURL}

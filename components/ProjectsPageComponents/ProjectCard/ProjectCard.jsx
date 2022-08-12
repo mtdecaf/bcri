@@ -38,12 +38,6 @@ const ProjectCard = ({ project }) => {
           color={"FFF"}
           style={hoverd ? { opacity: "0.75" } : { opacity: "0" }}
         />
-        <PopUpModal
-          imageSrc={"https://via.placeholder.com/240"}
-          modalOpened={modalOpened}
-          setModalOpened={setModalOpened}
-          imageURL={imageURL}
-        />
       </div>
       <div className={cx("project-card__content-wrap")}>
         {project?.name && (
@@ -53,6 +47,13 @@ const ProjectCard = ({ project }) => {
           {project?.name ? project.address : project}
         </p>
       </div>
+      <PopUpModal
+        imageSrc={"https://via.placeholder.com/240"}
+        modalOpened={modalOpened}
+        setModalOpened={setModalOpened}
+        imageURL={imageURL}
+        imageRef={imageRef}
+      />
     </div>
   );
 };
