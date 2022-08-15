@@ -2,7 +2,10 @@
     position:absolute;
     &__container {
         &-img {
-            // width: 25rem;
+            animation: shiftToCenter 2s linear;
+            @keyframes shiftToCenter {
+                
+            }
         }
     }
 }

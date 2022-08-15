@@ -2,7 +2,7 @@ import HeaderSection from "../../components/ServicesPageComponents/HeaderSection
 import ServiceSelectionSection from "../../components/ServicesPageComponents/ServiceSelectionSection/ServiceSelectionSection";
 import GuarenteeSection from "../../components/GuaranteeSection/GuaranteeSection";
 import { useServicesContext } from "../../context/services";
-import { mountAndGetWidth } from "../../custom_hooks/mountAndGetWidth";
+import { mountAndGetDimensions } from "../../custom_hooks/mountAndGetDimensions";
 import services from "../../data/servicesData.json";
 import Image from "next/image";
 
@@ -15,7 +15,7 @@ const ServicesPage = () => {
   const { servicesData } = services;
   return (
     <section className={cx("services-page")}>
-      <HeaderSection background={"services-stock-default"} mounted={mountAndGetWidth().mounted} windowWidth={mountAndGetWidth().windowWidth} />
+      <HeaderSection background={"services-stock-default"} mounted={mountAndGetDimensions().mounted} windowWidth={mountAndGetDimensions().windowWidth} />
       <ServiceSelectionSection servicesData={servicesData} />
       <div className={cx("services-page__image-wrap")}>
         <Image

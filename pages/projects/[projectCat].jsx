@@ -1,7 +1,7 @@
 import HeaderSection from "../../components/ProjectsPageComponents/HeaderSection/HeaderSection";
 import ProjectsGallery from "../../components/ProjectsPageComponents/ProjectsGallery/ProjectsGallery";
 import { useRouter } from "next/router";
-import { mountAndGetWidth } from "../../custom_hooks/mountAndGetWidth";
+import { mountAndGetDimensions } from "../../custom_hooks/mountAndGetDimensions";
 
 import styles from "./ProjectsPage.module.scss";
 import classNames from "classnames/bind";
@@ -15,12 +15,13 @@ const ProjectsPage = () => {
     <div className={cx("projects-page")}>
       <HeaderSection
         projectCategorySelected={projectCategorySelected}
-        mounted={mountAndGetWidth().mounted}
-        windowWidth={mountAndGetWidth().windowWidth}
+        mounted={mountAndGetDimensions().mounted}
+        windowWidth={mountAndGetDimensions().windowWidth}
       />
       <ProjectsGallery
         projectCategorySelected={projectCategorySelected}
-        mounted={mountAndGetWidth().mounted}
+        mounted={mountAndGetDimensions().mounted}
+        windowWidth={mountAndGetDimensions().windowWidth}
       />
     </div>
   );

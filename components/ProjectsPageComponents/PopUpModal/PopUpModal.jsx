@@ -11,8 +11,6 @@ const PopUpModal = ({ modalOpened, setModalOpened, imageURL, imageRef }) => {
   const [startingLeft, setStartingLeft] = useState("50%");
 
   useEffect(() => {
-    console.log(imageRef.current.getBoundingClientRect());
-    console.log(imageRef.current.offsetTop);
     setStartingTop(`${imageRef.current.getBoundingClientRect().top}px`);
     setStartingLeft(`${imageRef.current.getBoundingClientRect().left}px`);
   }, [modalOpened]);

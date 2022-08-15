@@ -2,7 +2,7 @@ import HeaderSection from "../../components/ServicesPageComponents/HeaderSection
 import GuarenteeSection from "../../components/GuaranteeSection/GuaranteeSection";
 import ServiceDescription from "../../components/ServicesPageComponents/ServiceDescription/ServiceDescription";
 import { useRouter } from "next/router";
-import { mountAndGetWidth } from "../../custom_hooks/mountAndGetWidth";
+import { mountAndGetDimensions } from "../../custom_hooks/mountAndGetDimensions";
 
 import services from "../../data/servicesData.json";
 
@@ -24,8 +24,8 @@ const ServicePage = () => {
       <HeaderSection
         background={"services-stock-selected"}
         serviceSelectedData={serviceSelectedData}
-        mounted={mountAndGetWidth().mounted}
-        windowWidth={mountAndGetWidth().windowWidth}
+        mounted={mountAndGetDimensions().mounted}
+        windowWidth={mountAndGetDimensions().windowWidth}
       />
       <ServiceDescription serviceSelectedData={serviceSelectedData} />
       <GuarenteeSection />

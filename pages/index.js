@@ -1,4 +1,4 @@
-import { mountAndGetWidth } from "../custom_hooks/mountAndGetWidth";
+import { mountAndGetDimensions } from "../custom_hooks/mountAndGetDimensions";
 
 import styles from "../styles/Home.module.css";
 import LandingSection from "../components/LandingPageComponents/LandingSection/LandingSection";
@@ -12,13 +12,13 @@ import TestimonialSection from "../components/LandingPageComponents/TestimonialS
 export default function Home() {
   return (
     <div className={styles.container}>
-      <LandingSection mounted={mountAndGetWidth().mounted} />
+      <LandingSection mounted={mountAndGetDimensions().mounted} />
       <IntroSection />
-      <CustomersSection mounted={mountAndGetWidth().mounted} />
+      <CustomersSection mounted={mountAndGetDimensions().mounted} />
       <ServicesSection />
       <ProjectsSection />
       <ServiceDetailsSection />
-      <TestimonialSection mounted={mountAndGetWidth().mounted} />
+      <TestimonialSection mounted={mountAndGetDimensions().mounted} />
     </div>
   );
 }
