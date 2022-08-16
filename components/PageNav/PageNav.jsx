@@ -7,6 +7,7 @@ import Link from "next/link";
 import bcriLogo from "../../public/bcri-logo.svg";
 import { FiPhone } from "react-icons/fi";
 import services from "../../data/servicesData.json";
+import projects from "../../data/projectsData.json";
 
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
 import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
@@ -17,6 +18,8 @@ let cx = classNames.bind(styles);
 
 const PageNav = () => {
   const { servicesData } = services;
+  const projectCat = Object.keys(projects);
+
   const hasWindow = typeof window !== "undefined";
 
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
@@ -25,8 +28,6 @@ const PageNav = () => {
   const [isScrolled, setIsScrolled] = useState();
   const [serviesDropDownOpen, setServiesDropDownOpen] = useState(false);
   const [projectsDropDownOpen, setProjectsDropDownOpen] = useState(false);
-
-  const PROJECTS_CATEGORIES = ["Residential", "Strata", "Commercial"];
 
   useEffect(() => {
     setMounted(true);
@@ -189,7 +190,7 @@ const PageNav = () => {
                 onMouseEnter={() => setProjectsDropDownOpen(true)}
                 onMouseLeave={() => setProjectsDropDownOpen(false)}
               >
-                {PROJECTS_CATEGORIES.map((project, key) => {
+                {projectCat.map((project, key) => {
                   return (
                     <Link href={`/projects/${project.toLowerCase()}`} key={key}>
                       <p
@@ -219,7 +220,7 @@ const PageNav = () => {
     </div>
   ) : mounted ? (
     <>
-      <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} scrollTo={scrollTo} />
+      <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} scrollTo={scrollTo} servicesTitle={servicesData.title} projectCat={projectCat} />
       <div className={cx("page-nav", "page-nav--small")}>
         <div className={cx("page-nav__logo-wrap")} style={{ width: 96 }}>
           <Link href="/">

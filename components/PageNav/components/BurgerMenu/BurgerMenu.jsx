@@ -1,4 +1,4 @@
-import { useServicesContext } from "../../../../context/services";
+import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 
 import { Slide } from "@mui/material";
 import ClearRoundedIcon from "@mui/icons-material/ClearRounded";
@@ -8,12 +8,7 @@ import styles from "./BurgerMenu.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
-const BurgerMenu = ({ isOpen, setIsOpen }) => {
-  const { handleServiceSelected } = useServicesContext();
-  const clickService = () => {
-    handleServiceSelected();
-    setIsOpen(false);
-  };
+const BurgerMenu = ({ isOpen, setIsOpen, servicesTitle, projectCat }) => {
 
   return (
     <Slide direction="left" in={isOpen} mountOnEnter unmountOnExit>
