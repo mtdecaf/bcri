@@ -8,15 +8,13 @@ import styles from "./ProjectCard.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, windowWidth, windowHeight }) => {
   const [hoverd, setHovered] = useState(false);
   const [modalOpened, setModalOpened] = useState(false);
   const imageRef = useRef();
 
   const imageURL = "https://via.placeholder.com/240";
-  // useEffect(() => {
-  //   console.log(imageRef);
-  // }, []);
+
   return (
     <div className={cx("project-card")}>
       <div className={cx("project-card__image-wrap")} ref={imageRef}>
@@ -27,7 +25,10 @@ const ProjectCard = ({ project }) => {
         />
         <span
           className={cx("project-card__image-overlay")}
-          onClick={() => setModalOpened(true)}
+          onClick={() => {
+            setModalOpened(true);
+            setHovered(false);
+          }}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           style={hoverd ? { opacity: "0.75" } : { opacity: "0" }}
@@ -47,13 +48,17 @@ const ProjectCard = ({ project }) => {
           {project?.name ? project.address : project}
         </p>
       </div>
-      <PopUpModal
-        imageSrc={"https://via.placeholder.com/240"}
-        modalOpened={modalOpened}
-        setModalOpened={setModalOpened}
-        imageURL={imageURL}
-        imageRef={imageRef}
-      />
+      {imageRef.current && (
+        <PopUpModal
+          imageSrc={imageURL}
+          modalOpened={modalOpened}
+          setModalOpened={setModalOpened}
+          imageURL={imageURL}
+          imageRef={imageRef}
+          windowWidth={windowWidth}
+          windowHeight={windowHeight}
+        />
+      )}
     </div>
   );
 };

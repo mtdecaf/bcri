@@ -5,7 +5,12 @@ import styles from "./ProjectsGallery.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
-const ProjectsGallery = ({ projectCategorySelected, mounted }) => {
+const ProjectsGallery = ({
+  projectCategorySelected,
+  mounted,
+  windowWidth,
+  windowHeight,
+}) => {
   const currentProjectData = projects[projectCategorySelected];
   return (
     mounted &&
@@ -20,7 +25,14 @@ const ProjectsGallery = ({ projectCategorySelected, mounted }) => {
         </div>
         <div className={cx("projects-gallery__gallery")}>
           {currentProjectData.map((project, key) => {
-            return <ProjectCard project={project} key={key} />;
+            return (
+              <ProjectCard
+                project={project}
+                key={key}
+                windowWidth={windowWidth}
+                windowHeight={windowHeight}
+              />
+            );
           })}
         </div>
       </section>

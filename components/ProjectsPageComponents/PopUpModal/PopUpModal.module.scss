@@ -1,11 +1,8 @@
 .pop-up-modal {
-    position:absolute;
-    &__container {
-        &-img {
-            animation: shiftToCenter 2s linear;
-            @keyframes shiftToCenter {
-                
-            }
-        }
-    }
+  position: absolute;
+  &__img {
+    position: absolute;
+    border: none;
+    outline: none;
+  }
 }

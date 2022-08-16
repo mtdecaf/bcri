@@ -22,6 +22,7 @@ const ProjectsPage = () => {
         projectCategorySelected={projectCategorySelected}
         mounted={mountAndGetDimensions().mounted}
         windowWidth={mountAndGetDimensions().windowWidth}
+        windowHeight={mountAndGetDimensions().windowHeight}
       />
     </div>
   );

@@ -1,27 +1,89 @@
-import { Modal, Box } from "@mui/material/";
-import { useState, useRef, useEffect } from "react";
+import { Modal } from "@mui/material/";
+import { useState, useEffect } from "react";
+import { useTransition, animated } from "react-spring";
 
 import styles from "./PopUpModal.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
-const PopUpModal = ({ modalOpened, setModalOpened, imageURL, imageRef }) => {
-  const containerRef = useRef();
-  const [startingTop, setStartingTop] = useState("50%");
-  const [startingLeft, setStartingLeft] = useState("50%");
+const ModalImage = ({
+  modalOpened,
+  startingDimensions,
+  windowHeight,
+  windowWidth,
+  imageRef,
+}) => {
+  const slideToCenter = useTransition(modalOpened, {
+    from: {
+      x: startingDimensions.top,
+      y: startingDimensions.left,
+    },
+    enter: {
+      x: windowHeight / 2 - imageRef.current.offsetHeight / 2,
+      y: windowWidth / 2 - imageRef.current.offsetWidth / 2,
+    },
+  });
+  return slideToCenter(
+    (styles, item) =>
+      item && (
+        <animated.img
+          className={cx("pop-up-modal__img")}
+          src={imageURL}
+          alt=""
+          style={styles}
+        />
+      )
+  );
+};
+
+const PopUpModal = ({
+  modalOpened,
+  setModalOpened,
+  imageURL,
+  imageRef,
+  windowWidth,
+  windowHeight,
+}) => {
+  const [startingDimensions, setStartingDimensions] = useState({
+    top: "50%",
+    left: "50%",
+  });
+  const [initDistFromCenter, setInitDistFromCenter] = useState({});
 
   useEffect(() => {
-    setStartingTop(`${imageRef.current.getBoundingClientRect().top}px`);
-    setStartingLeft(`${imageRef.current.getBoundingClientRect().left}px`);
+    setStartingDimensions({
+      top: `${imageRef.current.getBoundingClientRect().top}px`,
+      left: `${imageRef.current.getBoundingClientRect().left}px`,
+    });
+    modalOpened &&
+      setInitDistFromCenter({
+        top:
+          windowHeight / 2 -
+          imageRef.current.offsetHeight / 2 -
+          startingDimensions.top.replace(/\D/g, ""),
+        left:
+          windowWidth / 2 -
+          imageRef.current.offsetWidth / 2 -
+          startingDimensions.top.replace(/\D/g, ""),
+      });
   }, [modalOpened]);
   const style = {
-    position: "absolute",
-    top: startingTop,
-    left: startingLeft,
-    // transform: "translate(-50%, -50%)",
-    border: "none",
-    outline: "none",
+    top: startingDimensions.top,
+    left: startingDimensions.left,
   };
+
+  const slideToCenter = useTransition(modalOpened, {
+    from: {
+      width: "240px",
+      top: startingDimensions.top,
+      left: startingDimensions.left,
+    },
+    enter: {
+      width: "480px",
+      top: `${windowHeight / 2 - imageRef.current.offsetHeight}px`,
+      left: `${windowWidth / 2 - imageRef.current.offsetWidth}px`,
+    },
+  });
 
   return (
     <Modal
@@ -29,17 +91,17 @@ const PopUpModal = ({ modalOpened, setModalOpened, imageURL, imageRef }) => {
       open={modalOpened}
       onClose={() => setModalOpened(false)}
     >
-      <Box
-        className={cx("pop-up-modal__container")}
-        ref={containerRef}
-        style={style}
-      >
-        <img
-          className={cx("pop-up-modal__container-img")}
-          src={imageURL}
-          alt=""
-        />
-      </Box>
+      {slideToCenter(
+        (style, item) =>
+          item && (
+            <animated.img
+              className={cx("pop-up-modal__img")}
+              src={imageURL}
+              alt=""
+              style={style}
+            />
+          )
+      )}
     </Modal>
   );
 };
