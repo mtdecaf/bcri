@@ -32,16 +32,22 @@ const HeaderSection = ({
               style={
                 background === "services-stock-selected" && windowWidth > 1024
                   ? {
+                      width: "65%",
                       marginTop: "-20rem",
-                      marginRight: "-6rem",
+                      marginRight: "-7.5rem",
+                      height: "min-content",
                     }
                   : background === "services-stock-selected" &&
                     windowWidth <= 1024
                   ? {
+                      width: "60%",
                       minWidth: "30rem",
                       marginTop: "-10rem",
-                      marginRight: "-5rem",
+                      // marginRight: "-rem",
+                      height: "min-content",
                     }
+                  : background !== "services-stock-selected"
+                  ? { minWidth: "60%" }
                   : null
               }
             />
