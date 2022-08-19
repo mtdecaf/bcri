@@ -43,7 +43,7 @@ const HeaderSection = ({
                       width: "60%",
                       minWidth: "30rem",
                       marginTop: "-10rem",
-                      // marginRight: "-rem",
+                      marginRight: "-5rem",
                       height: "min-content",
                     }
                   : background !== "services-stock-selected"
