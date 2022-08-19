@@ -23,7 +23,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-around;
   }
   &__button {
     width: 100%;
@@ -57,7 +56,7 @@
       color: $navy-blue;
     }
     &-wrap {
-        position: relative;
+      position: relative;
     }
   }
   &-wrap {
@@ -65,12 +64,13 @@
   }
   &__options {
     &-drop-down {
+      height: 0;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      padding: 0 2.5rem 0.5rem 0;
+      padding: 0 2.5rem 0.75rem 0;
       gap: 0.15rem;
-      height: 100%;
+      overflow-y: hidden;
     }
   }
 }
