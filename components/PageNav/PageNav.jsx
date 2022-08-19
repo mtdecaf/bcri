@@ -195,7 +195,7 @@ const PageNav = () => {
                     <Link href={`/projects/${project.toLowerCase()}`} key={key}>
                       <p
                         className={cx(
-                          "page-nav__services-drop-down-text",
+                          "page-nav__projects-drop-down-text",
                           "page-nav__item-drop-down-text"
                         )}
                         onClick={() => setProjectsDropDownOpen(false)}
@@ -220,7 +220,7 @@ const PageNav = () => {
     </div>
   ) : mounted ? (
     <>
-      <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} scrollTo={scrollTo} servicesTitle={servicesData.title} projectCat={projectCat} />
+      <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} scrollTo={scrollTo} servicesTitle={servicesData.map(service => service.title)} projectCat={projectCat} />
       <div className={cx("page-nav", "page-nav--small")}>
         <div className={cx("page-nav__logo-wrap")} style={{ width: 96 }}>
           <Link href="/">

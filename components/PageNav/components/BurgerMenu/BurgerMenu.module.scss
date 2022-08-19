@@ -1,40 +1,76 @@
 @use "styles/global/colors.scss" as *;
 
 .burger-menu {
-    background-color: white;
-    display: flex;
+  background-color: white;
+  display: flex;
+  width: 100%;
+  max-width: 425px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  z-index: 150;
+  flex-direction: column;
+  align-items: flex-end;
+  &__close {
+    color: $navy-blue;
+    position: relative;
+    right: 0.75rem;
+    top: 2rem;
+  }
+  &__list {
     width: 100%;
-    max-width: 425px;
-    height: 100vh;
-    position: fixed;
-    right: 0;
-    z-index: 150;
+    padding-top: 2rem;
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
-    &__close {
-        color: $navy-blue;
+    justify-content: space-around;
+  }
+  &__button {
+    width: 100%;
+    color: $navy-blue;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: end;
+    padding: 0.5rem 2.5rem 0.5rem 0;
+  }
+  &__divider {
+    width: 100%;
+    height: 2px;
+    background-color: $navy-blue;
+  }
+  &__services {
+    &-wrap {
+      position: relative;
+    }
+  }
+  &__down-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0.9rem;
+    margin: auto;
+    cursor: pointer;
+  }
+  &__projects {
+    &-text {
+      color: $navy-blue;
+    }
+    &-wrap {
         position: relative;
-        right: 1rem;
-        top: 2rem;
     }
-    &__list {
-        width: 100%;
-        height: 50%;
-        margin-top: 5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
+  }
+  &-wrap {
+    width: 100%;
+  }
+  &__options {
+    &-drop-down {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 0 2.5rem 0.5rem 0;
+      gap: 0.15rem;
+      height: 100%;
     }
-    &__button {
-        color: $navy-blue;
-        font-size: 1.75rem;
-        font-weight: bold;
-    }
-    &__divider {
-        width: 70%;
-        max-width: 17.5rem;
-        height: 2px;
-        background-color: $navy-blue;
-    }
+  }
 }
