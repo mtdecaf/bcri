@@ -21,26 +21,6 @@ const HeaderSection = ({
           }
         >
           <div className={cx("header-section__background-wrap")}>
-            {/* <img
-              className={cx("header-section__background")}
-              src={`/stock-images/${background}.jpeg`}
-              alt=""
-              style={
-                background === "services-stock-selected" && windowWidth > 1024
-                  ? {
-                      marginTop: "-20rem",
-                      marginRight: "-6rem",
-                    }
-                  : background === "services-stock-selected" &&
-                    windowWidth <= 1024
-                  ? {
-                      minWidth: "30rem",
-                      marginTop: "-10rem",
-                      marginRight: "-5rem",
-                    }
-                  : null
-              }
-            /> */}
           </div>
           <div className={cx("header-section__inner-wrap")}>
             <div className={cx("header-section__overlay-wrap")}>

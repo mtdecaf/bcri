@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import styles from "./LandingSection.module.scss";
 import classNames from "classnames/bind";
@@ -12,7 +13,10 @@ const LandingSection = ({ mounted }) => {
           <h1 className={cx("landing-section__title")}>
             Trusted Roof Inspections
           </h1>
-          <a className={cx("landing-section__sub-text")} href="mailto: info@bcroofinspections.com">
+          <a
+            className={cx("landing-section__sub-text")}
+            href="mailto: info@bcroofinspections.com"
+          >
             BOOK YOUR CONSULTATION
           </a>
           <Link href="/services">
@@ -27,21 +31,17 @@ const LandingSection = ({ mounted }) => {
             </button>
           </Link>
         </div>
-        <div  className={cx("landing-section__left-overlay")}>
+        <div className={cx("landing-section__left-overlay")}>
           <span className={cx("landing-section__left-overlay-square")}></span>
-          <img
-            className={cx("landing-section__left-overlay-polygon")}
-            src="/svg-assets/landing_geometry.svg"
-            alt=""
-          />
+          <div className={cx("landing-section__left-overlay-polygon")}>
+            <Image src="/svg-assets/landing_geometry.svg" layout="fill" />
+          </div>
         </div>
         <div className={cx("landing-section__right-overlay")}>
           <span className={cx("landing-section__right-overlay-square")}></span>
-          <img
-            className={cx("landing-section__right-overlay-polygon")}
-            src="/svg-assets/landing_geometry.svg"
-            alt=""
-          />
+          <div className={cx("landing-section__right-overlay-polygon")}>
+            <Image src="/svg-assets/landing_geometry.svg" layout="fill" />
+          </div>
         </div>
       </section>
     )

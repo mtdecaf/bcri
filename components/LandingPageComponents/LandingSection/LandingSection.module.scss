@@ -76,7 +76,9 @@
       position: absolute;
       left: calc((100vw - 273px) / 2);
       height: 100%;
+      width: 272px;
       @include tablet {
+        width: 428px;
         left: calc((100vw - (100vh * 0.5)) / 2);
       }
     }

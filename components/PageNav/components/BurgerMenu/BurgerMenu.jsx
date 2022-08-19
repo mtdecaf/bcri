@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTransition, animated } from "react-spring";
+import { useSpring, useTransition, animated } from "react-spring";
 import { Slide } from "@mui/material";
 import { BiChevronDown } from "react-icons/bi";
 import ClearRoundedIcon from "@mui/icons-material/ClearRounded";
@@ -25,6 +25,7 @@ const BurgerMenu = ({ isOpen, setIsOpen, servicesTitle, projectCat }) => {
     },
     config: { duration: 500 },
   });
+
   const projectsAccordionTransition = useTransition(projectsDropDownOpen, {
     from: {
       height: "0%",
@@ -74,6 +75,7 @@ const BurgerMenu = ({ isOpen, setIsOpen, servicesTitle, projectCat }) => {
                 setProjectsDropDownOpen(false);
               }}
               color={"#2a3959"}
+              style={servicesDropDownOpen && { transform: "rotate(180deg)" }}
             />
           </div>
           {servicesAccordionTransition(
@@ -137,6 +139,7 @@ const BurgerMenu = ({ isOpen, setIsOpen, servicesTitle, projectCat }) => {
                 setServicesDropDownOpen(false);
               }}
               color={"#2a3959"}
+              style={projectsDropDownOpen && { transform: "rotate(180deg)" }}
             />
           </div>
           {projectsAccordionTransition(
