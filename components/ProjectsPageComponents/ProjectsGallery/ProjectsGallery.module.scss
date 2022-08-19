@@ -32,10 +32,11 @@
     @include tablet {
       display: grid;
       width: fit-content;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 2rem;
     }
     @include desktop {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 2.5rem;
     }
   }

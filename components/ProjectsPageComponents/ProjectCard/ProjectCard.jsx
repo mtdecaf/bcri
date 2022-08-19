@@ -9,7 +9,7 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const ProjectCard = ({ project, windowWidth, windowHeight }) => {
-  const [hoverd, setHovered] = useState(false);
+  const [hovered, setHovered] = useState(false);
   const [modalOpened, setModalOpened] = useState(false);
   const imageRef = useRef();
 
@@ -31,13 +31,13 @@ const ProjectCard = ({ project, windowWidth, windowHeight }) => {
           }}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          style={hoverd ? { opacity: "0.75" } : { opacity: "0" }}
+          style={hovered ? { opacity: "0.75" } : { opacity: "0" }}
         ></span>
         <ImPlus
           className={cx("project-card__image-overlay-plus")}
           size={28}
           color={"FFF"}
-          style={hoverd ? { opacity: "0.75" } : { opacity: "0" }}
+          style={hovered ? { opacity: "0.75" } : { opacity: "0" }}
         />
       </div>
       <div className={cx("project-card__content-wrap")}>
@@ -57,6 +57,7 @@ const ProjectCard = ({ project, windowWidth, windowHeight }) => {
           imageRef={imageRef}
           windowWidth={windowWidth}
           windowHeight={windowHeight}
+          hovered={hovered}
         />
       )}
     </div>

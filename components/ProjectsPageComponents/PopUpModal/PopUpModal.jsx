@@ -13,18 +13,19 @@ const PopUpModal = ({
   imageRef,
   windowWidth,
   windowHeight,
+  hovered,
 }) => {
   const [startingDimensions, setStartingDimensions] = useState({
     top: "50%",
     left: "50%",
   });
-
+  console.log(imageRef.current.getBoundingClientRect());
   useEffect(() => {
     setStartingDimensions({
       top: `${imageRef.current.getBoundingClientRect().top}px`,
       left: `${imageRef.current.getBoundingClientRect().left}px`,
     });
-  }, [modalOpened]);
+  }, [modalOpened, hovered]);
 
   const slideToCenter = useTransition(modalOpened, {
     from: {
