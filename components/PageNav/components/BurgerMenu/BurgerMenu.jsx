@@ -18,24 +18,24 @@ const BurgerMenu = ({ isOpen, setIsOpen, servicesTitle, projectCat }) => {
       height: "0%",
     },
     enter: {
-      height: "100%",
+      height: "40%",
     },
     leave: {
       height: "0%",
     },
-    config: { duration: 1000 },
+    config: { duration: 500 },
   });
   const projectsAccordionTransition = useTransition(projectsDropDownOpen, {
     from: {
       height: "0%",
     },
     enter: {
-      height: "100%",
+      height: "40%",
     },
     leave: {
       height: "0%",
     },
-    config: { duration: 1000 },
+    config: { duration: 500 },
   });
 
   return (
