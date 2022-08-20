@@ -13,21 +13,26 @@ const PopUpModal = ({
   imageRef,
   windowWidth,
   windowHeight,
-  hovered,
 }) => {
-  const [startingDimensions, setStartingDimensions] = useState({
-    top: "50%",
-    left: "50%",
-  });
-  console.log(imageRef.current.getBoundingClientRect());
+  const [startingDimensions, setStartingDimensions] = useState({});
+  const [startingDimensionsReady, setStartingDimensionsReady] = useState(false);
   useEffect(() => {
-    setStartingDimensions({
-      top: `${imageRef.current.getBoundingClientRect().top}px`,
-      left: `${imageRef.current.getBoundingClientRect().left}px`,
-    });
-  }, [modalOpened, hovered]);
+    modalOpened
+      ? setStartingDimensions({
+          top: `${imageRef.current.getBoundingClientRect().top}px`,
+          left: `${imageRef.current.getBoundingClientRect().left}px`,
+        })
+      : setStartingDimensions({});
+    !modalOpened && setStartingDimensionsReady(false);
+  }, [modalOpened]);
+  useEffect(() => {
+    // if starting dimensions changed
+    if (startingDimensions.top && startingDimensions.left) {
+      setStartingDimensionsReady(true);
+    }
+  }, [startingDimensions]);
 
-  const slideToCenter = useTransition(modalOpened, {
+  const slideToCenter = useTransition(startingDimensionsReady, {
     from: {
       width: "240px",
       top: startingDimensions.top,

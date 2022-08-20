@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { ImPlus } from "react-icons/im";
 import PopUpModal from "../PopUpModal/PopUpModal";
 
@@ -57,7 +57,6 @@ const ProjectCard = ({ project, windowWidth, windowHeight }) => {
           imageRef={imageRef}
           windowWidth={windowWidth}
           windowHeight={windowHeight}
-          hovered={hovered}
         />
       )}
     </div>
