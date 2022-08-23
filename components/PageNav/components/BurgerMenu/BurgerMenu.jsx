@@ -49,7 +49,7 @@ const BurgerMenu = ({ isOpen, setIsOpen, servicesTitle, projectCat }) => {
           color={"#2a3959"}
         />
         <div className={cx("burger-menu__list")}>
-          <Link href="/">
+          <Link href="/" passHref>
             <p
               className={cx("burger-menu__button", "burger-menu__home")}
               onClick={() => setIsOpen(false)}
@@ -59,7 +59,7 @@ const BurgerMenu = ({ isOpen, setIsOpen, servicesTitle, projectCat }) => {
           </Link>
           <hr className={cx("burger-menu__divider")} />
           <div className={cx("burger-menu__services-wrap")}>
-            <Link href="/services">
+            <Link href="/services" passHref>
               <p
                 className={cx("burger-menu__button")}
                 onClick={() => setIsOpen(false)}
@@ -95,6 +95,7 @@ const BurgerMenu = ({ isOpen, setIsOpen, servicesTitle, projectCat }) => {
                           .replace(/\s/g, "")
                           .toLowerCase()}`}
                         key={key}
+                        passHref
                       >
                         <p
                           className={cx(
@@ -112,7 +113,7 @@ const BurgerMenu = ({ isOpen, setIsOpen, servicesTitle, projectCat }) => {
               )
           )}
           <hr className={cx("burger-menu__divider")} />
-          <Link href="/about">
+          <Link href="/about" passHref>
             <p
               className={cx("burger-menu__button")}
               onClick={() => setIsOpen(false)}
@@ -157,6 +158,7 @@ const BurgerMenu = ({ isOpen, setIsOpen, servicesTitle, projectCat }) => {
                       <Link
                         href={`/projects/${project.toLowerCase()}`}
                         key={key}
+                        passHref
                       >
                         <p
                           className={cx(
@@ -175,7 +177,7 @@ const BurgerMenu = ({ isOpen, setIsOpen, servicesTitle, projectCat }) => {
           )}
 
           <hr className={cx("burger-menu__divider")} />
-          <Link href="/projects">
+          <Link href="/projects" passHref>
             <p
               className={cx("burger-menu__button")}
               onClick={() => setIsOpen(false)}

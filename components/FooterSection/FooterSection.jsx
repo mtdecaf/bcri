@@ -1,14 +1,11 @@
 import ScrollAnimation from "react-animate-on-scroll";
 import { BsLinkedin } from "react-icons/bs";
 
-import services from "../../data/servicesData.json";
-
 import styles from "./FooterSection.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const FooterSection = () => {
-  const { servicesData } = services;
   return (
     <section className={cx("footer-section")} id="footer-section">
       <div className={cx("footer-section__inner-wrap")}>
@@ -33,7 +30,7 @@ const FooterSection = () => {
         <div className={cx("footer-section__partners-wrap")}>
           <img className={cx("footer-section__partners")} src="/partners/partner1.png" alt="Better Business Bureau" />
           <img className={cx("footer-section__partners")} src="/partners/partner2.png" alt="International Institute of Building Enclosure Consultant" />
-          <img className={cx("footer-section__partners")} src="/partners/partner3.png" alt="" />
+          <img className={cx("footer-section__partners")} src="/partners/partner3.png" alt="Roof Contractors Association of British Columbia" />
         </div>
         <div className={cx("footer-section__contact-wrap", "footer-section__contact-content-wrap")}>
           <h3

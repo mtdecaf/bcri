@@ -21,6 +21,7 @@ const ServicesPage = () => {
           width={6504}
           height={4336}
           src="/stock-images/young-contractor-in-a-hard-hat-talking-on-the-phone.jpg"
+          alt="BC roof inspections BCRI service page"
         />
       </div>
       <GuarenteeSection />

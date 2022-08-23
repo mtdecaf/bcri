@@ -13,7 +13,7 @@ const ProjectsSection = () => {
         <img
           className={cx("projects-section__background")}
           src="/stock-images/stock2.jpeg"
-          alt=""
+          alt="page overlay geometry"
         />
       </div>
       <div className={cx("projects-section__inner-wrap")}>
@@ -32,7 +32,7 @@ const ProjectsSection = () => {
           <h2 className={cx("projects-section__title")}>
             Qualified, Trusted Inspectors for All Roofing Projects
           </h2>
-          <Link href="/projects">
+          <Link href="/projects" passHref>
             <button className={cx("projects-section__button", "red-button")}>
               OUR PROJECTS
             </button>

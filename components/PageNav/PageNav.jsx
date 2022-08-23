@@ -85,7 +85,7 @@ const PageNav = () => {
     <div className={cx("page-nav", "page-nav--large")}>
       <div className={cx("page-nav__contact-bar--large")}>
         <div className={cx("page-nav__contact-bar__wrap")}>
-          <Link href="/">
+          <Link href="/" passHref>
             <a className={cx("page-nav__logo-wrap")}>
               <Image
                 className={cx("page-nav__logo")}
@@ -122,11 +122,11 @@ const PageNav = () => {
       </div>
       <div className={cx("page-nav__list-wrap")}>
         <div className={cx("page-nav__list")}>
-          <Link href="/">
+          <Link href="/" passHref>
             <a className={cx("page-nav__button", "page-nav__home")}>HOME</a>
           </Link>
           <div className={cx("page-nav__services-wrap", "page-nav__item-wrap")}>
-            <Link href="/services">
+            <Link href="/services" passHref>
               <a
                 className={cx("page-nav__button", "page-nav__services")}
                 onMouseEnter={() => setServiesDropDownOpen(true)}
@@ -151,6 +151,7 @@ const PageNav = () => {
                         .replace(/\s/g, "")
                         .toLowerCase()}`}
                       key={key}
+                      passHref
                     >
                       <p
                         className={cx(
@@ -192,7 +193,7 @@ const PageNav = () => {
               >
                 {projectCat.map((project, key) => {
                   return (
-                    <Link href={`/projects/${project.toLowerCase()}`} key={key}>
+                    <Link href={`/projects/${project.toLowerCase()}`} key={key} passHref>
                       <p
                         className={cx(
                           "page-nav__projects-drop-down-text",

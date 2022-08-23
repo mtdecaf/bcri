@@ -19,7 +19,7 @@ const LandingSection = ({ mounted }) => {
           >
             BOOK YOUR CONSULTATION
           </a>
-          <Link href="/services">
+          <Link href="/services" passHref>
             <button
               className={cx(
                 "landing-section__button",
@@ -34,13 +34,21 @@ const LandingSection = ({ mounted }) => {
         <div className={cx("landing-section__left-overlay")}>
           <span className={cx("landing-section__left-overlay-square")}></span>
           <div className={cx("landing-section__left-overlay-polygon")}>
-            <Image src="/svg-assets/landing_geometry.svg" layout="fill" />
+            <Image
+              src="/svg-assets/landing_geometry.svg"
+              layout="fill"
+              alt="landing page geometry"
+            />
           </div>
         </div>
         <div className={cx("landing-section__right-overlay")}>
           <span className={cx("landing-section__right-overlay-square")}></span>
           <div className={cx("landing-section__right-overlay-polygon")}>
-            <Image src="/svg-assets/landing_geometry.svg" layout="fill" />
+            <Image
+              src="/svg-assets/landing_geometry.svg"
+              layout="fill"
+              alt="landing page geometry"
+            />
           </div>
         </div>
       </section>
