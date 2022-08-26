@@ -20,7 +20,7 @@ const ProjectCard = ({ project, windowWidth, windowHeight }) => {
       <div className={cx("project-card__image-wrap")} ref={imageRef}>
         <img
           className={cx("project-card__image")}
-          src={imageURL}
+          src={project?.image ? project?.image : imageURL}
           alt="project image"
         />
         <span

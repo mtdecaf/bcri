@@ -6,7 +6,8 @@
   background-color: $off-white;
   display: flex;
   align-items: center;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 100;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,

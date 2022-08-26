@@ -91,7 +91,7 @@ const PageNav = () => {
                 className={cx("page-nav__logo")}
                 src={bcriLogo}
                 alt="BCRI logo"
-                width={isScrolled ? 144 : 136}
+                width={136}
                 height={50}
               />
             </a>
@@ -160,7 +160,7 @@ const PageNav = () => {
                         )}
                         onClick={() => setServiesDropDownOpen(false)}
                       >
-                        {service.title}
+                        {service.title.toUpperCase()}
                       </p>
                     </Link>
                   );
@@ -201,7 +201,7 @@ const PageNav = () => {
                         )}
                         onClick={() => setProjectsDropDownOpen(false)}
                       >
-                        {project}
+                        {project.toUpperCase()}
                       </p>
                     </Link>
                   );

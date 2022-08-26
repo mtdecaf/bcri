@@ -5,6 +5,7 @@
 .services-card {
   background-color: white;
   border-radius: 15px;
+  height: 100%;
   max-width: 19rem;
   padding: 1.5rem 3rem 3rem;
   display: flex;
@@ -21,10 +22,7 @@
   }
   &__description {
     font-size: 1rem;
-    line-height: 1.8rem;
+    line-height: 1.5rem;
     padding-bottom: 2.25rem;
-    @include desktop {
-      line-height: 2rem;
-    }
   }
 }

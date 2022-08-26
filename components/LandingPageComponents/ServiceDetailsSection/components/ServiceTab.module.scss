@@ -3,7 +3,7 @@
 @use "styles/global/variables.scss" as *;
 
 .service-tab {
-    background-color: $beige;
+    background-color: $beige !important;
     width: 100%;
     &__summary, &__content{
         color:$grey;
