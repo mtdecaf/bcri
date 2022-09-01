@@ -17,7 +17,7 @@
   }
   transition: 0.25s;
   &:hover {
-    background-color: $rust-red;
+    background-color: $navy-blue--hovered;
   }
 }
 .red-button {
@@ -36,6 +36,6 @@
     }
     transition: 0.25s;
     &:hover {
-      background-color: $navy-blue;
+      background-color: $rust-red--hovered;
     }
 }

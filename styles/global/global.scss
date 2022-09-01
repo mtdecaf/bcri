@@ -3,7 +3,7 @@
 @use "mixins" as *;
 @use "buttons" as *;
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap");
 
 a {
   color: inherit;
@@ -18,7 +18,15 @@ a {
   scroll-behavior: smooth !important;
 }
 
-h1, h2 {
+main {
+  padding-top: 4rem;
+  @include tablet {
+    padding-top: 6.5rem;
+  }
+}
+
+h1,
+h2 {
   color: $navy-blue;
   font-size: 1.75rem;
   font-family: "Roboto Slab", serif;
@@ -51,8 +59,9 @@ p {
 }
 
 // removes accordion border
-.MuiPaper-root.MuiAccordion-root{
+.MuiPaper-root.MuiAccordion-root {
   box-shadow: none;
-  &::before  {
-  display: none;
-}}
+  &::before {
+    display: none;
+  }
+}
