@@ -82,13 +82,16 @@
     &-drop-down {
       position: absolute;
       background-color: $navy-blue;
-      padding: 1rem 2rem;
+      padding-top: 0.65rem;
       left: -2rem;
       &-text {
         white-space: nowrap;
         color: $off-white;
         cursor: pointer;
-        padding: 0.5rem 0;
+        padding: 0.65rem 2rem;
+        &:hover {
+          background-color: $navy-blue--hovered;
+        }
       }
     }
   }

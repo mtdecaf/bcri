@@ -179,7 +179,7 @@ const PageNav = () => {
             {projectsDropDownOpen && (
               <div
                 className={cx(
-                  "page-nav__services-drop-down",
+                  "page-nav__projects-drop-down",
                   "page-nav__item-drop-down"
                 )}
                 onMouseEnter={() => setProjectsDropDownOpen(true)}
