@@ -168,12 +168,6 @@ const PageNav = () => {
               </div>
             )}
           </div>
-
-          <Link href="/about">
-            <a className={cx("page-nav__button", "page-nav__about")}>
-              ABOUT US
-            </a>
-          </Link>
           <div className={cx("page-nav__projects-wrap", "page-nav__item-wrap")}>
             <a
               className={cx("page-nav__button", "page-nav__projects")}
@@ -193,7 +187,11 @@ const PageNav = () => {
               >
                 {projectCat.map((project, key) => {
                   return (
-                    <Link href={`/projects/${project.toLowerCase()}`} key={key} passHref>
+                    <Link
+                      href={`/projects/${project.toLowerCase()}`}
+                      key={key}
+                      passHref
+                    >
                       <p
                         className={cx(
                           "page-nav__projects-drop-down-text",
@@ -221,7 +219,13 @@ const PageNav = () => {
     </div>
   ) : mounted ? (
     <>
-      <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} scrollTo={scrollTo} servicesTitle={servicesData.map(service => service.title)} projectCat={projectCat} />
+      <BurgerMenu
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        scrollTo={scrollTo}
+        servicesTitle={servicesData.map((service) => service.title)}
+        projectCat={projectCat}
+      />
       <div className={cx("page-nav", "page-nav--small")}>
         <div className={cx("page-nav__logo-wrap")} style={{ width: 96 }}>
           <Link href="/">

@@ -113,15 +113,6 @@ const BurgerMenu = ({ isOpen, setIsOpen, servicesTitle, projectCat }) => {
               )
           )}
           <hr className={cx("burger-menu__divider")} />
-          <Link href="/about" passHref>
-            <p
-              className={cx("burger-menu__button")}
-              onClick={() => setIsOpen(false)}
-            >
-              ABOUT US
-            </p>
-          </Link>
-          <hr className={cx("burger-menu__divider")} />
           <div className={cx("burger-menu__projects-wrap")}>
             <p
               className={cx("burger-menu__button")}
