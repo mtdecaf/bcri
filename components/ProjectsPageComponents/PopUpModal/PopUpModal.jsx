@@ -39,9 +39,9 @@ const PopUpModal = ({
       left: startingDimensions.left,
     },
     enter: {
-      width: "480px",
-      top: `${windowHeight / 2 - imageRef.current.offsetHeight}px`,
-      left: `${windowWidth / 2 - imageRef.current.offsetWidth}px`,
+      width: windowWidth < 500 ? "240px" : "480px",
+      top:  windowWidth < 500 ? `${windowHeight / 2 - imageRef.current.offsetHeight / 2}px` :  `${windowHeight / 2 - imageRef.current.offsetHeight}px`,
+      left: windowWidth < 500 ? `${windowWidth / 2 - imageRef.current.offsetWidth / 2}px` : `${windowWidth / 2 - imageRef.current.offsetWidth}px`,
     },
   });
 
