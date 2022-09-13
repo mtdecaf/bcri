@@ -10,7 +10,10 @@ let cx = classNames.bind(styles);
 const ServiceDetailsSection = () => {
   const { servicesData } = services;
   return (
-    <section className={cx("service-details-section")}>
+    <section
+      className={cx("service-details-section")}
+      id="service-details-section"
+    >
       <div className={cx("service-details-section__inner-wrap")}>
         <Description />
         <div className={cx("service-details-section__tab-wrap")}>
