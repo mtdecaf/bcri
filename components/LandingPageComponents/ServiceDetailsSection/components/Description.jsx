@@ -10,13 +10,11 @@ const Description = () => {
         Commercial, Residential Inspections and More
       </h2>
       <p className={cx("description__content")}>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-        volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ul
-        iriu feugiat nulla facilisis at vero. Lorem ipsum dolor sit amet,
-        consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-        veniam, quis nostrud exerci tation ullamcorper suscipit lob.
+        BC Roof Inspections services are designed to free our clients with the
+        hassles of their roof and its components. We know that commercial and
+        industrial roofs are often quite troublesome, so we take care of the
+        things that require attention. By doing that you have peace of mind and
+        a sound roof.
       </p>
     </div>
   );

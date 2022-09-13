@@ -16,7 +16,7 @@ const ServiceTab = ({ servicesData }) => {
         <p className={cx("service-tab__title")}>{servicesData.title}</p>
       </AccordionSummary>
       <AccordionDetails className={cx("service-tab__content")}>
-        <p>{servicesData.description}</p>
+        <p>{servicesData.shortDescription}</p>
       </AccordionDetails>
     </Accordion>
   );
