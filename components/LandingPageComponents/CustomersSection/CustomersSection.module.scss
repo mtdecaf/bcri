@@ -43,6 +43,9 @@
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
       @include side-padding-tablet;
+      gap: 2rem;
+      position: relative;
+      min-width: 100%;
       padding-top: 4rem;
       padding-bottom: 4rem;
     }
@@ -88,6 +91,9 @@
   &__logo {
     width: 7.5rem;
     object-fit: contain;
+    @include tablet {
+      width: 100%;
+    }
     &-wrap {
       background-color: $beige;
       border-radius: 15px;
@@ -98,7 +104,9 @@
       position: relative;
       margin: 0 1.25rem;
       @include tablet {
-        max-width: 100%;
+        width: 100%;
+        padding: 1.25rem;
+        margin: 0;
       }
     }
   }

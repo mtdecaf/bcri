@@ -20,11 +20,12 @@ const CustomersSection = ({ mounted, windowWidth }) => {
   const [viewportRef, embla] = useEmblaCarousel({
     loop: true,
     skipSnaps: false,
+    startIndex: 0,
   });
 
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
-  
+
   const PrevButton = ({ onClick }) => (
     <button
       className={cx(
@@ -88,40 +89,44 @@ const CustomersSection = ({ mounted, windowWidth }) => {
             >
               {windowWidth > 768 ? (
                 <div className={cx("customers-section__grid-carousel")}>
-                  <div className={cx("customers-section__grid")}>
-                    {customers.slice(0, 24).map((customer) => (
-                      <div
-                        className={cx("customers-section__logo-wrap")}
-                        key={customer}
-                      >
-                        <img
-                          className={cx("customers-section__logo")}
-                          src={`/customers-logo/customer${customer}.png`}
-                          alt={`customer${customer}`}
-                          onError={(event) =>
-                            (event.target.style.display = "none")
-                          }
-                        />
-                      </div>
-                    ))}
-                  </div>
-                  <div className={cx("customers-section__grid")}>
-                    {customers.slice(24).map((customer) => (
-                      <div
-                        className={cx("customers-section__logo-wrap")}
-                        key={customer}
-                      >
-                        <img
-                          className={cx("customers-section__logo")}
-                          src={`/customers-logo/customer${customer}.png`}
-                          alt={`customer${customer}`}
-                          onError={(event) =>
-                            (event.target.style.display = "none")
-                          }
-                        />
-                      </div>
-                    ))}
-                  </div>
+                  {/* <div className={cx("customers-section__grid-wrap")}> */}
+                    <div className={cx("customers-section__grid")}>
+                      {customers.slice(0, 24).map((customer) => (
+                        <div
+                          className={cx("customers-section__logo-wrap")}
+                          key={customer}
+                        >
+                          <img
+                            className={cx("customers-section__logo")}
+                            src={`/customers-logo/customer${customer}.png`}
+                            alt={`customer${customer}`}
+                            onError={(event) =>
+                              (event.target.style.display = "none")
+                            }
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  {/* </div> */}
+                  {/* <div className={cx("customers-section__grid-wrap")}> */}
+                    <div className={cx("customers-section__grid")}>
+                      {customers.slice(24).map((customer) => (
+                        <div
+                          className={cx("customers-section__logo-wrap")}
+                          key={customer}
+                        >
+                          <img
+                            className={cx("customers-section__logo")}
+                            src={`/customers-logo/customer${customer}.png`}
+                            alt={`customer${customer}`}
+                            onError={(event) =>
+                              (event.target.style.display = "none")
+                            }
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  {/* </div> */}
                 </div>
               ) : (
                 <div className={cx("customers-section__flex")}>
