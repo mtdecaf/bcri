@@ -4,10 +4,11 @@
 
 .intro-section {
   background-color: $beige;
-  height: 30rem;
+  min-height: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem 0;
   &__inner-wrap {
     display: flex;
     flex-direction: column;

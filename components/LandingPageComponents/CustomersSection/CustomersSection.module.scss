@@ -33,39 +33,73 @@
   &__subtitle {
     font-size: 1rem;
   }
-  &__grid {
+  &__flex {
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+  }
+  &__grid {
     justify-content: center;
     align-items: center;
     width: 100%;
     gap: 2rem;
     padding: 4rem 0;
-    @include tablet {
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      @include side-padding-tablet;
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-    }
-    @include desktop {
-      padding: 4rem 0;
+    // @include tablet {
+    //   display: grid;
+    //   grid-template-columns: repeat(6, minmax(0, 1fr));
+    //   @include side-padding-tablet;
+    //   padding-top: 4rem;
+    //   padding-bottom: 4rem;
+    // }
+    // @include desktop {
+    //   padding: 4rem 0;
+    // }
+    &-carousel {
+      display: flex;
+      // width: 100%;
+      &-viewport {
+        overflow: hidden;
+        width: 100%;
+        &.is-draggable {
+          cursor: move;
+          cursor: grab;
+        }
+        .is-dragging {
+          cursor: grabbing;
+        }
+        &-wrap {
+          display: flex;
+          width: 100%;
+        }
+      }
+      &-button {
+        background-color: transparent;
+        cursor: pointer;
+        touch-action: manipulation;
+        border: 0;
+        padding: 0;
+        &:disabled {
+          cursor: default;
+          opacity: 0.5;
+        }
+        &-icon {
+          fill: $navy-blue;
+          width: 3rem;
+          height: 3rem;
+        }
+      }
     }
   }
   &__logo {
-    max-height: 100%;
-    width: 100%;
-    max-width: 15rem;
+    width: 9.5rem;
+    object-fit: contain;
     &-wrap {
       background-color: $beige;
       border-radius: 15px;
-      display: flex;
       width: 100%;
-      max-width: 12.5rem;
-      justify-content: center;
-      align-items: center;
+      display: flex;
       aspect-ratio: 1;
-      padding: 1.45rem;
+      padding: 1.5rem;
+      position: relative;
       @include tablet {
         max-width: 100%;
       }

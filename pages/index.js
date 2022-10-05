@@ -14,7 +14,10 @@ export default function Home() {
     <div className={styles.container}>
       <LandingSection mounted={mountAndGetDimensions().mounted} />
       <IntroSection />
-      <CustomersSection mounted={mountAndGetDimensions().mounted} />
+      <CustomersSection
+        mounted={mountAndGetDimensions().mounted}
+        windowWidth={mountAndGetDimensions().windowWidth}
+      />
       <ServicesSection />
       <ProjectsSection />
       <ServiceDetailsSection />
