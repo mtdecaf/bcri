@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
@@ -85,10 +86,20 @@ const TestimonialSection = ({ mounted }) => {
               <div className={cx("testimonial-section__carousel")}>
                 {testimonialsData.map((data, index) => (
                   <div className={cx("testimonial-section__slide")} key={index}>
-                    <div className={cx("testimonial-section__slide__inner")}>
+                    <div className={cx("testimonial-section__slide-inner")}>
                       <div
                         className={cx("testimonial-section__slide__top-wrap")}
                       >
+                        <div
+                          className={cx("testimonial-section__slide-rating")}
+                        >
+                          <Image
+                            src="/5-stars.png"
+                            width={1820}
+                            height={317}
+                            layout="responsive"
+                          />
+                        </div>
                         <div
                           className={cx("testimonial-section__content-wrap")}
                         >
