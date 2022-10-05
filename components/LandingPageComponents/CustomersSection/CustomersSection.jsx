@@ -16,13 +16,16 @@ const CustomersSection = ({ mounted, windowWidth }) => {
       setCustomers((customers) => [...customers, i]);
     }
   };
+
   const [viewportRef, embla] = useEmblaCarousel({
     loop: true,
     skipSnaps: false,
   });
+
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
-  const PrevButton = ({ enabled, onClick }) => (
+  
+  const PrevButton = ({ onClick }) => (
     <button
       className={cx(
         "customers-section__grid-carousel-button",
