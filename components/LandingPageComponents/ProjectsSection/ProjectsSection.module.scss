@@ -10,23 +10,19 @@
   position: relative;
   @include side-padding-mobile;
   @include tablet {
-  height: 45rem;
+    height: 45rem;
     @include side-padding-tablet;
   }
   @include desktop {
     padding: 0;
   }
   &__background {
-    width: 250%;
-    margin-left: -115%;
-    @include tablet {
-      width: 100%;
-      margin-left: 0;
-    }
     &-wrap {
-      position: absolute;
-      overflow: hidden;
+      height: 100%;
+      right: -12.5rem;
       z-index: -1;
+      position: absolute;
+      aspect-ratio: 4957/2761;
     }
   }
   &__inner-wrap {
@@ -41,7 +37,8 @@
     }
   }
   &__overlay {
-    &-polygon, &-square {
+    &-polygon,
+    &-square {
       height: 100%;
     }
     &-square {

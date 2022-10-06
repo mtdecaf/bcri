@@ -9,6 +9,14 @@ const LandingSection = ({ mounted }) => {
   return (
     mounted && (
       <section className={cx("landing-section")} id="landing-section">
+        <div className={cx("landing-section__background-wrap")}>
+          <Image
+            src="/stock-images/stock1.jpeg"
+            width={7360}
+            height={4912}
+            layout="responsive"
+          />
+        </div>
         <div className={cx("landing-section__inner-wrap")}>
           <h1 className={cx("landing-section__title")}>
             Trusted Roof Inspections

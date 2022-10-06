@@ -4,9 +4,9 @@
 
 .landing-section {
   height: 30rem;
-  background-image: url("/stock-images/stock1.jpeg");
-  background-size: cover;
-  background-position: center center;
+  // background-image: url("/stock-images/stock1.jpeg");
+  // background-size: cover;
+  // background-position: center center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,6 +19,15 @@
   @include desktop {
     align-items: center;
     padding: 0;
+  }
+  &__background-wrap {
+    height: 125%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+    position: absolute;
+    aspect-ratio: 460/307;
   }
   &__inner-wrap {
     display: flex;
