@@ -5,7 +5,26 @@
             "descriptionTitle": "Roof Inspection, Existing Conditions, and Surveys and Evaluations",
             "icon": "IoHome",
             "shortDescription": "BC Roof Inspections provides detailed and unbiased reports, containing valuable and pertinent information regarding the buildings’ existing roof systems and components. Here is a sample of what our reports cover.",
-            "description": "BC Roof Inspections’ detailed reports contain valuable and pertinent information regarding the buildings’ existing roof system and components. They are used for assessing a new purchase or refinancing of existing commercial and industrial buildings. Our reports are also used for General Assessments for building owners at budget time. \nBC Roof Inspections’ reports are used by property management companies, real estate development firms, retirement funds, restaurants, hospitals, school districts, city, county, and provincial and federal agencies just to name a few. \nThe data that is compiled during our field inspections are presented in an organized way (see Roof Management Page) which explains each roof item in detail. The information in the roof inspection report includes the existing condition(s) of the roof and components, estimated remaining life of the existing roof(s) and provides budget numbers for corrective action (ongoing maintenance, repairs and replacement estimates). Our reports also include photo documentation. \nWe also specialize in deck membrane inspections and sundeck, parkade and courtyard waterproofing inspections."
+            "description": "BC Roof Inspections’ detailed reports contain valuable and pertinent information regarding the buildings’ existing roof system and components. They are used for assessing a new purchase or refinancing existing commercial and industrial buildings. Our reports are also used for General Assessments for building owners at budget time and for insurance purposes. \nBC Roof Inspections’ reports are used by property management companies, real estate development firms, retirement funds, restaurants, hospitals, school districts, city, county, and provincial and federal agencies just to name a few. \nThe data that is compiled during our field inspections are presented in an organized way (see Roof Management Page) which explains each roof item in detail. The information in the roof inspection report includes the existing condition(s) of the roof and components, the estimated remaining life of the existing roof(s), and provides budget numbers for corrective action (ongoing maintenance, repairs, and replacement estimates). Our reports also include photo documentation. \nWe also specialize in deck membrane inspections and sundeck, parkade, and courtyard waterproofing inspections.",
+            "ul": {
+                "summary": "Inspection reporting includes data on:",
+                "list": [
+                    "Sheet Metal",
+                    "Roof Field",
+                    "Ventilation",
+                    "Skylights",
+                    "Perimeter and Curb Flashings",
+                    "Roof Penetrations",
+                    "Drains and Drainage Areas",
+                    "Mansards",
+                    "Parapet Walls",
+                    "Pitch pans/Pipe Flashings",
+                    "Sleepers and Supports",
+                    "Vegetation/Trees/Foliage",
+                    "Mechanical Equipment",
+                    "Miscellaneous Items (electrical panelsconcrete platforms, etc.)"
+                ]
+            }
         },
         {
             "title": "Roof Consultant",
@@ -19,35 +38,72 @@
             "descriptionTitle": "Specification Writing",
             "icon": "RiPencilRuler2Fill",
             "shortDescription": "BC Roof Inspections provides detailed reports which contain valuable and pertinent information regarding the buildings’ existing roof systems and components. Here is a sample of what our reports cover.",
-            "description": "Placeholder 3 lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "description": "Our roof consultants and administrative staff will develop a full set of construction documents for repair or replacement. These will include roof plans and details, technical specifications, and general conditions to assist you in securing competitive bids that allow apples-to-apples comparison. We’ll conduct a pre-bid tender, provide addenda to bid documents (if required), review received bids, and make recommendations for selecting the best bid.",
+            "ol": {
+                "summary": "Prepared Comprehensive Specifications which will typically include, but not be limited to, the following:",
+                "list": [
+                    "Roof demolition guidelines.",
+                    "Substrate preparation requirements.",
+                    "Carpentry and millwork requirements.",
+                    "Roof insulation type(s), manufacturers, and installation guidelines, including tapered insulation layouts.",
+                    "Roof membrane type(s), manufacturers, specification numbers, and installation guidelines.",
+                    "Roof flashing type(s), manufacturers, specification numbers, and installation guidelines.",
+                    "Sheet metal flashing type(s), thickness’ and installation guidelines.",
+                    "Fastener type(s), manufacturers, and installation guidelines.",
+                    "Sealant type(s), manufacturers, and installation guidelines.",
+                    "Bitumen and/or adhesive types, manufacturers, and installation guidelines.",
+                    "Roof walkway type(s), manufacturers, and installation guidelines.",
+                    "Products, manufacturers, and installation guidelines for the flashing of all miscellaneous related components such as curbs, equipment pads, supports, pipe penetrations, pitch pockets, expansion joints, parapet walls, adjoining walls, roof edges, scuppers, and roof drains.",
+                    "Roof system warranty requirements."
+                ]
+            }
         },
         {
             "title": "Construction Dispute – Expert Witness",
             "descriptionTitle": "Construction Dispute – Expert Witness",
             "icon": "RiFilePaper2Fill",
             "shortDescription": "Our experts pride themselves on fair and accurate assessments of technical issues related to moisture intrusion, condensation, or system failures.",
-            "description": "Placeholder 3 lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "description": "Do you need an expert witness in a construction dispute? \nOur experts pride themselves on fair and accurate assessments of technical issues that are related to moisture intrusion, condensation, or system failures. When generating a claim for the plaintiff's counsel or advising the defence counsel, our input comes without bias towards a particular party. Our advice is based on historical performance issues and construction defects. \nWe have an extensive track record of amicably resolving roof and envelope disputes while limiting the duration of mediation or costly trials. We believe that a fair representation of the facts at the forefront of a dispute brings the parties closer to an agreement on corrective actions and costs. Our opinions are based on prevailing codes in force during design, industry standards, approvals, datasheets, historical project documentation reviews where applicable, and current and past building codes. \nConcise and comprehensive reports or analyses can be provided and are arranged and presented appropriately for the uniqueness of each project (as one report style does not suit all cases). \nExpert testimony services are provided when needed, and our experts carry appropriate credentials required by the Roofing Contractors Association of British Columbia (RCABC) and RCI, Incorporated, as well as meaningful real-world experience."
         },
         {
             "title": "Leak Investigation",
             "descriptionTitle": "Leak Investigation",
             "icon": "IoWaterSharp",
             "shortDescription": "BC Roof Inspections provides detailed reports containing valuable and pertinent information regarding the buildings’ existing roof systems and components. Here is a sample of what our reports cover.",
-            "description": "Placeholder 3 lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "description": "Do you have a roof leak that needs investigating? \nSome roof leak sources are obvious surface deficiencies. Some roof leaks are just pesky little drips that annoy you. Some roof leaks can be tricky to locate. But even the pesky little drips can evolve into much bigger problems if not addressed as soon as identified. Roof leaks come in all shapes and sizes, so locating and properly addressing roof leaks is important and something we do efficiently. \n When is a roof leak not a roof leak? \nWhen the leak is from rooftop equipment, such as drain problems and other parts on the roof (vents, skylights). We make sure we thoroughly inspect the area of the water infiltration inside the building or home, and then investigate the rooftop area where the water is penetrating the interior of the unit. We make a detailed report indicating the problem and the solution and email it to you or your roofing contractor. \nOur roof leak services are just one quick phone call away. We know what types of things to look for when it comes to a leaking roof. It’s true, sometimes a roof leak can be rectified in a few minutes, and some roof leaks require more than just a ‘quick fix.’ Depending on the severity of the leak and its location, BC Roof Inspections can provide details on how your roofing contractor can solve the problem to eliminate the roof leak."
         },
         {
             "title": "Roofing Maintenance",
             "descriptionTitle": "Roofing Maintenance",
             "icon": "IoHammerSharp",
             "shortDescription": "A consistent and routine maintenance plan is critical to the long-term performance of your roof system. BC Roof Inspections provide maintenance programs and annual inspections to protect the longevity of the roof.",
-            "description": "Placeholder 3 lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "description": "What is “Roof Maintenance”? \nRoof Maintenance is the performing of routine tasks necessary to keep a roof in a watertight condition. Performing roof maintenance protects the durability of the roof. \nA consistent and routine maintenance plan is critical to the long-term performance of your roof system. BC Roof Inspections provides a recommended roof maintenance program and annual inspections to protect the longevity of your roof. \nLike everything else in our lives, roofs get older. They go through the wear and tear of natural aging and exposure to the elements. That’s where we come in; we know if maintenance services are not completed on your roof(s) regularly, the service life of your roof will be greatly reduced. You could even void the warranty of that new roof. We know the average life of a built-up roof is 18-20 years and that the average life of a single-ply roof system is 15-20 years. And it’s a fact the service life of a roof will increase if the roofs are properly maintained. You’d be surprised how many times re-roofing is routinely performed when it isn’t required!"
         },
         {
             "title": "Project Management",
             "descriptionTitle": "Project Management",
             "icon": "IoPeopleSharp",
             "shortDescription": "BC Roof Inspections can provide project management if required. These services are available if the management company or the strata council does not feel comfortable dealing with the daily management of the re-roof project.",
-            "description": "Placeholder 3 lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "description": "BC Roof inspections will provide project management if required. These services are provided when the management company or the strata council does not feel comfortable dealing with the daily management of the re-roof project. ",
+            "ul": {
+                "summary": "The service includes:",
+                "list": [
+                    "Creating and executing project work plans and revising as appropriate to meet changing needs and requirements.",
+                    "Identifying resources needed and assigning individual responsibilities.",
+                    "Managing day-to-day operational aspects of a project and scope.",
+                    "Review deliverables prepared by the team before passing them to the client.",
+                    "Applying our methodology and enforcing project standards.",
+                    "Preparing for engagement reviews and quality assurance procedures.",
+                    "Minimizing our and your exposure and risk on the project.",
+                    "Ensuring project documents are complete, current, and stored appropriately.",
+                    "Managing the project budget.",
+                    "Determining appropriate revenue recognition, ensuring timely and accurate invoicing, and monitoring receivables for the project.",
+                    "Following up with clients, when necessary, regarding unpaid invoices.",
+                    "Analyzing project profitability, revenue, margins, bill rates, and utilization.",
+                    "Managing meetings with the owners and the contractors.",
+                    "Dealing with the contractor every morning through meetings or phone calls on day-to-day matters."
+                ]
+            }
         }
     ]
 }
