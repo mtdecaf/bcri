@@ -40,4 +40,16 @@
       padding-bottom: 4rem;
     }
   }
+  &__accordion {
+    &-wrap {
+      width: 100%;
+    }
+    &-title {
+      color: $rust-red;
+      font-weight: 700;
+    }
+    &-content {
+      padding: 0 1rem;
+    }
+  }
 }
