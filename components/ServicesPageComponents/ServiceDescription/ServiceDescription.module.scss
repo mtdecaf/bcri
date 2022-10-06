@@ -37,12 +37,13 @@
     gap: 1rem;
     @include tablet {
       gap: 1.25rem;
-      padding-bottom: 4rem;
+      padding-bottom: 3rem;
     }
   }
   &__accordion {
     &-wrap {
       width: 100%;
+      padding-bottom: 4rem;
     }
     &-title {
       color: $rust-red;

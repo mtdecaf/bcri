@@ -98,6 +98,7 @@ const TestimonialSection = ({ mounted }) => {
                             width={1820}
                             height={317}
                             layout="responsive"
+                            alt="5 star reviews"
                           />
                         </div>
                         <div

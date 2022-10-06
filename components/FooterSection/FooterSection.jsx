@@ -1,4 +1,5 @@
 import ScrollAnimation from "react-animate-on-scroll";
+import Image from "next/image";
 import { BsLinkedin } from "react-icons/bs";
 
 import styles from "./FooterSection.module.scss";
