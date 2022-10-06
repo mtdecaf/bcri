@@ -6,6 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  width: min-content;
   max-width: 33rem;
   @include tablet {
     max-width: 53rem;
