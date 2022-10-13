@@ -89,7 +89,6 @@ const CustomersSection = ({ mounted, windowWidth }) => {
             >
               {windowWidth > 768 ? (
                 <div className={cx("customers-section__grid-carousel")}>
-                  {/* <div className={cx("customers-section__grid-wrap")}> */}
                     <div className={cx("customers-section__grid")}>
                       {customers.slice(0, 24).map((customer) => (
                         <div
@@ -107,8 +106,6 @@ const CustomersSection = ({ mounted, windowWidth }) => {
                         </div>
                       ))}
                     </div>
-                  {/* </div> */}
-                  {/* <div className={cx("customers-section__grid-wrap")}> */}
                     <div className={cx("customers-section__grid")}>
                       {customers.slice(24).map((customer) => (
                         <div
@@ -126,7 +123,6 @@ const CustomersSection = ({ mounted, windowWidth }) => {
                         </div>
                       ))}
                     </div>
-                  {/* </div> */}
                 </div>
               ) : (
                 <div className={cx("customers-section__flex")}>

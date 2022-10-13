@@ -16,6 +16,7 @@ a {
   margin: 0;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth !important;
+  outline: none;
 }
 
 main {
@@ -37,6 +38,9 @@ h2 {
 }
 p {
   color: $grey;
+}
+button{
+  -webkit-tap-highlight-color: transparent;
 }
 
 .over-flow-wrapper {
