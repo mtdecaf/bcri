@@ -50,7 +50,10 @@
       font-weight: 700;
     }
     &-content {
-      padding: 0 1rem;
+      padding: 0 1rem 1rem 1rem;
+      line-height: 1.25rem;
+      // list-style: none;
+      list-style-position:inside;
     }
   }
 }
