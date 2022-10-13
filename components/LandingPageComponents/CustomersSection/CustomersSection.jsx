@@ -33,6 +33,7 @@ const CustomersSection = ({ mounted, windowWidth }) => {
         "customers-section__grid-carousel-button--prev"
       )}
       onClick={onClick}
+      aria-label="move carousel left"
     >
       <IoChevronBack
         className={cx("customers-section__grid-carousel-button-icon")}
@@ -48,6 +49,7 @@ const CustomersSection = ({ mounted, windowWidth }) => {
         "customers-section__grid-carousel-button--next"
       )}
       onClick={onClick}
+      aria-label="move carousel right"
     >
       <IoChevronForward
         className={cx("customers-section__grid-carousel-button-icon")}

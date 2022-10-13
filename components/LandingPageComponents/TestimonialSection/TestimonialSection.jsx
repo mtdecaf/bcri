@@ -28,6 +28,7 @@ const TestimonialSection = ({ mounted }) => {
         "testimonial-section__button--prev"
       )}
       onClick={onClick}
+      aria-label="move carousel left"
       // disabled={!enabled}
     >
       <IoChevronBack
@@ -44,6 +45,7 @@ const TestimonialSection = ({ mounted }) => {
         "testimonial-section__button--next"
       )}
       onClick={onClick}
+      aria-label="move carousel right"
       // disabled={!enabled}
     >
       <IoChevronForward

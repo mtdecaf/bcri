@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import styles from "../styles/Home.module.css";
 import LandingSection from "../components/LandingPageComponents/LandingSection/LandingSection";
 import IntroSection from "../components/LandingPageComponents/IntroSection/IntroSection";
-// import CustomersSection from "../components/LandingPageComponents/CustomersSection/CustomersSection";
 import ServicesSection from "../components/LandingPageComponents/ServicesSection/ServicesSection";
 import ProjectsSection from "../components/LandingPageComponents/ProjectsSection/ProjectsSection";
 import ServiceDetailsSection from "../components/LandingPageComponents/ServiceDetailsSection/ServiceDetailsSection";

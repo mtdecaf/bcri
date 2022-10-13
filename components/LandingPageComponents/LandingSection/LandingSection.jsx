@@ -15,6 +15,7 @@ const LandingSection = ({ mounted }) => {
             width={7360}
             height={4912}
             layout="responsive"
+            alt="landing page header background image"
           />
         </div>
         <div className={cx("landing-section__inner-wrap")}>
