@@ -169,13 +169,13 @@ const PageNav = () => {
             )}
           </div>
           <div className={cx("page-nav__projects-wrap", "page-nav__item-wrap")}>
-            <a
+            <div
               className={cx("page-nav__button", "page-nav__projects")}
               onMouseEnter={() => setProjectsDropDownOpen(true)}
               onMouseLeave={() => setProjectsDropDownOpen(false)}
             >
               PROJECTS
-            </a>
+            </div>
             {projectsDropDownOpen && (
               <div
                 className={cx(
@@ -207,12 +207,12 @@ const PageNav = () => {
               </div>
             )}
           </div>
-          <a
+          <div
             className={cx("page-nav__button", "page-nav__contact")}
             onClick={(e) => scrollTo(e, "footer-section")}
           >
             CONTACT US
-          </a>
+          </div>
         </div>
       </div>
       <ScrollToTopButton isScrolled={isScrolled} />
