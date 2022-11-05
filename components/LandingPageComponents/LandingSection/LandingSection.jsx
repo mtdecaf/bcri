@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import landingBackground from "/public/stock-images/stock1.jpeg"
+
 import styles from "./LandingSection.module.scss";
 import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
@@ -11,11 +13,12 @@ const LandingSection = ({ mounted }) => {
       <section className={cx("landing-section")} id="landing-section">
         <div className={cx("landing-section__background-wrap")}>
           <Image
-            src="/stock-images/stock1.jpeg"
+            src={landingBackground}
             width={7360}
             height={4912}
             layout="responsive"
             alt="landing page header background image"
+            placeholder="blur"
           />
         </div>
         <div className={cx("landing-section__inner-wrap")}>
@@ -47,6 +50,7 @@ const LandingSection = ({ mounted }) => {
               src="/svg-assets/landing_geometry.svg"
               layout="fill"
               alt="landing page geometry"
+              priority
             />
           </div>
         </div>
@@ -57,6 +61,7 @@ const LandingSection = ({ mounted }) => {
               src="/svg-assets/landing_geometry.svg"
               layout="fill"
               alt="landing page geometry"
+              priority
             />
           </div>
         </div>
