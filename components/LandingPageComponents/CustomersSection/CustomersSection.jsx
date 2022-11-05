@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useEffectOnce } from "/custom_hooks/useEffectOnce";
 import useEmblaCarousel from "embla-carousel-react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
+import Image from "next/image";
 
 import styles from "./CustomersSection.module.scss";
 import classNames from "classnames/bind";
@@ -94,16 +95,19 @@ const CustomersSection = ({ mounted, windowWidth }) => {
                   <div className={cx("customers-section__grid")}>
                     {customers.slice(0, 24).map((customer) => (
                       <div
-                        className={cx("customers-section__logo-wrap")}
+                        className={cx("customers-section__logo-container")}
                         key={customer}
                       >
-                        <img
+                        <Image
                           className={cx("customers-section__logo")}
                           src={`/customers-logo/customer${customer}.png`}
                           alt={`customer${customer}`}
+                          width={150}
+                          height={150}
                           onError={(event) =>
                             (event.target.style.display = "none")
                           }
+                          placeholder="empty"
                         />
                       </div>
                     ))}
@@ -111,16 +115,19 @@ const CustomersSection = ({ mounted, windowWidth }) => {
                   <div className={cx("customers-section__grid")}>
                     {customers.slice(24).map((customer) => (
                       <div
-                        className={cx("customers-section__logo-wrap")}
+                        className={cx("customers-section__logo-container")}
                         key={customer}
                       >
-                        <img
+                        <Image
                           className={cx("customers-section__logo")}
                           src={`/customers-logo/customer${customer}.png`}
                           alt={`customer${customer}`}
+                          width={150}
+                          height={150}
                           onError={(event) =>
                             (event.target.style.display = "none")
                           }
+                          placeholder="empty"
                         />
                       </div>
                     ))}
@@ -130,16 +137,19 @@ const CustomersSection = ({ mounted, windowWidth }) => {
                 <div className={cx("customers-section__flex")}>
                   {customers.slice(0, 41).map((customer) => (
                     <div
-                      className={cx("customers-section__logo-wrap")}
+                      className={cx("customers-section__logo-container")}
                       key={customer}
                     >
-                      <img
+                      <Image
                         className={cx("customers-section__logo")}
                         src={`/customers-logo/customer${customer}.png`}
                         alt={`customer${customer}`}
+                        width={150}
+                        height={150}
                         onError={(event) =>
                           (event.target.style.display = "none")
                         }
+                        placeholder="empty"
                       />
                     </div>
                   ))}
