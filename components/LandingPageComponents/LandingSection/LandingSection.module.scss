@@ -4,9 +4,6 @@
 
 .landing-section {
   height: 30rem;
-  // background-image: url("/stock-images/stock1.jpeg");
-  // background-size: cover;
-  // background-position: center center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,7 +67,7 @@
     position: absolute;
     display: flex;
     @include tablet {
-      height: calc(100vh - 6.5rem);
+      height: 100%;
     }
     &-square {
       position: absolute;
@@ -83,12 +80,15 @@
       }
     }
     &-polygon {
-      position: absolute;
-      left: calc((100vw - 273px) / 2);
-      height: 100%;
-      aspect-ratio: 72/127;
-      @include tablet {
-        left: calc((100vw - (100vh * 0.5)) / 2);
+      fill: $rust-red;
+      &-wrap {
+        position: absolute;
+        left: calc((100vw - 273px) / 2);
+        height: 100%;
+        aspect-ratio: 72/133;
+        @include tablet {
+          left: calc((100vw - (100vh * 0.5)) / 2);
+        }
       }
     }
   }

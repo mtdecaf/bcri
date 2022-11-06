@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import landingBackground from "/public/stock-images/stock1.jpeg"
+import landingBackground from "/public/stock-images/stock1.jpeg";
 
 import styles from "./LandingSection.module.scss";
 import classNames from "classnames/bind";
@@ -45,25 +45,32 @@ const LandingSection = ({ mounted }) => {
         </div>
         <div className={cx("landing-section__left-overlay")}>
           <span className={cx("landing-section__left-overlay-square")}></span>
-          <div className={cx("landing-section__left-overlay-polygon")}>
-            <Image
-              src="/svg-assets/landing_geometry.svg"
-              layout="fill"
-              alt="landing page geometry"
-              priority
-            />
+          <div className={cx("landing-section__left-overlay-polygon-wrap")}>
+            <svg
+              className={cx("landing-section__left-overlay-polygon")}
+              width="100%"
+              height="100%"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+            >
+              <polygon points="0,0 100,100 0,100" />
+            </svg>
           </div>
         </div>
         <div className={cx("landing-section__right-overlay")}>
           <span className={cx("landing-section__right-overlay-square")}></span>
-          <div className={cx("landing-section__right-overlay-polygon")}>
-            <Image
-              src="/svg-assets/landing_geometry.svg"
-              layout="fill"
-              alt="landing page geometry"
-              priority
-            />
+          <div className={cx("landing-section__right-overlay-polygon-wrap")}>
+            <svg
+              className={cx("landing-section__right-overlay-polygon")}
+              width="100%"
+              height="100%"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+            >
+              <polygon points="0,0 100,100 0,100" />
+            </svg>
           </div>
+          <polygon />
         </div>
       </section>
     )
