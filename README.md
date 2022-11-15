@@ -2,15 +2,22 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, install Node on your computer:
+1. Go to https://nodejs.org/en/download/
+2. Download the LTS version for your operating system.
+3. Follow the instructions of installation.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Second, Download VS Code:
+1. Go to https://code.visualstudio.com/.
+2. Download the recommended version and follow the instructions of installation.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Second run the development server:
+1. Open the folder in VS Code.
+2. Click on Terminal on the top left toolbar and select New Terminal.
+3. On the terminal opened, type: npm install --global yarn.
+4. Then after the installation completes, type: yarn install.
+4. Then after the installation completes, type: npm run dev.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
